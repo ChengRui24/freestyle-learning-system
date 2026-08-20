@@ -14,11 +14,9 @@ python3 -m http.server 8080
 
 ## GitHub Pages
 
-1. 把本仓库推到 GitHub。
-2. Settings → Pages → Source 选 `main` / root。
-3. 站点入口为根目录 `index.html`。
+已发布：<https://chengrui24.github.io/freestyle-learning-system/>
 
-仓库已含 `.nojekyll`，避免 Jekyll 忽略下划线路径。
+源分支为 `main`，站点根目录为仓库根。含 `.nojekyll`。
 
 ## 更新内容
 
