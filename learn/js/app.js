@@ -105,6 +105,13 @@
     return code + extra + " " + zh;
   }
 
+  function withGearLinks(html) {
+    return html
+      .replace(/正面呼吸管/g, '<a href="../gear/snorkels/">正面呼吸管</a>')
+      .replace(/短脚蹼/g, '<a href="../gear/fins/">短脚蹼</a>')
+      .replace(/小划手/g, '<a href="../gear/paddles/">小划手</a>');
+  }
+
   function drillHref(code) {
     if (DRILL_IDS[code]) return "#drill-" + code;
     const base = code.replace(/[A-Z]$/, "");
@@ -227,7 +234,7 @@
         esc(s.task) +
         "</dd>" +
         "<dt>建议里程碑</dt><dd>" +
-        esc(s.milestone) +
+        withGearLinks(esc(s.milestone)) +
         "</dd>" +
         "<dt>最常见卡点</dt><dd>" +
         esc(s.stuck) +
@@ -267,7 +274,13 @@
       "<table><thead><tr><th>测试结果</th><th>优先怀疑</th></tr></thead><tbody>" +
       data.quickTests
         .map(function (t) {
-          return "<tr><td>" + esc(t.result) + "</td><td>" + esc(t.suspect) + "</td></tr>";
+          return (
+            "<tr><td>" +
+            withGearLinks(esc(t.result)) +
+            "</td><td>" +
+            esc(t.suspect) +
+            "</td></tr>"
+          );
         })
         .join("") +
       "</tbody></table>";

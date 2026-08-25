@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FINIS 成人训练脚蹼选择指南 · Tech Sheet 核查版</title>
+<style>
+  :root{
+    --bg:#f6f6f3;--paper:#fff;--ink:#111214;--muted:#6d7178;--line:#dedfd9;--line-dark:#c7c9c2;
+    --accent:#ffd400;--soft:#f0f1ed;--max:1280px;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;line-height:1.56}
+  a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .topbar{position:sticky;top:0;z-index:30;background:rgba(246,246,243,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(17,18,20,.10)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:54px}.brand{font-size:13px;font-weight:800;letter-spacing:.06em;white-space:nowrap}
+  .topbar nav{display:flex;gap:18px;overflow:auto;white-space:nowrap;font-size:12px;color:var(--muted);scrollbar-width:none}.topbar nav::-webkit-scrollbar{display:none}.topbar nav a:hover{color:var(--ink)}
+  header{padding:66px 0 34px;border-bottom:1px solid var(--line)}.eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,212,0,.16)}
+  h1{font-size:clamp(34px,5vw,62px);line-height:1.03;letter-spacing:-.05em;margin:0 0 18px;font-weight:850;max-width:950px}.lede{font-size:16px;max-width:920px;color:#41454b;margin:0}
+  .scope{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid var(--line-dark);background:var(--paper);border-radius:999px;padding:7px 10px;font-size:12px;color:#34373b}.pill strong{font-weight:800}
+  section{padding:50px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:minmax(180px,260px) 1fr;gap:30px;align-items:end;margin-bottom:26px}
+  .section-head h2{margin:0;font-size:27px;letter-spacing:-.035em;line-height:1.08}.section-head p{margin:0;color:var(--muted);font-size:13px;max-width:820px}
+  .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .quick{background:var(--paper);padding:21px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}.quick .goal{font-size:12px;color:var(--muted);margin-bottom:3px}.quick .pick{font-size:19px;font-weight:820;letter-spacing:-.02em}.quick .why{font-size:13px;color:#42464c;max-width:340px}
+  .filterbar{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}.filterbar button{appearance:none;border:1px solid var(--line-dark);background:var(--paper);border-radius:999px;padding:8px 11px;font:inherit;font-size:12px;cursor:pointer;transition:.18s}.filterbar button:hover,.filterbar button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s opacity,.2s transform,.2s border-color;min-width:0}.card.dim{opacity:.24;transform:scale(.99)}.card:hover{border-color:#b5b7b0}
+  .product-img{height:260px;background:#fafafa;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);padding:12px}.product-img img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+  .card-body{padding:19px}.kicker{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}.card h3{font-size:22px;line-height:1.1;letter-spacing:-.025em;margin:0 0 8px}.tagline{font-size:14px;font-weight:720;margin-bottom:15px;min-height:44px}
+  .facts{display:grid;grid-template-columns:86px 1fr;column-gap:10px;row-gap:8px;font-size:12px;border-top:1px solid var(--line);padding-top:13px}.facts dt{color:var(--muted)}.facts dd{margin:0}.facts strong{font-weight:800}
+  .tradeoff{margin-top:14px;background:var(--soft);padding:11px 12px;border-radius:10px;font-size:12px;color:#41454a}.tradeoff b{color:var(--ink)}
+  .source-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}.source-link{display:inline-flex;font-size:11px;color:var(--muted);border-bottom:1px solid #aeb1aa;padding-bottom:1px}.source-link:hover{color:var(--ink)}
+  .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 1px 0 rgba(0,0,0,.02)}table{border-collapse:separate;border-spacing:0;width:100%;min-width:1220px;font-size:12px}
+  th,td{padding:12px 13px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}th:last-child,td:last-child{border-right:0}tr:last-child td{border-bottom:0}thead th{background:#f3f3ef;font-size:12px;text-align:left;position:sticky;top:0;z-index:3}thead th:first-child{left:0;z-index:4}tbody td:first-child{position:sticky;left:0;background:#fbfbf8;font-weight:750;z-index:2;width:160px}.note{margin-top:12px;font-size:11px;color:var(--muted)}
+  .spectrum-box{display:grid;gap:14px}.spectrum{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 20px 17px}.spectrum-title{display:flex;justify-content:space-between;gap:20px;font-size:12px;font-weight:780;margin-bottom:34px}.track{position:relative;height:6px;background:linear-gradient(90deg,#e9eae5,#222);border-radius:99px;margin:0 18px 46px}.marker{position:absolute;top:50%;transform:translate(-50%,-50%);width:12px;height:12px;border-radius:50%;background:white;border:3px solid #111;box-shadow:0 0 0 3px white}.marker span{position:absolute;top:15px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:760;white-space:nowrap;background:white;padding:3px 5px;border-radius:5px}.marker.alt span{top:auto;bottom:15px}.branch{margin-top:-18px;border-left:2px solid var(--accent);padding:6px 0 6px 12px;font-size:12px;color:#464a50}.branch b{color:var(--ink)}
+  .map{position:relative;height:340px;border:1px solid var(--line);background:var(--paper);border-radius:16px;overflow:hidden}.map:before,.map:after{content:"";position:absolute;background:#dcded8}.map:before{left:84px;right:20px;bottom:52px;height:1px}.map:after{left:84px;top:46px;bottom:52px;width:1px}.axis-x{position:absolute;left:84px;right:20px;bottom:18px;display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.axis-y-title{position:absolute;left:12px;top:14px;font-size:11px;font-weight:760;color:#4f5358;white-space:nowrap}.axis-y{position:absolute;left:12px;top:52px;bottom:58px;width:56px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;writing-mode:horizontal-tb;transform:none;font-size:11px;line-height:1.2;color:var(--muted)}
+  .point{position:absolute;transform:translate(-50%,50%);font-size:11px;font-weight:800;background:#111;color:#fff;border-radius:999px;padding:6px 9px;white-space:nowrap;box-shadow:0 3px 12px rgba(0,0,0,.08)}.point.special{background:var(--accent);color:#111}
+  .decision{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:21px}.panel h3{font-size:18px;letter-spacing:-.02em;margin:0 0 15px}.path{display:grid;grid-template-columns:1fr auto 1.2fr;gap:10px;align-items:center;padding:11px 0;border-top:1px solid var(--line);font-size:12px}.path:first-of-type{border-top:0}.path .arrow{color:#9a9d96}.path strong{font-size:13px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.pair div{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px;background:#fafaf7}.pair b{display:block;margin-bottom:3px}
+  .method{display:grid;grid-template-columns:1fr 1fr;gap:14px}.method .panel{min-height:170px}.source-list{display:grid;gap:7px;font-size:12px;color:#44484d}.source-list a{border-bottom:1px solid var(--line);padding-bottom:6px}.source-list small{color:var(--muted)}footer{padding:28px 0 60px;color:var(--muted);font-size:11px}.tiny{font-size:10px;color:#8a8d92}
+  @media(max-width:900px){.quick-grid,.cards{grid-template-columns:repeat(2,1fr)}.section-head{grid-template-columns:1fr;gap:10px}.decision,.method{grid-template-columns:1fr}}
+  @media(max-width:620px){.wrap{padding:0 16px}header{padding-top:44px}.quick-grid,.cards{grid-template-columns:1fr}.product-img{height:230px}.topbar .wrap{min-height:50px}.brand{display:none}.topbar nav{gap:14px}section{padding:38px 0}.path{grid-template-columns:1fr;gap:4px}.path .arrow{display:none}.spectrum{padding-left:12px;padding-right:12px}.marker span{font-size:10px}.map{height:360px}.axis-x{font-size:10px}}
+  @media print{.topbar,.filterbar{display:none!important}body{background:white}.wrap{max-width:none}.card,.panel,.spectrum,.map,.table-wrap{break-inside:avoid}.cards{grid-template-columns:repeat(3,1fr)}}
+
+.fin-label{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;vertical-align:baseline;}
+.fin-label .fin-mini{width:16px;height:16px;object-fit:cover;border-radius:3px;display:inline-block;vertical-align:-2px;box-shadow:0 0 0 1px rgba(15,23,42,.10);background:#fff;flex:0 0 16px;}
+.fin-label.compact .fin-mini{width:14px;height:14px;flex-basis:14px;}
+.fin-label.tiny-gap{gap:3px;}
+.pill .fin-label .fin-mini,.pick .fin-label .fin-mini,.path .fin-label .fin-mini,.pair .fin-label .fin-mini{width:15px;height:15px;flex-basis:15px;}
+.marker .fin-mini,.point .fin-mini{width:14px;height:14px;flex-basis:14px;vertical-align:-2px;}
+th .fin-label,.td .fin-label{font-weight:inherit;}
+</style>
+<link rel="stylesheet" href="../../css/site.css"/>
+</head>
+<body class="page-fins">
+<header class="site-bar">
+  <a class="site-brand" href="../../">成人游泳训练</a>
+  <nav aria-label="站点">
+    <a href="../../learn/">学习</a>
+    <a href="../snorkels/">呼吸管</a>
+    <a href="../paddles/">划手掌</a>
+    <a href="./" aria-current="page">脚蹼</a>
+  </nav>
+</header>
+<div class="topbar"><div class="wrap"><div class="brand">FINIS · ADULT TRAINING FINS</div><nav aria-label="页面导航"><a href="#quick">快速选择</a><a href="#products">产品特点</a><a href="#compare">横向对比</a><a href="#spectrum">连续谱</a><a href="#choose">怎么选</a><a href="#sources">依据</a></nav></div></div>
+<header><div class="wrap">
+<div class="eyebrow"><span class="dot"></span> 2026-08 · 逐款核对 FINIS Tech Sheet</div>
+<h1>FINIS 成人训练脚蹼<br/>完整选择指南</h1>
+<p class="lede">先别按“软、硬、长、短”直接买。把六份 Tech Sheet 放在一起看，真正拉开差距的是：叶片怎么受力、推进和浮力有多强、腿要承担多少负荷，以及它会把踢腿节奏带向哪里。这里仅比较成人训练会实际考虑的 6 款。</p>
+<p class="site-cross">对应学习体系 <a href="../../learn/#stage-A1">A1 身体线型</a>、<a href="../../learn/#stage-A2">A2 打腿</a>、<a href="../../learn/#drill-D-K18">D-K18 短脚蹼辅助</a>。撤掉脚蹼后必须复测。</p>
+<div class="scope"><span class="pill"><strong>轻量自然</strong> <span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span><span class="pill"><strong>经典短蹼</strong> <span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span><span class="pill"><strong>上下踢分工</strong> <span class="fin-label tiny-gap">Z2 Gold<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span><span class="pill"><strong>高负荷</strong> <span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span><span class="pill"><strong>高浮力 / 高推进</strong> <span class="fin-label tiny-gap">Long Floating<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span><span class="pill"><strong>四泳姿</strong> <span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div>
+</div></header>
+<main>
+<section id="quick"><div class="wrap">
+<div class="section-head"><h2>先按训练目的排除</h2><p>这六双没有统一的“最好”。如果先想清楚脚蹼要替你解决什么问题，选择会快很多。</p></div>
+<div class="quick-grid">
+<div class="quick"><div><div class="goal">技术组、配速组里想戴蹼，但不想被大叶片带着游</div><div class="pick"><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">脚跟和脚踝完全开放，靠脚背处的轻微吸附固定。FINIS 的目标就是保留身体节奏和比赛配速下的踢腿感，只给适量推进和托举。</div></div>
+<div class="quick"><div><div class="goal">想买一双用途最清楚、最常规的短蹼</div><div class="pick"><span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">短叶片直接把踢腿带向“更短、更快”。叶片角度顺着脚的自然角度，适合速度、心肺、腿部耐力和常规打腿组。</div></div>
+<div class="quick"><div><div class="goal">想把上踢也练出来，又不想下踢一直顶股四头</div><div class="pick"><span class="fin-label tiny-gap">Z2 Gold Zoomers<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">上面的 Fluid Separator 让下踢更容易切水，底部的上踢抓水区（Flex Box）在上踢时抓水。它的重点不是“更软”，而是让上下踢承担不同任务。</div></div>
+<div class="quick"><div><div class="goal">要明显的腿部训练负荷，同时纠正膝盖主导踢腿</div><div class="pick"><span class="fin-label tiny-gap">Edge Fins<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">侧轨用来把发力带回髋部，叶片在上踢时也抓水。它本来就是让腿“真干活”的训练蹼，适合冲刺、力量和高负荷组。</div></div>
+<div class="quick"><div><div class="goal">腿容易沉，换气或技术动作一慢下来就散</div><div class="pick"><span class="fin-label tiny-gap">Long Floating Fins<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">长叶片给这组里最强的浮力和前向推进，把腿托起来、先把身体线和动作做完整。它的干预很强，但教学价值也最直接。</div></div>
+<div class="quick"><div><div class="goal">蛙泳、个人混合泳练得多</div><div class="pick"><span class="fin-label tiny-gap">Positive Drive Fins<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div><div class="why">椭圆、不对称叶片可以处理蛙泳这类多方向踢水；闭趾和可调跟带又兼顾力量传递和脚部活动，是六款里唯一明确为四泳姿设计的。</div></div>
+</div>
+</div></section>
+<section id="products"><div class="wrap">
+<div class="section-head"><h2>逐款看 Tech Sheet：结构决定什么</h2><p>下面把官方写明的结构和训练用途拆开。涉及“负荷高低”“干预多少”这类横向等级时，会明确作为相对判断，不把营销文案当成实验数据。</p></div>
+<div aria-label="按训练目标筛选" class="filterbar" role="group"><button aria-pressed="true" data-filter="all">全部</button><button data-filter="natural">自然感</button><button data-filter="speed">速度 / 高频</button><button data-filter="drill">Drill</button><button data-filter="strength">力量</button><button data-filter="beginner">体线 / 初学</button><button data-filter="im">蛙泳 / IM</button></div>
+<div class="cards">
+<article class="card" data-goals="natural drill speed">
+<a class="product-img" href="https://www.finisswim.com/slipfin-pro-strapless-swim-fin" rel="noopener" target="_blank"><img alt="FINIS SlipFin Pro" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">轻量 / 无绑带 / 节奏</div><h3><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">最特别的不是叶片长短，而是它把传统脚跟杯和绑带都拿掉了。</div>
+<dl class="facts">
+<dt>怎么固定</dt><dd>先把脚和脚蹼打湿，套上后挤出空气和水；柔软材料在脚背形成轻微吸附。左右脚有区分，要穿对。</dd>
+<dt>活动自由</dt><dd>脚跟和踝关节完全露出。官方把它描述为“像脚的自然延伸”，重点是轻、少束缚。</dd>
+<dt>推进特点</dt><dd>提供顺滑推进和 <strong>gentle lift（轻度托举）</strong>，但设计上刻意避免“推进太强，把原有节奏盖掉”。</dd>
+<dt>训练目的</dt><dd>支持技术、身体线、平衡和节奏；Tech Sheet 明确提到 <strong>race-pace rhythm（比赛配速下的节奏）</strong>。</dd>
+<dt>适合怎么用</dt><dd>更适合技术组、配速组和需要长时间戴蹼但不想让脚蹼存在感太强的训练。这个“长时间”是基于结构做的选型判断，不是官方耐力测试结论。</dd>
+<dt>尺码</dt><dd>不按鞋码，按脚背围：S 21–24.5 cm，M 23.5–27 cm，L 26–28+ cm；窄脚偏小、宽脚偏大。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>它的体验非常吃贴合。密封没做好、脚背形状不合适，都会比传统全脚套更容易出现进水或松动。官方没有公布统一的阻力、效率或关节负荷数据。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/FINIS_SlipFinPro_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/slipfin-pro-strapless-swim-fin" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+<article class="card" data-goals="strength speed drill">
+<a class="product-img" href="https://www.finisswim.com/Edge" rel="noopener" target="_blank"><img alt="FINIS Edge Fins" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">高负荷 / 髋部发力 / 上踢</div><h3><span class="fin-label tiny-gap">Edge Fins<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">它不是单纯“硬一点的短蹼”，而是把侧轨、叶片角度和上踢抓水都做成训练反馈。</div>
+<dl class="facts">
+<dt>侧轨</dt><dd>侧轨（Technique-focused side rails）用来增加髋和股四头参与，FINIS 明确希望它把踢腿起点从膝盖带回髋部。</dd>
+<dt>上踢</dt><dd>叶片会在上踢时抓水，让腘绳肌和臀肌也参与，而不是只靠下踢。</dd>
+<dt>叶片角度</dt><dd>专有叶片角度（proprietary blade angle）的目标，是让蹼更像脚的延伸。也就是说，它虽然负荷重，设计上并不是故意把脚型扭成另一个角度。</dd>
+<dt>训练负荷</dt><dd>Tech Sheet 直接写明“需要力量把它推过水”，用于增加力量、耐力、速度，也支持有氧和无氧训练。</dd>
+<dt>脚套</dt><dd>100% 硅胶，人体工学脚套；官方称使用几次后会逐渐贴合足型。</dd>
+<dt>尺码</dt><dd>脚套偏窄；卡在两个尺码之间或脚宽，建议选大一码。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>“叶片角度自然”和“训练负荷高”可以同时成立。它未必让脚的姿态很别扭，但阻力大，本身就会让踢腿频率和肌肉募集跟轻型短蹼不同。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/Edge_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/Edge" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+<article class="card" data-goals="speed strength natural">
+<a class="product-img" href="https://www.finisswim.com/Zoomer-Gold" rel="noopener" target="_blank"><img alt="FINIS Zoomers Gold" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">经典短蹼 / 高频 / 心肺</div><h3><span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">这双最容易理解：用短叶片保留较快踢频，再给腿增加持续负荷。</div>
+<dl class="facts">
+<dt>短叶片</dt><dd>官方明确写的是“更短、更快的踢腿”，同时仍获得额外推进。它不像长蹼那样靠大叶片把一次踢腿拖得很长。</dd>
+<dt>叶片角度</dt><dd>叶片角度顺着脚的自然角度，目标是更容易做出正确踢腿，而不是让脚尖被叶片带偏。</dd>
+<dt>脚套</dt><dd>柔软天然橡胶；闭跟设计提供稳定贴合，并用于限制踝关节过度跖屈（hyperflexion）。</dd>
+<dt>训练效果</dt><dd>腿部力量、速度、耐力、踝活动范围；官方把心肺训练和速度训练列为主要用途。</dd>
+<dt>适合怎么用</dt><dd>常规打腿组、速度组、自由泳 / 仰泳训练。想买一双“不偏门”的成人短蹼，它是最标准的基准款。</dd>
+<dt>尺码</dt><dd>脚套偏窄；卡码或脚宽建议选大一码。天然橡胶会随着使用逐渐贴合。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>它没有 <span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 那种“下踢减负、上踢抓水”的结构，也没有 <span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 那么强的力量导向。优点正是简单：短蹼、高频、稳定负荷。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/ZoomerGold_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/Zoomer-Gold" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+<article class="card" data-goals="drill speed natural">
+<a class="product-img" href="https://www.finisswim.com/Z2-Gold" rel="noopener" target="_blank"><img alt="FINIS Z2 Gold Zoomers" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">Drill / 下踢减负 / 上踢强化</div><h3><span class="fin-label tiny-gap">Z2 Gold Zoomers<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">和 <span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 最大的区别，不是“更轻松”，而是它刻意把上下踢做成不同反馈。</div>
+<dl class="facts">
+<dt>下踢</dt><dd>顶部的分水结构（Fluid Separator）让脚更容易切水，官方明确写到可降低下踢和股四头肌疲劳。</dd>
+<dt>上踢</dt><dd>底部的上踢抓水区（Flex Box）在上踢时抓水，重点刺激腘绳肌和臀肌。</dd>
+<dt>叶片控制</dt><dd>叶片控制槽（Technique Channels）控制弯曲幅度，让推进更稳定，也减少叶片乱甩的感觉。</dd>
+<dt>脚套</dt><dd>天然橡胶、闭跟；提供稳定贴合，并用于限制过度跖屈。</dd>
+<dt>训练目的</dt><dd>官方把它直接定义为适合 <strong>drill progression</strong> 的训练蹼，同时强调踝活动范围。</dd>
+<dt>尺码</dt><dd>夹在两个尺码之间且脚宽可选大一码；其他情况官方反而建议偏小，获得更紧的贴合。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>它不能简单归类成“低负荷版 <span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>”。下踢确实减轻，但上踢会更主动抓水，所以更准确的说法是：把负荷从单一下踢，重新分配到完整踢腿周期。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/Z2GoldZoomers_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/Z2-Gold" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+<article class="card" data-goals="beginner strength">
+<a class="product-img" href="https://www.finisswim.com/Floating-Fin" rel="noopener" target="_blank"><img alt="FINIS Long Floating Fins" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">长蹼 / 高浮力 / 高推进</div><h3><span class="fin-label tiny-gap">Long Floating Fins<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">这双不是为了“更像裸脚”，而是主动用浮力和长叶片改变身体位置，让动作先做出来。</div>
+<dl class="facts">
+<dt>长叶片</dt><dd>长流线叶片提供较大的水阻，并给出官方所称的 <strong>maximum forward propulsion（最大前向推进）</strong>，同时把每次踢腿拉得更长。</dd>
+<dt>浮力</dt><dd>脚蹼会把腿托向水面，减少下肢下沉造成的阻力，帮助建立更水平的身体线。</dd>
+<dt>动作反馈</dt><dd>官方强调“从髋部而不是膝盖踢”，并用长叶片让游泳者体会更完整的踢腿幅度。</dd>
+<dt>训练负荷</dt><dd>推进很强并不等于腿很省事：长叶片本身也提供更大水阻，官方同时把腿部力量和心肺列入用途。</dd>
+<dt>脚套</dt><dd>天然橡胶、闭跟；官方称可限制踝关节过度跖屈并提高舒适度。</dd>
+<dt>尺码</dt><dd>成人从 XS 到 XXXL；卡码或脚宽建议大一码。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>它是六款里对身体位置和踢腿幅度干预最明显的一类。初学、练体线和换气很有价值，但不适合拿它去模拟裸脚的比赛踢频。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/LongFloatingFins_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/Floating-Fin" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+<article class="card" data-goals="im drill strength">
+<a class="product-img" href="https://www.finisswim.com/Positive-Drive-Fin" rel="noopener" target="_blank"><img alt="FINIS Positive Drive Fins" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></a>
+<div class="card-body"><div class="kicker">四泳姿 / 蛙泳 / IM</div><h3><span class="fin-label tiny-gap">Positive Drive Fins<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><div class="tagline">它解决的是方向问题：普通直板蹼擅长上下踢，这双要让蛙泳这种多方向踢水也能产生有效推进。</div>
+<dl class="facts">
+<dt>椭圆叶片</dt><dd>Ellipsoidal blade 用来在不同踢腿方向上产生推进，Tech Sheet 明确包括蛙泳。</dd>
+<dt>不对称设计</dt><dd>不对称叶片会引导脚部向内转动的踢腿路径（官方原文 inward supination kick cycle），用来提高脚部动作速度和踝灵活性。</dd>
+<dt>闭趾</dt><dd>Closed toe design 的目的很直接：提高脚到叶片的力量传递。</dd>
+<dt>跟带</dt><dd>可调脚跟带用于把蹼固定住，同时让脚部弯曲更自然；脚套本身也按游泳姿态做了人体工学设计。</dd>
+<dt>训练目的</dt><dd>四泳姿腿部力量、脚部动作速度（foot speed）、踝灵活性；官方特别把个人混合泳列为理想场景。</dd>
+<dt>尺码</dt><dd>脚套偏窄；卡码或脚宽建议大一码，材料会随使用逐渐贴合。</dd>
+</dl>
+<div class="tradeoff"><b>要注意：</b>如果你几乎只练自由泳，它不一定比普通短蹼更合适；但一旦蛙泳和 IM 占比高，它的功能最难被其他五款替代。</div>
+<div class="source-row"><a class="source-link" href="https://www.finisswim.com/documents/TechSheets/PositiveDriveFins_TechSheet.pdf" rel="noopener" target="_blank">Tech Sheet ↗</a><a class="source-link" href="https://www.finisswim.com/Positive-Drive-Fin" rel="noopener" target="_blank">产品页 ↗</a></div>
+</div>
+</article>
+</div>
+</div></section>
+<section id="compare"><div class="wrap">
+<div class="section-head"><h2>横向对比</h2><p>前几行尽量只写官方能确认的结构和用途；“推进辅助、训练负荷、水动力干预”属于横向选型判断，没有统一实验数值。</p></div>
+<div class="table-wrap"><table>
+<thead><tr><th>维度</th><th><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th><th><span class="fin-label tiny-gap">Z2 Gold<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th><th><span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th><th><span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th><th><span class="fin-label tiny-gap">Long Floating<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th><th><span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></th></tr></thead>
+<tbody>
+<tr><td>一句话定位</td><td>少束缚、保节奏</td><td>下踢减负，上踢强化</td><td>经典高频短蹼</td><td>高负荷力量蹼</td><td>高浮力、高推进长蹼</td><td>四泳姿 / 蛙泳专项</td></tr>
+<tr><td>固定方式</td><td>脚背套入；轻微吸附；无脚跟杯 / 无绑带</td><td>天然橡胶闭跟脚套</td><td>天然橡胶闭跟脚套</td><td>100% 硅胶人体工学脚套</td><td>天然橡胶闭跟脚套</td><td>闭趾脚套 + 可调跟带</td></tr>
+<tr><td>关键叶片结构</td><td>柔软轻量叶片；左右脚区分</td><td>Technique Channels + Fluid Separator + Flex Box</td><td>短叶片 + 顺应脚角度的 blade angle</td><td>Side rails + 专有 blade angle + 上踢抓水</td><td>长流线叶片</td><td>短宽椭圆、不对称叶片</td></tr>
+<tr><td>官方明确的动作作用</td><td>节奏、平衡、身体线；race-pace rhythm</td><td>下踢减轻股四头疲劳；上踢更多刺激腘绳肌 / 臀肌</td><td>更短、更快的踢腿；提高踝活动范围</td><td>从髋部起踢；上踢练后链</td><td>腿上浮；从髋部踢；延长踢腿</td><td>多方向推进；提高脚部动作速度与踝灵活性</td></tr>
+<tr><td>推进辅助*</td><td>低–中：轻度托举 + 顺滑推进</td><td>中</td><td>中</td><td>中</td><td><strong>最高：官方明确 maximum forward propulsion</strong></td><td>中</td></tr>
+<tr><td>浮力 / 托举</td><td>有，官方称 gentle lift</td><td>Tech Sheet 未强调</td><td>Tech Sheet 未强调</td><td>Tech Sheet 未强调</td><td><strong>最高：明确用于托腿、改善身体位置</strong></td><td>Tech Sheet 未强调</td></tr>
+<tr><td>腿部训练负荷*</td><td>低–中</td><td>中：负荷向完整上下踢重新分配</td><td>中–高</td><td><strong>高</strong></td><td>中–高：推进强，同时长叶片阻力也大</td><td>中</td></tr>
+<tr><td>踢腿节奏倾向</td><td>尽量保留原节奏</td><td>短蹼；更关注完整上下踢</td><td><strong>短、快</strong></td><td>力量 / 阻力导向，官方未规定具体踢频</td><td><strong>拉长踢腿</strong></td><td>多方向踢水 + 更快的脚部动作</td></tr>
+<tr><td>水动力干预*</td><td><strong>最低一档</strong></td><td>低–中</td><td>低–中</td><td>中–高：阻力存在感明显</td><td><strong>最高</strong></td><td>特殊：不是单纯强弱，而是改变推进方向</td></tr>
+<tr><td>踝 / 脚跟限制</td><td><strong>最少：脚跟、踝完全开放</strong></td><td>闭跟，官方称可限制过度跖屈</td><td>闭跟，官方称可限制过度跖屈</td><td>全脚套，强调贴合足型</td><td>闭跟，官方称可限制过度跖屈</td><td>可调跟带，允许脚更自然弯曲</td></tr>
+<tr><td>蛙泳</td><td>不是专项；官方 Tech Sheet 未像 <span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 那样明确列出蛙泳机制</td><td>不是专项</td><td>不是专项</td><td>不是专项</td><td>不是专项</td><td><strong>明确支持</strong></td></tr>
+<tr><td>最合适的训练</td><td>技术、配速、身体线、较长戴蹼组</td><td>Drill progression、踢腿完整性</td><td>速度、心肺、常规打腿</td><td>力量、冲刺、有氧 / 无氧高负荷</td><td>初学、体线、换气、髋部踢腿</td><td>蛙泳、四泳姿、IM</td></tr>
+<tr><td>最难替代的特点</td><td>无绑带 + 脚跟 / 踝完全开放</td><td>分水结构与上踢抓水区带来的上下踢分工</td><td>最简单直接的经典短蹼逻辑</td><td>侧轨 + 高阻力 + 上踢时的后链参与</td><td>最大浮力与最大前向推进</td><td>蛙泳也能有效推进的四泳姿设计</td></tr>
+<tr><td>尺码重点</td><td>按脚背围，不按鞋码；窄脚偏小、宽脚偏大</td><td>脚宽且卡码选大；否则可偏小求紧贴</td><td>脚套偏窄；卡码 / 脚宽选大</td><td>脚套偏窄；卡码 / 脚宽选大</td><td>卡码 / 脚宽选大</td><td>脚套偏窄；卡码 / 脚宽选大</td></tr>
+</tbody>
+</table></div>
+<div class="note">* 相对等级仅用于这六款之间选型。FINIS 没有公布统一的推进效率、阻力曲线、叶片刚度、踝关节力矩或 EMG 数据，因此不能把“高 / 低”理解成实验测量。</div>
+</div></section>
+<section id="spectrum"><div class="wrap">
+<div class="section-head"><h2>连续谱：看“脚蹼存在感”，不是看水平高低</h2><p>Tech Sheet 核对后，把原来的“动作自然度”改成“水动力干预”更准确。<span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 虽然负荷高，但官方叶片角度本身仍是按“脚的自然延伸”设计，不能简单说它动作最不自然。</p></div>
+<div class="spectrum-box">
+<div class="spectrum"><div class="spectrum-title"><span>水动力干预较少 / 脚蹼存在感低</span><span>浮力、推进或阻力干预更强</span></div><div aria-label="水动力干预连续谱" class="track">
+<div class="marker" style="left:8%"><span><span class="fin-label tiny-gap">SlipFin<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker alt" style="left:32%"><span><span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker" style="left:42%"><span><span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker alt" style="left:72%"><span><span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker" style="left:95%"><span><span class="fin-label tiny-gap">Long<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div>
+</div><div class="branch"><b><span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 仍然单独看。</b>它的关键不是“干预更强还是更弱”，而是把叶片受力方向扩展到蛙泳和其他泳姿。</div></div>
+<div class="spectrum"><div class="spectrum-title"><span>腿部训练负荷较低</span><span>腿部训练负荷更高</span></div><div aria-label="腿部训练负荷连续谱" class="track">
+<div class="marker" style="left:12%"><span><span class="fin-label tiny-gap">SlipFin<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker alt" style="left:34%"><span><span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker" style="left:48%"><span><span class="fin-label tiny-gap">Positive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker alt" style="left:62%"><span><span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker" style="left:76%"><span><span class="fin-label tiny-gap">Long<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div><div class="marker alt" style="left:95%"><span><span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></span></div>
+</div><div class="branch">这里比较的是<strong>腿要承担多少训练负荷</strong>，不是戴上以后谁最快。<span class="fin-label tiny-gap">Long<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 的推进很强，但长叶片阻力也大；<span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 则从一开始就把“让腿更累”写进产品定位。</div></div>
+<div aria-label="水动力干预与腿部训练负荷二维定位图" class="map">
+<div class="axis-y-title">腿部训练负荷 ↑</div><div class="axis-y"><span>高</span><span>低</span></div><div class="axis-x"><span>水动力干预低</span><span>水动力干预高</span></div>
+<div class="point" style="left:22%;bottom:38%"><span class="fin-label tiny-gap">SlipFin<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div class="point" style="left:38%;bottom:61%"><span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div class="point" style="left:46%;bottom:50%"><span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div class="point" style="left:70%;bottom:84%"><span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div class="point" style="left:89%;bottom:70%"><span class="fin-label tiny-gap">Long Floating<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div class="point special" style="left:59%;bottom:55%"><span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> · 四泳姿支线</div>
+</div>
+<div class="note">二维图是选型地图，不是实验坐标。横轴看脚蹼通过浮力、推进、阻力改变游泳状态的程度；纵轴看腿部训练负荷。</div>
+</div>
+</div></section>
+<section id="choose"><div class="wrap">
+<div class="section-head"><h2>落到购买：怎么选最省事</h2><p>如果已经知道自己主要练什么，可以直接按下面选；没必要因为型号多而把几双短蹼都买齐。</p></div>
+<div class="decision">
+<div class="panel"><h3>只买一双</h3>
+<div class="path"><span>技术和配速为主，想少束缚、少干预</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+<div class="path"><span>想要用途最广、逻辑最简单的常规短蹼</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+<div class="path"><span>Drill 多，尤其想把上踢和后链练出来</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">Z2 Gold Zoomers<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+<div class="path"><span>主要目的就是增加腿部负荷和力量</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">Edge Fins<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+<div class="path"><span>身体线还不稳定、腿容易沉、换气会失速</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">Long Floating Fins<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+<div class="path"><span>蛙泳 / IM 训练占比较高</span><span class="arrow">→</span><strong><span class="fin-label tiny-gap">Positive Drive Fins<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></strong></div>
+</div>
+<div class="panel"><h3>买两双：让功能拉开</h3>
+<div class="pair"><div><b>技术 + 力量</b><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div><b>自然辅助 + 经典短蹼</b><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div><b>初学到进阶</b><span class="fin-label tiny-gap">Long Floating<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> → <span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div><div><b>IM + 自由泳专项</b><span class="fin-label tiny-gap">Positive Drive<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="fin-label tiny-gap">SlipFin<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div></div>
+<div class="tradeoff" style="margin-top:14px"><b><span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>、<span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>、<span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 不应只按“软到硬”理解。</b><span class="fin-label tiny-gap">Zoomers<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 是短蹼高频；<span class="fin-label tiny-gap">Z2<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 是上下踢受力重新分配；<span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 是高阻力、髋部发力和后链参与。</div>
+</div>
+</div>
+</div></section>
+<section id="sources"><div class="wrap">
+<div class="section-head"><h2>资料来源与判断边界</h2><p>本版逐款核对了六份官方 Tech Sheet，并用当前产品页补充尺码和现行产品信息。连续谱和二维图是为了选型而做的相对分析。</p></div>
+<div class="method">
+<div class="panel"><h3>这页哪些是事实，哪些是判断</h3><div class="source-list">
+<div><strong>官方资料：</strong>叶片结构、材料、固定方式、推荐训练、泳姿、尺码和官方描述的动作效果。</div>
+<div><strong>横向判断：</strong>推进辅助、腿部训练负荷、水动力干预的相对位置。</div>
+<div><strong>不做的事：</strong>不虚构阻力数值、推进效率、肌肉激活百分比，也不把“限制 hyperflexion”直接等同于医学上的防伤结论。</div>
+<div><strong>关于 <span class="fin-label tiny-gap">SlipFin<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：</strong>“更自然、race-pace rhythm、gentle lift”来自其 Tech Sheet；具体贴合和高速转身体验仍会受足型与穿戴影响。</div>
+</div></div>
+<div class="panel"><h3>六份官方 Tech Sheet</h3><div class="source-list">
+<a href="https://www.finisswim.com/documents/TechSheets/FINIS_SlipFinPro_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">SlipFin Pro<img alt="SlipFin Pro" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.006-DeepPink-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/TechSheets/ZoomerGold_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">Zoomers Gold<img alt="Zoomers Gold" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.003-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/TechSheets/Z2GoldZoomers_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">Z2 Gold Zoomers<img alt="Z2 Gold Zoomers" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.004-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/TechSheets/Edge_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">Edge<img alt="Edge Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.050-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/TechSheets/LongFloatingFins_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">Long Floating Fins<img alt="Long Floating Fins" class="fin-mini" src="https://www.finisswim.com/images/products/1.05.037-BlackGreen.XXXL-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/TechSheets/PositiveDriveFins_TechSheet.pdf" rel="noopener" target="_blank"><span class="fin-label tiny-gap">Positive Drive Fins<img alt="Positive Drive Fins" class="fin-mini" src="https://www.finisswim.com/images/products/2.35.100-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> Tech Sheet ↗</a>
+<a href="https://www.finisswim.com/documents/ComparisonGuides/TrainingFins_ComparisonGuide.pdf" rel="noopener" target="_blank">Training Fins Comparison Guide ↗</a>
+<a href="https://www.finisswim.com/shop/training-gear/training-fins" rel="noopener" target="_blank">FINIS 当前 Training Fins 产品目录 ↗</a>
+</div></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">FINIS 成人训练脚蹼选型整理 · Tech Sheet 核查版 · 2026-08-23。产品图片版权归 FINIS 所有，本页仅用于训练器材比较。</div></footer>
+<script>
+  const buttons=[...document.querySelectorAll('.filterbar button')];const cards=[...document.querySelectorAll('.card')];
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.filter;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));cards.forEach(card=>{const goals=card.dataset.goals.split(/\s+/);card.classList.toggle('dim',key!=='all'&&!goals.includes(key));});}));
+</script>
+</body></html>

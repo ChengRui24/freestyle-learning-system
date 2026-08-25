@@ -7,7 +7,8 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MD = (ROOT / "source.md").read_text(encoding="utf-8")
+LEARN = ROOT / "learn"
+MD = (LEARN / "source.md").read_text(encoding="utf-8")
 
 
 def split_table(block: str) -> list[list[str]]:
@@ -162,8 +163,8 @@ def main() -> None:
         "chains": extract_chains(),
     }
     payload = json.dumps(data, ensure_ascii=False, indent=2)
-    (ROOT / "data.json").write_text(payload, encoding="utf-8")
-    (ROOT / "data.js").write_text(
+    (LEARN / "data.json").write_text(payload, encoding="utf-8")
+    (LEARN / "data.js").write_text(
         "window.FS_DATA = " + payload + ";\n", encoding="utf-8"
     )
     print(

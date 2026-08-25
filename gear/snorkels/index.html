@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FINIS 游泳呼吸管产品线与配件完整对比</title>
+<style>
+:root{
+  --bg:#f6f6f3; --card:#ffffff; --text:#15191c; --muted:#667079;
+  --line:#dfe4e8; --soft:#eef2f4; --accent:#111; --warn:#755f28;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  line-height:1.62;
+}
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:28px 24px 80px}
+.hero{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:38px 42px;margin-bottom:22px
+}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:40px;line-height:1.15;margin:8px 0 12px}
+.lead{font-size:18px;max-width:880px;color:#434a50;margin:0}
+.note{font-size:13px;color:var(--muted)}
+.section{margin-top:24px}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:0 0 12px}
+h2{font-size:26px;margin:0}
+h3{font-size:19px;margin:0}
+.sub{color:var(--muted);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.product-mini{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;
+  min-height:250px;display:flex;flex-direction:column
+}
+.product-mini img{width:100%;height:150px;object-fit:contain;background:#fff;border-radius:12px}
+.product-mini h3{font-size:17px;margin-top:8px}
+.tag{display:inline-flex;align-items:center;font-size:12px;padding:3px 8px;border-radius:999px;background:var(--soft);margin-top:6px;width:max-content}
+.price{font-size:13px;color:var(--muted);margin-top:auto;padding-top:8px}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;overflow:hidden}
+th,td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:11px 12px;vertical-align:top;text-align:left}
+th{background:#f1f4f5;font-weight:650}
+tr:first-child th{border-top:1px solid var(--line)}
+th:first-child,td:first-child{border-left:1px solid var(--line)}
+tr:first-child th:first-child{border-top-left-radius:12px}
+tr:first-child th:last-child{border-top-right-radius:12px}
+tr:last-child td:first-child{border-bottom-left-radius:12px}
+tr:last-child td:last-child{border-bottom-right-radius:12px}
+.namecell{display:flex;align-items:center;gap:8px;min-width:195px}
+.namecell img{width:52px;height:52px;object-fit:contain;border-radius:8px;background:#fff}
+.product-detail{
+  display:grid;grid-template-columns:290px 1fr;gap:24px;background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:22px;margin-bottom:14px
+}
+.p-visual{border-radius:16px;background:#fafbfb;padding:14px;display:flex;align-items:center;justify-content:center;min-height:280px}
+.p-visual img{width:100%;max-height:260px;object-fit:contain}
+.p-title{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.p-title img{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);border-radius:12px;background:#fff}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}
+.meta span{background:var(--soft);border-radius:999px;padding:4px 9px;font-size:12px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{background:#f7f9fa;border-radius:14px;padding:14px}
+.box b{display:block;margin-bottom:5px}
+.feature{
+  display:grid;grid-template-columns:220px 1fr;gap:18px;border:1px solid var(--line);
+  border-radius:16px;overflow:hidden;background:#fff
+}
+.feature img{width:100%;height:210px;object-fit:cover;background:#fff}
+.feature .copy{padding:18px 18px 18px 0}
+.feature .copy p{margin:7px 0;color:#454c52}
+.accessory{
+  display:grid;grid-template-columns:130px 1fr;gap:16px;align-items:center;
+  border:1px solid var(--line);background:#fff;border-radius:16px;padding:14px
+}
+.accessory img{width:120px;height:120px;object-fit:contain;border-radius:12px;background:#fafbfb}
+.compat{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.compat span{font-size:11px;padding:3px 7px;border-radius:999px;background:var(--soft)}
+.callout{
+  border-left:4px solid #262b2f;background:#eceff1;border-radius:8px;padding:14px 16px;margin:14px 0
+}
+.warn{border-left-color:#92752d;background:#f7f2e6}
+.choose{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.choose .c{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.choose .c strong{display:flex;align-items:center;gap:8px}
+.choose img{width:42px;height:42px;object-fit:contain;border-radius:8px}
+.refs{font-size:13px;color:#596168}
+.refs li{margin:5px 0}
+
+.refs a{text-decoration:underline;text-underline-offset:2px}
+.why-hero{
+  display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch
+}
+.why-core{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px
+}
+.why-core .big{
+  font-size:25px;line-height:1.38;font-weight:720;letter-spacing:-.015em;
+  max-width:760px;margin:5px 0 12px
+}
+.why-core p{margin:7px 0;color:#454c52}
+.why-visual{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+  display:flex;flex-direction:column;justify-content:center;min-height:270px
+}
+.why-visual img{width:100%;height:190px;object-fit:contain}
+.why-visual .caption{font-size:12px;color:var(--muted);margin-top:8px}
+.purpose-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px
+}
+.purpose{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px
+}
+.purpose .num{
+  font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.08em;margin-bottom:5px
+}
+.purpose h3{font-size:16px;margin-bottom:5px}
+.purpose p{font-size:13px;color:#525a61;margin:0}
+.train-pattern{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px
+}
+.train-pattern .step{
+  background:#f7f9fa;border-radius:14px;padding:14px;border:1px solid var(--line)
+}
+.train-pattern b{display:block;font-size:13px;margin-bottom:4px}
+.train-pattern span{font-size:12px;color:var(--muted)}
+.do-dont{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px
+}
+.do-dont .panel{border-radius:16px;padding:18px;border:1px solid var(--line);background:#fff}
+.do-dont ul{margin:8px 0 0;padding-left:19px}
+.do-dont li{margin:7px 0;font-size:13px;color:#444c52}
+.limit-table td:first-child{font-weight:650;width:220px}
+.mini-products{display:flex;gap:6px;align-items:center;margin-top:10px}
+.mini-products img{width:42px;height:42px;object-fit:contain;border:1px solid var(--line);border-radius:9px;background:#fff}
+@media(max-width:900px){
+  .why-hero{grid-template-columns:1fr}
+  .purpose-grid{grid-template-columns:repeat(2,1fr)}
+  .train-pattern{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .purpose-grid,.train-pattern,.do-dont{grid-template-columns:1fr}
+  .why-core .big{font-size:21px}
+}
+
+@media(max-width:900px){
+  .grid4,.choose{grid-template-columns:repeat(2,1fr)}
+  .product-detail{grid-template-columns:1fr}
+  .p-visual{min-height:220px}
+}
+@media(max-width:640px){
+  .wrap{padding:16px 12px 60px}
+  .hero{padding:26px 22px}
+  h1{font-size:31px}
+  .grid4,.grid2,.choose,.cols{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr}
+  .feature img{height:220px}
+  .feature .copy{padding:0 16px 16px}
+  table{font-size:12px}
+  th,td{padding:8px}
+  .namecell{min-width:150px}
+}
+</style>
+<link rel="stylesheet" href="../../css/site.css">
+</head>
+<body class="page-snorkels">
+<header class="site-bar">
+  <a class="site-brand" href="../../">成人游泳训练</a>
+  <nav aria-label="站点">
+    <a href="../../learn/">学习</a>
+    <a href="./" aria-current="page">呼吸管</a>
+    <a href="../paddles/">划手掌</a>
+    <a href="../fins/">脚蹼</a>
+  </nav>
+</header>
+<div class="topbar"><div class="topbar-inner"><div class="brand">FINIS · SNORKELS</div><nav aria-label="页面导航"><a href="#why">为什么使用</a><a href="#overview">产品总览</a><a href="#compare">核心对比</a><a href="#details">逐款分析</a><a href="#features">特殊结构</a><a href="#accessories">配件</a><a href="#compat">兼容矩阵</a><a href="#choose">怎么选</a></nav></div></div>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">FINIS SNORKELS · 成人训练选购</div>
+    <h1>FINIS 游泳呼吸管产品线与配件完整对比</h1>
+    <p class="lead">把四款成人主力呼吸管、两类功能配件和常用维修件放在同一套逻辑里看。重点不是“哪款更高级”，而是固定方式、管道几何、排水结构和附件会怎样改变训练体验。</p>
+    <p class="note">资料与图片来自 FINIS 官方产品页 / Tech Sheet。价格为 FINIS 美国官网页面在 2026-08-25 的标价，仅用于产品定位参考。</p>
+    <p class="site-cross">训练用法见学习体系 <a href="../../learn/#stage-A5">A5 划臂基础</a>、<a href="../../learn/#drill-D-BR07">D-BR07 正面呼吸管完整游</a>。先隔离换气变量，再脱掉呼吸管复测。</p>
+  </section>
+
+
+  <section class="section" id="why">
+    <div class="section-title">
+      <h2>为什么要使用呼吸管训练</h2>
+      <span class="sub">先理解训练目的，再选具体型号</span>
+    </div>
+
+    <div class="why-hero">
+      <div class="why-core">
+        <div class="eyebrow">THE CORE IDEA</div>
+        <div class="big">呼吸管最重要的作用，不是“让你不用学换气”，而是暂时把换气从完整动作链里拆出去。</div>
+        <p>自由泳换气同时涉及头部转动、身体滚转、划臂时序、吸气时机和身体线型。对成人学习者来说，一旦“先要抢到一口气”成为最高优先级，其他技术动作很容易一起变形。中置呼吸管允许脸持续朝下，在保持正常游进的同时，把注意力集中到一个更小的技术目标上。</p>
+        <p>因此它更像一个<strong>变量隔离工具</strong>：先体验“不被换气打断时，正确动作是什么感觉”，再脱掉呼吸管，把这种感觉迁移回正常游泳。</p>
+        <div class="mini-products" aria-label="FINIS snorkel examples">
+          <img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="Stability">
+          <img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="Original">
+          <img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="Glide">
+          <img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="Freestyle">
+        </div>
+      </div>
+      <div class="why-visual">
+        <img src="https://www.finisswim.com/images/products/1.05.021-Black-Usage.Main-02.jpg?resizeh=500&resizeid=13&resizew=500" alt="使用 FINIS Stability Snorkel 进行游泳训练">
+        <div class="caption">中置训练呼吸管让头部无需周期性转动取气，便于连续观察身体线型、划水和滚转。图：FINIS 官方产品使用图。</div>
+      </div>
+    </div>
+
+    <div class="purpose-grid">
+      <div class="purpose">
+        <div class="num">01 · 技术隔离</div>
+        <h3>把注意力留给划水动作</h3>
+        <p>不必每几次划臂就中断注意力去找空气，更容易观察入水、前伸、抱水、推水、回臂以及手臂路径。</p>
+      </div>
+      <div class="purpose">
+        <div class="num">02 · 头位与身体线型</div>
+        <h3>先体验“头不动”时的身体姿态</h3>
+        <p>减少抬头或转头造成的髋腿下沉，让学习者更清楚地感受中立头位、身体水平和低阻力姿态。</p>
+      </div>
+      <div class="purpose">
+        <div class="num">03 · 对称与滚转</div>
+        <h3>排除单侧换气的干扰</h3>
+        <p>单侧呼吸可能让左右动作出现差异。呼吸管可以先观察左右划水、肩髋滚转和入水位置是否对称。</p>
+      </div>
+      <div class="purpose">
+        <div class="num">04 · 专项动作</div>
+        <h3>让练习动作可以持续游起来</h3>
+        <p>适合夹浮漂划手、划手掌、脚蹼、sculling（划水感练习）、单臂或其他需要把注意力集中在局部动作的练习。</p>
+      </div>
+      <div class="purpose">
+        <div class="num">05 · 成人学习</div>
+        <h3>降低“必须马上吸到气”的干扰</h3>
+        <p>部分成人初学者一到换气就会加速、抬头或动作僵硬。呼吸管可以先让动作学习和呼吸学习分开，再逐步重新合并。</p>
+      </div>
+      <div class="purpose">
+        <div class="num">06 · 连续有氧</div>
+        <h3>技术练习不一定只能做短距离</h3>
+        <p>在无需频繁停下来处理换气的情况下，可以把某个技术目标保持更长距离，在较稳定的有氧强度下重复动作。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>呼吸管训练的特点</h3>
+      <div class="train-pattern">
+        <div class="step"><b>① 去掉一个变量</b><span>先暂时移除侧向换气或抬头吸气。</span></div>
+        <div class="step"><b>② 聚焦一个动作</b><span>一次只盯头位、入水、抱水、滚转等一个主要目标。</span></div>
+        <div class="step"><b>③ 建立正确感觉</b><span>在重复中记住更稳定、对称、低阻的动作感觉。</span></div>
+        <div class="step"><b>④ 脱掉呼吸管验证</b><span>恢复正常呼吸，看技术是否仍然能够保持。</span></div>
+      </div>
+      <div class="callout" style="margin-bottom:0"><b>最推荐的使用逻辑：</b>呼吸管游一段 → 不带呼吸管游一段 → 比较动作感觉 → 再调整。USMS 在自由泳换气教学中也强调，把带呼吸管和不带呼吸管的游进交替进行，更有利于把“不受呼吸干扰的动作”迁移到正常换气中。</div>
+    </div>
+
+    <div class="card" style="margin-top:14px;overflow:auto">
+      <h3 style="margin-bottom:10px">它适合解决什么，不适合替代什么</h3>
+      <table class="limit-table">
+        <tr><th>用途</th><th>适合用呼吸管</th><th>为什么</th></tr>
+        <tr><td>头位 / 身体线型</td><td><b>非常适合</b></td><td>减少转头吸气造成的姿态变化，可以持续感受中立头位和身体平衡。</td></tr>
+        <tr><td>划水路径 / 抱水</td><td><b>非常适合</b></td><td>注意力不被换气周期打断，适合低速精细动作和水感练习。</td></tr>
+        <tr><td>左右对称 / 滚转</td><td><b>适合</b></td><td>暂时去掉惯用呼吸侧，更容易暴露左右划水和滚转差异。</td></tr>
+        <tr><td>腿部专项 / Streamline</td><td><b>适合</b></td><td>无需举板抬头也能持续呼吸，可更接近完整游姿的身体线型。</td></tr>
+        <tr><td>正常侧向换气技术</td><td><b>不能替代</b></td><td>呼吸管恰恰去掉了转头、吸气时机和呼气—吸气配合，因此最终必须回到无呼吸管练习。</td></tr>
+        <tr><td>开放水域观察 / sighting</td><td><b>不能替代</b></td><td>开放水域需要抬头观察、方向控制、波浪中取气等专项能力。</td></tr>
+        <tr><td>“练肺活量 / 模拟高原”</td><td><b>不应作为主要目的</b></td><td>管道会增加一定呼吸阻力和额外死腔，但这与真正降低吸入氧分压的高海拔训练不是一回事。</td></tr>
+      </table>
+    </div>
+
+    <div class="do-dont">
+      <div class="panel">
+        <h3>使用时这样做</h3>
+        <ul>
+          <li><b>先在浅水区适应。</b>站立状态先练习只用嘴通过管道平稳吸气和呼气，再开始短距离游。</li>
+          <li><b>从低强度、短距离开始。</b>先把注意力放在呼吸节奏和清管，不要第一次就做高强度长组。</li>
+          <li><b>呼气保持连续。</b>不要因为不用转头而无意识长时间憋气；让呼吸节奏自然、可持续。</li>
+          <li><b>一次只设置一个技术目标。</b>例如这一趟只观察头位，下一趟只观察入水交叉，不要同时修五六个问题。</li>
+          <li><b>带 / 不带交替。</b>用呼吸管建立感觉后立即脱掉验证，避免技术只在器材条件下成立。</li>
+          <li><b>进水先处理，不要硬吸。</b>管中进水时停止吸气，用有力呼气清管；不确定是否清空时可以停下或站立。</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>特别注意这些问题</h3>
+        <ul>
+          <li><b>它会掩盖换气问题。</b>长期只戴呼吸管可能让侧向换气时的抬头、转头过度、时序错误一直没有被训练。</li>
+          <li><b>呼吸感觉本来就会不同。</b>呼吸管增加额外气道容积（死腔）并可能增加呼吸功；不要把“更闷”自动理解成训练效果更好。</li>
+          <li><b>Cardio Cap 不等于高原训练。</b>缩小管口主要增加通气阻力；真正高海拔训练的核心是较低氧分压，两者机制不同。</li>
+          <li><b>出现明显不适立即停止。</b>头晕、异常气促、胸闷、恶心或无法顺畅清管时，应取下器材并恢复正常呼吸。</li>
+          <li><b>不要把呼吸管当安全装备。</b>它是泳池训练器材，不提供浮力，也不替代水中自救、开放水域判断或正常呼吸能力。</li>
+          <li><b>器材组合会提高负荷。</b>同时使用划手掌、阻力器材和呼吸限制附件时，应逐项增加，不要一次叠加全部负荷。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <b>关于“练肺”的证据要谨慎：</b>呼吸管确实增加额外死腔，部分呼出气体可能在下一次吸气时被重新吸入，从而改变通气需求；但一项针对休闲游泳者、采用更大额外死腔的 6 周研究，并没有发现吸气/呼气肌力或常规肺功能得到显著改善。因此，本页把 FINIS 呼吸管首先视为<strong>技术训练工具</strong>，而不是肺功能训练器。
+    </div>
+  </section>
+
+  <section class="section" id="overview">
+    <div class="section-title"><h2>产品线</h2><span class="sub">四款成人主力呼吸管</span></div>
+    <div class="grid4">
+      <div class="product-mini">
+        <img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="FINIS Stability Snorkel">
+        <h3>Stability Snorkel</h3><span class="tag">综合训练首选</span>
+        <p class="sub">无传统硬质额托、双带固定，强调稳定与低存在感。</p><div class="price">$48</div>
+      </div>
+      <div class="product-mini">
+        <img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="FINIS Original Swimmer's Snorkel">
+        <h3>Original Swimmer's Snorkel</h3><span class="tag">排水最省心</span>
+        <p class="sub">经典中置结构，底部单向排水阀是最大差异点。</p><div class="price">$42–45</div>
+      </div>
+      <div class="product-mini">
+        <img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="FINIS Glide Snorkel">
+        <h3>Glide Snorkel</h3><span class="tag">简化入门</span>
+        <p class="sub">传统额托、短管、无排水阀，定位为 introductory snorkel。</p><div class="price">$40</div>
+      </div>
+      <div class="product-mini">
+        <img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500" alt="FINIS Freestyle Snorkel">
+        <h3>Freestyle Snorkel</h3><span class="tag">自由泳专项纠错</span>
+        <p class="sub">强后弯管道对头位产生即时反馈，不是通用升级款。</p><div class="price">$42</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="section-title"><h2>核心对比</h2><span class="sub">从真正影响使用的结构变量看</span></div>
+    <div class="card" style="overflow:auto">
+      <table>
+        <tr>
+          <th>产品</th><th>定位</th><th>固定结构</th><th>管道几何</th><th>排水</th><th>动作约束</th><th>成人训练判断</th>
+        </tr>
+        <tr>
+          <td><div class="namecell"><img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><b>Stability</b></div></td>
+          <td>综合技术训练 / 长时间佩戴</td><td>Bracketless；软额头支撑 + 双硅胶带</td><td>贴近头部、低阻</td><td>无 Original 式底部排水阀</td><td>低</td><td><b>多数成人只买一个时优先</b></td>
+        </tr>
+        <tr>
+          <td><div class="namecell"><img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><b>Original</b></div></td>
+          <td>经典通用训练</td><td>传统额托 + 单头带</td><td>标准中置弯管</td><td><b>底部单向 purge valve</b></td><td>低</td><td>进水、翻滚转身、连续训练更省心</td>
+        </tr>
+        <tr>
+          <td><div class="namecell"><img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><b>Glide</b></div></td>
+          <td>入门 / 简化结构</td><td>传统额托 + 单头带</td><td>较短水动力管</td><td>无排水阀；短管降低清管负担</td><td>低</td><td>预算和简单易用优先</td>
+        </tr>
+        <tr>
+          <td><div class="namecell"><img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><b>Freestyle</b></div></td>
+          <td>自由泳专项头位训练</td><td>传统额托</td><td><b>管口明显向后弯</b></td><td>无 purge valve</td><td><b>高</b></td><td>明确纠正自由泳抬头时价值最大</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callout"><b>最关键的理解：</b>Stability 与 Freestyle 不是上下级。Stability 尽量减少器材对动作的干扰；Freestyle 则故意用器材制造反馈，迫使头位更低、更稳定。</div>
+  </section>
+
+  <section class="section" id="details">
+    <div class="section-title"><h2>逐款分析</h2><span class="sub">每一款都说明“它在改变什么”</span></div>
+
+    <article class="product-detail">
+      <div class="p-visual"><img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"></div>
+      <div>
+        <div class="p-title"><img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><div><h3>Stability Snorkel</h3><div class="sub">Bracketless™ Snorkel · SKU 1.05.021</div></div></div>
+        <div class="meta"><span>综合训练</span><span>双硅胶带</span><span>软额头支撑</span><span>5 档长度</span><span>可旋转咬嘴</span></div>
+        <p>核心变化在固定系统。FINIS 去掉传统硬质 Head Bracket，用贴合前额曲线的软支撑和双硅胶带分散压力，同时让管体更靠近头部。结果是：高速推墙、海豚腿和翻滚转身时更不容易左右晃动，长时间佩戴的额头压迫也更低。</p>
+        <div class="cols">
+          <div class="box"><b>适合</b>大量专项练习、夹浮漂划手、脚蹼、划手掌、长距离技术组；希望戴上以后尽量“忘记呼吸管存在”的成人。</div>
+          <div class="box"><b>注意</b>它没有 Original 的底部 purge valve；完全灌水后主要依靠向上吹水清管。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-detail">
+      <div class="p-visual"><img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"></div>
+      <div>
+        <div class="p-title"><img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><div><h3>Original Swimmer's Snorkel</h3><div class="sub">First Ever Center-Mount Snorkel · SKU 1.05.009</div></div></div>
+        <div class="meta"><span>经典通用</span><span>中置管</span><span>单向排水阀</span><span>多泳姿</span></div>
+        <p>经典 FINIS 中置训练管。它最大的实际优势不是“经典”，而是咬嘴下方的单向排水阀：进入底部的水可以从下方排出，减少每次都必须沿整根管子把水向上吹出的负担。</p>
+        <div class="cols">
+          <div class="box"><b>适合</b>初次正式使用呼吸管、频繁翻滚转身、长距离持续训练，或特别讨厌少量积水的人。</div>
+          <div class="box"><b>代价</b>传统硬质额托集中受力，长时间使用时存在感和额头压力高于 Stability。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-detail">
+      <div class="p-visual"><img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"></div>
+      <div>
+        <div class="p-title"><img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><div><h3>Glide Snorkel</h3><div class="sub">Technique & Training Snorkel · SKU 1.05.002</div></div></div>
+        <div class="meta"><span>入门</span><span>较短管体</span><span>无排水阀</span><span>多泳姿</span></div>
+        <p>Glide 与 Original 外形逻辑相近，但被简化为较短的管体并取消 purge valve。短管意味着内部空气柱和完全进水时需要排出的水量更少，因此 FINIS 将其定义为 introductory snorkel。</p>
+        <div class="cols">
+          <div class="box"><b>适合</b>第一次尝试泳池呼吸管、想要结构简单、预算优先，又不需要排水阀的人。</div>
+          <div class="box"><b>怎么理解</b>它不是“性能差的 Original”，而是用短管换取简单清管，用更少结构换取低门槛。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-detail">
+      <div class="p-visual"><img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"></div>
+      <div>
+        <div class="p-title"><img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500"><div><h3>Freestyle Snorkel</h3><div class="sub">Designed for Freestyle · SKU 1.05.001</div></div></div>
+        <div class="meta"><span>自由泳专项</span><span>后弯管口</span><span>即时头位反馈</span><span>动作约束高</span></div>
+        <p>Freestyle 的管口明显向头后方弯。正确低头位时管口仍能保持在水面；一旦抬头、下巴前伸或前额抬高，后弯管口更容易进入水中。它因此会把“头位错误”直接转化成“进水反馈”。</p>
+        <div class="cols">
+          <div class="box"><b>适合</b>已有基本自由泳能力，明确存在抬头、身体线型上翘、髋腿下沉等问题的人。</div>
+          <div class="box"><b>不适合</b>希望一根管覆盖蛙泳、蝶泳和大量通用练习的人；它的价值恰恰来自专项限制。</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" id="features">
+    <div class="section-title"><h2>特殊结构怎么工作</h2><span class="sub">用产品图直接看差异</span></div>
+    <div class="grid2">
+      <div class="feature">
+        <img src="https://www.finisswim.com/images/products/1.05.021-Black-Usage.Main-02.jpg?resizeh=500&resizeid=13&resizew=500" alt="">
+        <div class="copy"><h3>Stability：稳定来自“贴头 + 双带”</h3><p>双带把压力分散到更大区域；管体靠近头部，减少水流作用在长杠杆上的扭矩。它解决的是器材晃动和额头压迫，不是通过“限制动作”纠错。</p></div>
+      </div>
+      <div class="feature">
+        <img src="https://www.finisswim.com/images/products/1.05.009-Sr-Usage.Main-02.jpg?resizeh=500&resizeid=13&resizew=500" alt="">
+        <div class="copy"><h3>Original：底部排水阀让少量积水直接下排</h3><p>咬嘴下方的 purge valve 允许水从底部排出。对翻滚转身、连续训练或容易有少量进水的人，它比“每次都把整根管吹空”更省心。</p></div>
+      </div>
+      <div class="feature">
+        <img src="https://www.finisswim.com/images/products/1.05.001-Yellow-Usage.Main-03.jpg?resizeh=500&resizeid=13&resizew=500" alt="">
+        <div class="copy"><h3>Freestyle：抬头会让后弯管口更容易下沉</h3><p>这是故意设计的动作约束。它把错误头位放大成即时进水反馈，所以更接近专项纠错器，而不是纯粹的“免转头呼吸工具”。</p></div>
+      </div>
+      <div class="feature">
+        <img src="https://www.finisswim.com/images/products/1.05.057-Usage.Main-3.jpg?resizeh=500&resizeid=13&resizew=500" alt="">
+        <div class="copy"><h3>Dry Top：入水时浮子上升关闭管口</h3><p>内部浮子在管口没入水中时上升并封闭进水通道，重新出水后下降恢复通气。它主要改变的是“进水风险”，而不是动作技术本身。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="accessories">
+    <div class="section-title"><h2>功能配件与维修件</h2><span class="sub">哪些真的改变训练，哪些只是延长使用寿命</span></div>
+    <div class="grid2">
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.057-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Snorkel Dry Top · $22</h3><p class="sub">浮子式干式管口。下潜时自动关闭，重新露出水面后恢复通气。</p>
+        <div class="compat"><span>Original</span><span>Glide</span><span>Original Jr</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.022-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Snorkel Cardio Cap · $6</h3><p class="sub">缩小通气开口，增加吸气与呼气阻力。更准确地说是“呼吸阻力训练”，不等同于真正高海拔暴露。</p>
+        <div class="compat"><span>Original</span><span>Glide</span><span>Original Jr</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.017-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Head Bracket Replacement · $15</h3><p class="sub">传统额托总成，TPR 额垫、硅胶带、侧面调节夹和管体固定环。</p>
+        <div class="compat"><span>Original</span><span>Glide</span><span>Freestyle</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.018-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Head Bracket Replacement Clip Set · $4</h3><p class="sub">Original Swimmer's Snorkel 的额托夹片维修件。</p>
+        <div class="compat"><span>Original</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.010.101-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Purge Valve Replacement · $5</h3><p class="sub">Original 系列底部单向排水阀。硅胶阀座让水向外排出，同时减少水进入咬嘴。</p>
+        <div class="compat"><span>Original Adult</span><span>Jr</span><span>Youth</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.032-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Stability Replacement Strap · $17</h3><p class="sub">Stability 专用双带系统维修件。</p>
+        <div class="compat"><span>Stability</span></div></div>
+      </div>
+      <div class="accessory">
+        <img src="https://www.finisswim.com/images/products/1.05.083-Clear-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">
+        <div><h3>Stability Replacement Mouthpiece · $15</h3><p class="sub">Stability 专用透明咬嘴维修件。</p>
+        <div class="compat"><span>Stability</span></div></div>
+      </div>
+    </div>
+    <div class="callout warn"><b>关于 Cardio Cap：</b>FINIS 官方使用“hypoxic / replicates higher altitude workouts”等表述，但限制管口主要增加的是通气阻力和呼吸肌负荷，并不会像真正高海拔那样降低环境氧分压。普通成人技术训练不需要默认使用。</div>
+  </section>
+
+  <section class="section" id="compat">
+    <div class="section-title"><h2>兼容矩阵</h2><span class="sub">购买配件前先看这一张</span></div>
+    <div class="card" style="overflow:auto">
+      <table>
+        <tr><th>配件 / 维修件</th><th>Stability</th><th>Original</th><th>Glide</th><th>Freestyle</th></tr>
+        <tr><td>Snorkel Dry Top</td><td>—</td><td><b>✓</b></td><td><b>✓</b></td><td>—</td></tr>
+        <tr><td>Snorkel Cardio Cap</td><td>—</td><td><b>✓</b></td><td><b>✓</b></td><td>—</td></tr>
+        <tr><td>Head Bracket Replacement</td><td>—</td><td><b>✓</b></td><td><b>✓</b></td><td><b>✓</b></td></tr>
+        <tr><td>Head Bracket Clip Set</td><td>—</td><td><b>✓</b></td><td>—</td><td>—</td></tr>
+        <tr><td>Purge Valve Replacement</td><td>—</td><td><b>✓</b></td><td>—</td><td>—</td></tr>
+        <tr><td>Stability Replacement Strap</td><td><b>✓</b></td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>Stability Replacement Mouthpiece</td><td><b>✓</b></td><td>—</td><td>—</td><td>—</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="choose">
+    <div class="section-title"><h2>成人怎么选</h2><span class="sub">按实际训练目的，不按价格排序</span></div>
+    <div class="choose">
+      <div class="c"><strong><img src="https://www.finisswim.com/images/products/1.05.021-Black-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">只买一个</strong><p><b>Stability</b>。综合稳定、舒适度和训练覆盖面最均衡。</p></div>
+      <div class="c"><strong><img src="https://www.finisswim.com/images/products/1.05.009-Sr-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">特别怕进水</strong><p><b>Original</b>。底部排水阀是最明确的结构优势；还可加 Dry Top。</p></div>
+      <div class="c"><strong><img src="https://www.finisswim.com/images/products/1.05.002-Mint-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">第一次试用</strong><p><b>Glide</b>。短管、结构简单；如果与 Original 差价很小，也可以直接买 Original。</p></div>
+      <div class="c"><strong><img src="https://www.finisswim.com/images/products/1.05.001-Studio.Main-01.jpg?resizeh=500&resizeid=13&resizew=500">纠正自由泳抬头</strong><p><b>Freestyle</b>。用后弯管口把错误头位转化为进水反馈。</p></div>
+    </div>
+    <div class="callout">
+      <b>一句话连续谱：</b>Glide = 简化入门；Original = 排水友好；Stability = 低存在感综合训练；Freestyle = 高反馈专项纠错。
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>来源</h2><span class="sub">官方产品页 / 官方资料</span></div>
+    <div class="card refs">
+      <ol>
+        <li><a href="https://www.finisswim.com/shop/training-gear/snorkels" target="_blank">FINIS Snorkels 产品线</a></li>
+        <li><a href="https://www.finisswim.com/Stability-Snorkel" target="_blank">Stability Snorkel</a></li>
+        <li><a href="https://www.finisswim.com/Swimmers-Snorkel" target="_blank">Original Swimmer's Snorkel</a></li>
+        <li><a href="https://www.finisswim.com/Glide-Snorkel" target="_blank">Glide Snorkel</a></li>
+        <li><a href="https://www.finisswim.com/Freestyle-Snorkel" target="_blank">Freestyle Snorkel</a></li>
+        <li><a href="https://www.finisswim.com/Dry-Top-Attachment" target="_blank">Snorkel Dry Top</a></li>
+        <li><a href="https://www.finisswim.com/Cardio-Cap" target="_blank">Snorkel Cardio Cap</a></li>
+        <li><a href="https://www.finisswim.com/Replacement-Head-Bracket" target="_blank">Head Bracket Replacement</a></li>
+        <li><a href="https://www.finisswim.com/Replacement-Purge-Valve" target="_blank">Purge Valve Replacement</a></li>
+        <li><a href="https://www.finisswim.com/Stability-Snorkel-Replacement-Strap" target="_blank">Stability Replacement Strap</a></li>
+        <li><a href="https://www.finisswim.com/Stability-Snorkel-Replacement-Mouthpiece" target="_blank">Stability Replacement Mouthpiece</a></li>
+
+        <li><a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/why-swimmers-need-to-use-a-snorkel" target="_blank">U.S. Masters Swimming — Why Swimmers Need to Use a Snorkel (2024)</a></li>
+        <li><a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/five-ways-pool-based-snorkel-training-can-make-you-a-better-open-water-swimmer" target="_blank">U.S. Masters Swimming — Five Ways Pool-Based Snorkel Training Can Make You a Better Open Water Swimmer</a></li>
+        <li><a href="https://www.usms.org/fitness-and-training/guides/freestyle/breathing" target="_blank">U.S. Masters Swimming — Freestyle Breathing Guide</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/12740732/" target="_blank">Toklu et al. — Ventilatory and metabolic response to rebreathing the expired air in the snorkel</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/32784446/" target="_blank">Szczepan et al. — Swimming Training with Added Respiratory Dead Space and Respiratory Muscle/Pulmonary Function</a></li>
+      </ol>
+      <p>本页面中的产品图直接引用 FINIS 官方产品页图片地址，因此打开页面时需要联网才能加载这些图片。</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>

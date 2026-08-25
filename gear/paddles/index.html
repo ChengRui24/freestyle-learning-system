@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FINIS 划手掌（手蹼）介绍与对比｜2026-08-24</title>
+<style>
+  :root{
+    --bg:#f6f6f3;--paper:#fff;--ink:#171717;--muted:#60656b;--line:#d9dcdf;--soft:#eef0f2;
+    --accent:#f2c300;--accent-ink:#252100;--warn:#fff7d4;--danger:#fff0ee;--good:#eef7ef;
+    --radius:12px;--shadow:0 1px 3px rgba(0,0,0,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.58;font-size:15px}
+  a{color:#1c4f77;text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1220px;margin:0 auto;padding:18px 20px 60px}
+  main{min-width:0}
+  .hero,.section,.product{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .hero{padding:22px 24px;margin-bottom:14px}
+  .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#666;font-weight:700}
+  h1{font-size:30px;line-height:1.2;margin:7px 0 9px;letter-spacing:-.02em}
+  h2{font-size:21px;margin:0 0 10px;line-height:1.25}
+  h3{font-size:17px;margin:0 0 8px;line-height:1.3}
+  h4{font-size:14px;margin:11px 0 5px}
+  p{margin:6px 0}
+  .lead{font-size:16px;color:#34383c;max-width:900px}
+  .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .chip{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;background:var(--soft);font-size:12px;color:#40454a;border:1px solid #e0e3e6}
+  .chip.accent{background:#fff7ce;border-color:#ead36a;color:#5c4e00}
+  .section{padding:18px 20px;margin-bottom:14px}
+  .kicker{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:2px 7px;font-weight:800;font-size:12px;border-radius:4px;margin-bottom:7px}
+  .notice{padding:10px 12px;border-radius:8px;background:var(--warn);border:1px solid #ebd47d;margin:8px 0}
+  .notice.red{background:var(--danger);border-color:#e7c6bf}
+  .notice.green{background:var(--good);border-color:#cbdccb}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .mini{border:1px solid var(--line);border-radius:9px;padding:11px 12px;background:#fcfcfc}
+  .mini b{display:block;margin-bottom:2px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+  th,td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+  th{background:#f6f7f8;font-weight:700;white-space:nowrap}
+  .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}
+  .table-wrap table{margin:0;min-width:900px}
+  .tag{display:inline-block;padding:2px 6px;border-radius:5px;background:#f0f1f2;margin:1px 2px 1px 0;font-size:11px;white-space:nowrap}
+  .tag.yellow{background:#fff2a8}.tag.red{background:#ffe1dc}.tag.green{background:#e5f5e7}.tag.blue{background:#e3f0fa}
+  .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px}
+  .flow .step{padding:10px 8px;border:1px solid var(--line);border-radius:8px;background:#fafafa;min-height:92px}
+  .flow .phase{font-size:11px;color:#6a6f73;font-weight:700;text-transform:uppercase}
+  .flow b{display:block;margin:2px 0 3px;font-size:13px}
+  .arrow-note{font-size:12px;color:#63686d}
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px}
+  button.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;cursor:pointer;font-size:12px}
+  button.filter.active{background:#222;color:#fff;border-color:#222}
+  .products{display:grid;grid-template-columns:1fr;gap:12px}
+  .product{padding:17px 18px;position:relative}
+  .product.hidden{display:none}
+  .product-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+  .product .sub{color:#666;font-size:13px;margin-top:-2px}
+  .family{font-size:11px;font-weight:800;letter-spacing:.05em;color:#605000;background:#fff0a3;border:1px solid #ead77b;border-radius:5px;padding:3px 6px}
+  .product-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:12px;margin-top:10px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}
+  .fact{background:#f7f8f9;border:1px solid #e5e7e9;border-radius:7px;padding:7px 8px}
+  .fact span{display:block;color:#73777b;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .fact b{font-size:12.5px}
+  .bullets{margin:5px 0 5px 18px;padding:0}.bullets li{margin:3px 0}
+  .mechanism{border-left:4px solid var(--accent);padding:8px 10px;background:#faf9f2;margin:7px 0}
+  .source-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;padding-top:8px;border-top:1px dashed var(--line)}
+  .source-row a{font-size:11.5px;background:#f4f5f6;border:1px solid #e1e3e5;padding:3px 6px;border-radius:5px}
+  .pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .pair{border:1px solid var(--line);border-radius:9px;padding:11px 12px;background:#fcfcfc}
+  .pair h3{font-size:15px}
+  .decision{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}
+  .decision .question{padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#fafafa}
+  .decision .answer{font-weight:700;color:#1e2327}
+  .evidence{font-size:13px}
+  .confidence{font-size:11px;font-weight:700;padding:2px 6px;border-radius:5px;white-space:nowrap}
+  .high{background:#e5f5e7}.mid{background:#fff0b6}.low{background:#ffe2dd}
+  .footnotes{font-size:12.5px;color:#4f555a}
+  .footnotes li{margin:5px 0}
+  .small{font-size:12px;color:#656a6f}
+  code{background:#f2f3f4;padding:1px 4px;border-radius:4px}
+  .print-only{display:none}
+  @media (max-width:920px){.grid2,.grid3,.product-grid,.pair-grid,.decision{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr 1fr}.hero{padding:18px}.section,.product{padding:15px}h1{font-size:25px}}
+  @media print{body{background:#fff;font-size:12px}.wrap{display:block;max-width:none;padding:0}.topbar,.filters{display:none}.hero,.section,.product{box-shadow:none;border:1px solid #ccc;break-inside:avoid}.product{break-inside:auto}.source-row a{color:#000}.print-only{display:inline}}
+
+  /* Product-image system: official FINIS studio images */
+  .pname{display:inline-flex;align-items:center;gap:4px;vertical-align:middle;white-space:nowrap}
+  .pname-thumb{width:24px;height:24px;object-fit:contain;background:#fff;border:1px solid #e4e6e8;border-radius:5px;vertical-align:middle;box-shadow:0 1px 1px rgba(0,0,0,.03)}
+  h2 .pname-thumb,h3 .pname-thumb{width:28px;height:28px;border-radius:6px}
+  .visual-index{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:10px}
+  .visual-card{border:1px solid var(--line);border-radius:10px;background:#fbfbfb;padding:10px;display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;align-items:center;min-height:142px}
+  .visual-card img{width:118px;height:118px;object-fit:contain;background:#fff;border-radius:8px;border:1px solid #e8eaec}
+  .visual-card h3{margin-bottom:4px;font-size:15px}.visual-card p{font-size:12.5px;color:#585e63;margin:3px 0}.visual-card .visual-role{font-size:11px;font-weight:800;letter-spacing:.03em;color:#5a4b00;background:#fff1ad;border:1px solid #ead57d;border-radius:4px;padding:2px 5px;display:inline-block;margin-top:4px}
+  .product-visual{margin:0 0 10px;padding:10px;border:1px solid var(--line);border-radius:9px;background:#fafafa;text-align:center}
+  .product-visual img{display:block;width:min(100%,280px);height:240px;object-fit:contain;margin:0 auto;background:#fff;border-radius:8px;border:1px solid #e6e8ea}
+  .product-visual figcaption{margin-top:6px;font-size:11.5px;color:#686e73;text-align:left;line-height:1.45}
+  .product-visual .look-for{display:block;color:#2e3337;font-weight:700;margin-bottom:2px}
+  .img-failed{visibility:hidden}
+  @media (max-width:920px){.visual-index{grid-template-columns:1fr 1fr}.visual-card{grid-template-columns:92px minmax(0,1fr);min-height:110px}.visual-card img{width:92px;height:92px}.product-visual img{height:220px}}
+  @media (max-width:600px){.visual-index{grid-template-columns:1fr}.visual-card{grid-template-columns:96px minmax(0,1fr)}.visual-card img{width:96px;height:96px}.pname-thumb{width:22px;height:22px}h2 .pname-thumb,h3 .pname-thumb{width:25px;height:25px}}
+</style>
+<link rel="stylesheet" href="../../css/site.css"/>
+</head>
+<body class="page-paddles">
+<header class="site-bar">
+  <a class="site-brand" href="../../">成人游泳训练</a>
+  <nav aria-label="站点">
+    <a href="../../learn/">学习</a>
+    <a href="../snorkels/">呼吸管</a>
+    <a href="./" aria-current="page">划手掌</a>
+    <a href="../fins/">脚蹼</a>
+  </nav>
+</header>
+<div class="topbar"><div class="topbar-inner"><div class="brand">FINIS · PADDLES</div><nav aria-label="页面导航"><a href="#summary">产品定位</a><a href="#terms">术语</a><a href="#visual">产品对比</a><a href="#physics">设计影响</a><a href="#matrix">参数对比</a><a href="#phase">产品特点</a><a href="#products">单款分析</a><a href="#pairs">相似对比</a><a href="#choose">怎么选</a><a href="#training">训练用法</a><a href="#evidence">证据</a><a href="#sources">来源</a></nav></div></div>
+<div class="wrap">
+<main>
+<section class="hero">
+<div class="eyebrow">FINIS 训练器材 · 划手掌</div>
+<h1>FINIS 划手掌：6 款产品介绍、分析与对比</h1>
+<p class="lead">基于 FINIS 产品页、官方 Tech Sheet、FAQ 及相关研究整理，比较 6 款产品的结构、反馈方式、训练用途和使用边界。</p>
+<p class="site-cross">对应学习体系 <a href="../../learn/#stage-A5">A5 划臂基础</a>。先用器材放大问题，再裸手验证；专项好但完整泳不好，不算学会。</p>
+<div class="meta">
+<span class="chip accent">核对日期：2026-08-24</span>
+<span class="chip">当前分类页：7 个商品条目</span>
+<span class="chip">产品设计：6 种</span>
+<span class="chip"><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 成人版 / 青少年版（Jr）为同一设计</span>
+</div>
+</section>
+<section class="section" id="summary">
+<span class="kicker">概览</span>
+<h2>产品定位</h2>
+<div class="grid3">
+<div class="mini"><b><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>大面积曲面板、泄水孔、无绑带。主要增加拉水负荷，并要求保持稳定掌压。</div>
+<div class="mini"><b><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>凸面、拇指孔、无绑带。板面移位或掉落就是技术反馈。</div>
+<div class="mini"><b><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>非对称版型。通过偏心受力放大内外侧压力和扫水偏差。</div>
+<div class="mini"><b><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>狭长板 + 导向小鳍。主要限制入水和前伸路线，纠正跨中线。</div>
+<div class="mini"><b><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>“8 字”约束工具。主要约束手—腕—前臂关系，训练高肘抱水（EVF）；基本不用于加阻力。</div>
+<div class="mini"><b><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b>板面延伸到腕部，并用魔术贴固定。兼顾高肘抱水姿态和阻力训练。</div>
+</div>
+<div class="notice green"><b>选购原则：</b>加阻力 → <span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；技术反馈 → <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</div>
+</section><section class="section" id="terms">
+<span class="kicker">术语</span>
+<h2>英文缩写和术语</h2>
+<p class="small">保留产品官方英文名、技术名词缩写。</p>
+<div class="grid3">
+<div class="mini"><b>高肘抱水（EVF）</b><p>EVF = Early Vertical Forearm。抱水早期让前臂尽快形成有效受力面；不是把肘抬得越高越好。</p></div>
+<div class="mini"><b>单次划水距离（DPS）</b><p>DPS = Distance Per Stroke，每次划水对应的前进距离。计数口径可能不同，也不是越大越好。</p></div>
+<div class="mini"><b>跨中线（crossover）</b><p>自由泳入水或前伸时，手越过身体纵向中线，常伴随身体摆动或划水绕行。</p></div>
+<div class="mini"><b>导向小鳍（skeg）</b><p>类似冲浪板的小鳍；用于放大横向偏航阻力，提示入水和前伸路线。</p></div>
+<div class="mini"><b>技术说明（Tech Sheet）</b><p>FINIS 单品技术说明 PDF，主要包含设计、佩戴和尺码信息。</p></div>
+<div class="mini"><b>常见问题（FAQ）</b><p>FAQ = Frequently Asked Questions，补充尺码、佩戴和使用细节。资料冲突时，以当前产品页和 Tech Sheet 为准。</p></div>
+<div class="mini"><b>商品编号（SKU）</b><p>SKU 是商品编号，用于区分型号、尺码或版本，不代表性能等级。</p></div>
+<div class="mini"><b>专项练习（drill）</b><p>针对单一技术点的短组练习，如入水路线、掌压或前臂姿态。</p></div>
+<div class="mini"><b>肌电（EMG）</b><p>EMG = Electromyography，用于记录肌肉电活动。“缺少独立 EMG 研究”指没有该产品的肌肉参与验证。</p></div>
+</div>
+</section><section class="section" id="visual"><span class="kicker">外形</span><h2>产品对比</h2><p>以下均为 FINIS 官方产品页的主展示图（Studio Main）。</p><div class="visual-index"><div class="visual-card"><img alt="FINIS Manta 官方展示图" class="visual-main" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="manta">Manta Paddles</span></h3><p>大面积曲面板；中央中指孔；多组泄水孔</p><span class="visual-role">整体负荷 / 单次划水距离</span></div></div><div class="visual-card"><img alt="FINIS Agility 官方展示图" class="visual-main" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="agility">Agility Paddles Floating</span></h3><p>左右手独立凸面板；无腕带；靠拇指孔与掌压稳定</p><span class="visual-role">通用技术反馈</span></div></div><div class="visual-card"><img alt="FINIS ISO 官方展示图" class="visual-main" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="iso">ISO Paddles</span></h3><p>明显非对称版型；左右手可交换方向；图中黑色、黄色成对</p><span class="visual-role">偏心压力反馈</span></div></div><div class="visual-card"><img alt="FINIS Freestyler 官方展示图" class="visual-main" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="freestyler">Freestyler Paddles</span></h3><p>狭长冲浪板形；中指绑带；底部或侧面有明显导向小鳍</p><span class="visual-role">自由泳路线约束</span></div></div><div class="visual-card"><img alt="FINIS Forearm Fulcrum 官方展示图" class="visual-main" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="fulcrum">Forearm Fulcrums</span></h3><p>8 字形框架；不是传统手掌板；同时套住手掌和前臂</p><span class="visual-role">高肘抱水姿态约束</span></div></div><div class="visual-card"><img alt="FINIS Bolster 官方展示图" class="visual-main" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><div><h3><span class="pname" data-product="bolster">Bolster Paddles</span></h3><p>宽手掌板向腕部延伸；指部固定 + 宽魔术贴腕带</p><span class="visual-role">高肘抱水 + 阻力</span></div></div></div></section>
+<section class="section" id="physics">
+<span class="kicker">原理</span>
+<h2>版型、绑带、偏心设计会影响什么？</h2>
+<div class="grid2">
+<div>
+<h3>1. 水阻不只看板面大小</h3>
+<p>简化看，水动力可写成 <code>F ≈ ½ρ·C·A·v²</code>。<code>A</code> 是受水面积，<code>v</code> 是手与水的相对速度，<code>C</code> 与版型、角度和流动状态有关。板面越大，潜在水阻通常越高，但手速和板面角度同样重要。</p>
+<p>大板还会改变手速、划频和划水时序，因此实际负荷不会按板面面积线性增加。</p>
+</div>
+<div>
+<h3>2. 技术反馈主要来自力矩和约束</h3>
+<p><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 的受力中心偏离手掌中心，会产生转动力矩 <code>τ ≈ r × F</code>；<span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 的导向小鳍会在手偏航时增加侧向阻力；<span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 依靠持续掌压保持贴合；<span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 则直接限制腕—前臂几何关系。</p>
+<p>这些产品主要通过动作约束提供反馈，不只是增加水阻。</p>
+</div>
+</div>
+<p class="small">研究支持划手掌会改变 DPS、划频、划水时序和协调方式；未找到这 6 款产品的独立直接对照试验。以下差异主要依据官方结构和一般水动力、运动控制原理。</p>
+</section>
+<section class="section" id="matrix">
+<span class="kicker">总表</span>
+<h2>参数对比</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>产品</th><th>核心结构</th><th>主要目标</th><th>反馈方式</th><th>相对水阻*</th><th>泳姿</th><th>FINIS 官方等级</th><th>典型用途</th></tr></thead>
+<tbody>
+<tr><td><b><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>大面积曲面、泄水孔、无绑带、浮水材质</td><td>力量、划距、整体拉水</td><td>要求整段拉水维持均匀压力</td><td><span class="tag red">高</span></td><td>四种泳姿</td><td>初级 / 中级 / 高级</td><td>技术稳定后的拉水力量训练</td></tr>
+<tr><td><b><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>凸面、拇指孔、无绑带、浮水材质</td><td>抓水、掌压、高肘抱水基础反馈</td><td>技术失稳时移位或掉落</td><td><span class="tag yellow">中，随尺寸</span></td><td>四种泳姿</td><td>初级 / 中级 / 高级</td><td>通用技术反馈</td></tr>
+<tr><td><b><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>左右不对称、凸面、无绑带</td><td>压力分配、扫水方向、坏习惯暴露</td><td>偏心受力造成旋转趋势</td><td><span class="tag yellow">中，随尺寸</span></td><td>四种泳姿</td><td>中级 / 高级</td><td>掌压方向和扫水精细控制</td></tr>
+<tr><td><b><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>狭长“冲浪板”形 + 导向小鳍 + 中指绑带</td><td>自由泳入水、前伸、跨中线</td><td>偏航时导向小鳍产生明显方向阻力</td><td><span class="tag green">低–中</span></td><td>自由泳</td><td>初级 / 中级</td><td>跨中线、入水和前伸路线</td></tr>
+<tr><td><b><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>8 字形手—腕—前臂约束</td><td>高肘抱水，减少掉肘或折腕</td><td>机械约束 + 本体感觉</td><td><span class="tag green">低</span></td><td>四种泳姿；官方指南特别强调自由泳专项练习</td><td>初级 / 中级 / 高级</td><td>掉肘、折腕、高肘抱水</td></tr>
+<tr><td><b><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b></td><td>宽板延伸到腕部 + 魔术贴固定</td><td>高肘抱水 + 手腕稳定 + 阻力</td><td>限制手腕活动，让手掌与前臂更像一个整体受力面</td><td><span class="tag red">中–高</span></td><td>四种泳姿</td><td>初级 / 中级</td><td>高肘抱水下增加负荷</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">*“相对水阻”为结构推测，不是 FINIS 官方测试值；仅用于粗略比较。</p>
+</section>
+<section class="section" id="phase">
+<span class="kicker">划水阶段</span>
+<h2>产品特点</h2>
+<div class="flow">
+<div class="step"><span class="phase">入水</span><b><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">是否跨中线？入水和前伸是否直？</span></div>
+<div class="step"><span class="phase">前伸 → 抓水</span><b><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">掌面是否建立并维持连续压力？</span></div>
+<div class="step"><span class="phase">抓水方向</span><b><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">手掌内外侧压力是否失衡？是否过度扫水？</span></div>
+<div class="step"><span class="phase">建立前臂</span><b><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">腕与前臂能否形成稳定的抓水面？</span></div>
+<div class="step"><span class="phase">高肘抱水姿态下发力</span><b><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">保持前臂姿态同时承受更大水阻。</span></div>
+<div class="step"><span class="phase">完整拉水</span><b><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></b><span class="arrow-note">整段受力、划距和专项力量。</span></div>
+</div>
+</section>
+<section class="section" id="products">
+<span class="kicker">单款</span>
+<h2>单款产品分析</h2>
+<div aria-label="filter products" class="filters">
+<button class="filter active" data-filter="all">全部</button>
+<button class="filter" data-filter="strength">力量</button>
+<button class="filter" data-filter="feedback">技术反馈</button>
+<button class="filter" data-filter="evf">高肘抱水（EVF）</button>
+<button class="filter" data-filter="freestyle">自由泳专项</button>
+<button class="filter" data-filter="allstrokes">四种泳姿</button>
+</div>
+<div class="products">
+<article class="product" data-tags="strength feedback allstrokes">
+<div class="product-head"><div><h2><span class="pname" data-product="manta">Manta Paddles<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">SKU 1.05.152 · 力量 / 技术训练</div></div><span class="family">力量型</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>无绑带，中指孔</b></div><div class="fact"><span>版型</span><b>大面积曲面 + 泄水孔</b></div><div class="fact"><span>泳姿</span><b>四种泳姿</b></div>
+<div class="fact"><span>官方定位</span><b>力量、划水效率、单次划水距离</b></div><div class="fact"><span>材料</span><b>浮水材质</b></div><div class="fact"><span>美国站价格（核对时）</span><b>26 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>大面积板面增加受水面积；曲面帮助稳定手掌；中指孔和掌压负责固定；泄水孔让水压变化更平缓。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>提高力量、划水效率和单次划水距离（DPS）。</li><li>拉水全程保持均匀压力（原文：“apply even pressure throughout your pull”）。</li><li>曲面兼顾前伸，并在进入抱水时引导手掌姿态（原文：“gently forcing your hand into the catch”）。</li><li>所有尺码板面尺寸相同，只改变中指孔大小。</li></ul>
+<h4>分析</h4>
+<p>六款中最接近传统大划手掌，主要用于增加拉水负荷。<span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 的技术反馈更直接；动作不稳时，Manta 也会放大错误路线。</p>
+<div class="notice"><b>注意：</b>S、M、L、XL 只区分中指孔大小，板面尺寸相同，不代表不同阻力等级。</div>
+</div>
+<div><figure class="product-visual"><img alt="FINIS Manta 官方展示图" class="product-visual-img" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>大面积曲面板；中央中指孔；多组泄水孔。</figcaption></figure>
+<h4>尺码（中指最粗处周长）</h4>
+<table><tr><th>S</th><td>≤53 mm</td></tr><tr><th>M</th><td>53–62 mm</td></tr><tr><th>L</th><td>62–69 mm</td></tr><tr><th>XL</th><td>69–77 mm</td></tr></table>
+<h4>最适合</h4><p><span class="tag yellow">拉水力量</span><span class="tag">单次划水距离（DPS）</span><span class="tag">四种泳姿</span><span class="tag">中等以上连续组</span></p>
+<h4>不适合优先使用</h4><p>跨中线、精细掌压控制，以及高肘抱水入门。</p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Manta-Paddles" target="_blank">产品页</a><a href="https://www.finisswim.com/documents/TechSheets/Manta%20Paddle_TechSheet.pdf" target="_blank">Tech Sheet（2 页）</a><a href="https://www.finisswim.com/documents/ComparisonGuides/Paddles_ComparisonGuide.pdf" target="_blank">对比指南</a></div>
+</article>
+<article class="product" data-tags="feedback evf allstrokes strength">
+<div class="product-head"><div><h2><span class="pname" data-product="agility">Agility Paddles Floating<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">SKU 1.05.129 · 技术反馈</div></div><span class="family">技术反馈</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>无绑带 + 拇指孔</b></div><div class="fact"><span>版型</span><b>凸面</b></div><div class="fact"><span>泳姿</span><b>四种泳姿</b></div>
+<div class="fact"><span>核心信号</span><b>移位 / 掉落</b></div><div class="fact"><span>材料</span><b>浮水材质</b></div><div class="fact"><span>美国站价格（核对时）</span><b>26 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>无腕带，靠拇指孔和持续掌压稳定板面。掌压、手掌角度或抱水连续性失控时，板会移位或脱落。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>凸面提高对划水动作和水压的感知（stroke awareness / feel for the water）。</li><li>拇指孔定位手位；用掌压保持，不要用手抓住。</li><li>FINIS 将其用于高肘抱水反馈：姿态稳定时，板面更容易保持稳定。</li><li>适用于蝶泳、仰泳、蛙泳和自由泳。</li></ul>
+<h4>分析</h4>
+<p><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 主要放大掌压中断，适合自查抱水和掌压；增加水阻不是主要用途。</p>
+<p>旧 FAQ 对应 SKU 1.05.145；当前 <span class="pname" data-product="agility">Floating Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 为 1.05.129。旧 FAQ 仅用于补充佩戴和尺码测量方法。</p>
+</div>
+<div><figure class="product-visual"><img alt="FINIS Agility 官方展示图" class="product-visual-img" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>左右手独立凸面板；无腕带；靠拇指孔与掌压稳定。</figcaption></figure>
+<h4>尺码（手掌周长，不含拇指）</h4>
+<table><tr><th>XS</th><td>≤17.8 cm；板长 14.7 cm</td></tr><tr><th>S</th><td>17.8–20.3 cm；16.5 cm</td></tr><tr><th>M</th><td>20.3–22.9 cm；18.4 cm</td></tr><tr><th>L</th><td>≥22.9 cm；20.3 cm</td></tr></table>
+<h4>最适合</h4><p><span class="tag yellow">抓水反馈</span><span class="tag">掌压连续性</span><span class="tag">高肘抱水提示</span><span class="tag">第一块技术反馈型划手掌</span></p>
+<h4>注意</h4><p>不要为了增加阻力故意选大码；尺码会同时改变反馈和水阻。</p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Agility-Paddles_Floating" target="_blank">产品页</a><a href="https://www.finisswim.com/documents/TechSheets/FloatingAgilityPaddle_TechSheet.pdf" target="_blank">Tech Sheet</a><a href="https://www.finisswim.com/faq?title=agility-paddles" target="_blank">FAQ</a></div>
+</article>
+<article class="product" data-tags="feedback allstrokes">
+<div class="product-head"><div><h2><span class="pname" data-product="iso">ISO Paddles<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">SKU 1.05.033 · 非对称压力反馈</div></div><span class="family">压力反馈</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>无绑带</b></div><div class="fact"><span>版型</span><b>左右不对称 + 凸面</b></div><div class="fact"><span>泳姿</span><b>四种泳姿</b></div>
+<div class="fact"><span>核心变量</span><b>内侧 / 外侧压力分配</b></div><div class="fact"><span>能力级别</span><b>中级 / 高级</b></div><div class="fact"><span>美国站价格（核对时）</span><b>26 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>非对称板面让受力中心偏离手掌中心，产生旋转趋势；要保持稳定，必须调整掌面角度和内外侧压力。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>抱水阶段主动制造不平衡（原文：“create an imbalance in the catch phase”）。</li><li>两种佩戴方向分别强调手掌内侧或外侧受力。</li><li>官方称：外侧受力更强调肱三头肌、斜方肌；内侧受力更强调胸肌、肱二头肌、三角肌。</li><li>用于自我纠正、水感和扫水倾向识别。</li></ul>
+<h4>分析</h4>
+<p><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 是<strong>压力方向放大器</strong>，不是肌肉隔离工具；目前没有产品专项 EMG 研究验证官方的肌群分工。</p>
+<div class="notice red"><b>尺码空档：</b>官方表中 M 为 17.5–20 cm，L 从 22.9 cm 起；20–22.9 cm 没有建议尺码，建议向 FINIS 或经销商确认。</div>
+</div>
+<div><figure class="product-visual"><img alt="FINIS ISO 官方展示图" class="product-visual-img" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>明显非对称版型；左右手可交换方向；图中黑色、黄色成对。</figcaption></figure>
+<h4>尺码</h4>
+<table><tr><th>S</th><td>手围约 17.5 cm；板长 15.2 cm</td></tr><tr><th>M</th><td>17.5–20 cm；17.2 cm</td></tr><tr><th>L</th><td>≥22.9 cm；19 cm</td></tr></table>
+<h4>最适合</h4><p><span class="tag yellow">压力中心</span><span class="tag">扫水习惯</span><span class="tag">左右差异</span><span class="tag">精细水感</span></p>
+<h4>不适合优先使用</h4><p>抱水基础薄弱时，先用 <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 建立持续掌压，再用 <span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 练压力方向。</p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Iso-Paddles" target="_blank">产品页</a><a href="https://www.finisswim.com/documents/TechSheets/TechSheet_Iso.pdf" target="_blank">Tech Sheet</a></div>
+</article>
+<article class="product" data-tags="feedback freestyle">
+<div class="product-head"><div><h2><span class="pname" data-product="freestyler">Freestyler Paddles<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">成人版 SKU 1.05.020.50 · 青少年版 SKU 1.05.006.48 · 自由泳路线训练</div></div><span class="family">路线约束</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>中指可调绑带</b></div><div class="fact"><span>版型</span><b>狭长板 + 导向小鳍</b></div><div class="fact"><span>泳姿</span><b>仅自由泳</b></div>
+<div class="fact"><span>核心变量</span><b>入水 / 前伸路线</b></div><div class="fact"><span>官方等级</span><b>初级 / 中级</b></div><div class="fact"><span>美国站价格（核对时）</span><b>成人版与青少年版（Jr）均为 26 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>狭长板面减少横向受力；导向小鳍（skeg）在跨中线或横向偏航时明显增加侧向阻力。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>冲浪板式外形减少前伸阻力，强调有效前伸和 DPS。</li><li>导向小鳍（skeg）让入水路线更直（原文：“streamline and straighten hand entry”）。</li><li>减少跨中线，改善身体位置和拉水连续性。</li><li>产品页还提到“改善髋部转动（better hip rotation）”；更可能是入水路线改善后的间接结果。</li></ul>
+<h4>分析</h4>
+<p>跨中线 → <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；路线正常但抱水、掌压不稳 → <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p>
+<p>FINIS 有“降低肩部压力 / 避免导致肩伤的跨中线”等表述。可理解为减少跨中线风险，<strong>不能理解为器材能预防肩伤</strong>。</p>
+</div>
+<div><figure class="product-visual"><img alt="FINIS Freestyler 官方展示图" class="product-visual-img" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>狭长冲浪板形；中指绑带；底部或侧面有明显导向小鳍。</figcaption></figure>
+<h4>尺码（官方常见问题）</h4>
+<table><tr><th>青少年版（Jr）</th><td>约 8.5 英寸（21.6 cm）；较小手型成人、多数青少年和儿童</td></tr><tr><th>成人版（Sr / Adult）</th><td>约 11 英寸（27.9 cm）；较大手型青少年和多数成人</td></tr></table>
+<h4>最适合</h4><p><span class="tag yellow">跨中线</span><span class="tag">入水方向</span><span class="tag">前伸线路</span><span class="tag">自由泳专项</span></p>
+<h4>注意</h4><p>不要为提高 DPS 刻意做追赶式停顿（catch-up）；目标是路线和前伸，不是延长滑行。</p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Freestyler-Hand-Paddles-Adult" target="_blank">成人产品页</a><a href="https://www.finisswim.com/Freestyle-Hand-Paddles-Jr-" target="_blank">青少年版产品页</a><a href="https://www.finisswim.com/documents/TechSheets/FreestylerPaddles_TechSheet.pdf" target="_blank">Tech Sheet</a><a href="https://www.finisswim.com/documents/FAQs/FreestylerPaddles_FAQ%27S.pdf" target="_blank">FAQ PDF</a></div>
+</article>
+<article class="product" data-tags="feedback evf allstrokes freestyle">
+<div class="product-head"><div><h2><span class="pname" data-product="fulcrum">Forearm Fulcrums<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">SKU 1.05.028 · 高肘抱水训练</div></div><span class="family">动作约束</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>8 字结构包住手与前臂</b></div><div class="fact"><span>水阻</span><b>不是主要目的</b></div><div class="fact"><span>泳姿</span><b>四种泳姿</b></div>
+<div class="fact"><span>核心变量</span><b>手—腕—前臂关系</b></div><div class="fact"><span>官方等级</span><b>初级 / 中级 / 高级</b></div><div class="fact"><span>美国站价格（核对时）</span><b>31 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>8 字结构限制手腕和前臂姿态，使折腕、掉肘更难出现，并强化前臂参与。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>用于纠正掉肘（原文：“Designed to correct a dropped elbow”）。</li><li>高肘抱水（EVF）：尽早让手掌和前臂形成有效受水面。</li><li>建立手—腕—前臂协同。</li><li>适用于四种泳姿；对比指南给出自由泳渐进练习，并建议可配 Zoomers 短脚蹼保持身体位置。</li></ul>
+<h4>分析</h4>
+<p>器材不会机械锁死肘关节，实际作用是<strong>约束手腕—前臂姿态，让掉肘和折腕更明显</strong>。</p>
+<p>适合短距离使用后立即裸手复现；长期依赖器材固定姿态，动作迁移可能不足。</p>
+</div>
+<div><figure class="product-visual"><img alt="FINIS Forearm Fulcrum 官方展示图" class="product-visual-img" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>8 字形框架；不是传统手掌板；同时套住手掌和前臂。</figcaption></figure>
+<h4>尺码（官方常见问题）</h4>
+<table><tr><th>青少年版（Jr）</th><td>略短于 11 英寸（约 28 cm）；儿童、青少年和较小体型成人</td></tr><tr><th>成人版（Sr）</th><td>约 13.5 英寸（34.3 cm）；成人和较高大的青少年</td></tr></table>
+<h4>最适合</h4><p><span class="tag yellow">掉肘</span><span class="tag">折腕</span><span class="tag">高肘抱水入门</span><span class="tag">本体感觉</span></p>
+<h4>与 <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 的区别</h4><p><b><span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 先教姿势；<span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 在姿势上再增加明显阻力。</b></p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Forearm-Fulcrum" target="_blank">产品页</a><a href="https://www.finisswim.com/documents/TechSheets/ForearmFulcrum_TechSheet.pdf" target="_blank">Tech Sheet</a><a href="https://www.finisswim.com/documents/FAQs/ForearmFulcrum_FAQ%27S.pdf" target="_blank">FAQ PDF</a></div>
+</article>
+<article class="product" data-tags="strength feedback evf allstrokes">
+<div class="product-head"><div><h2><span class="pname" data-product="bolster">Bolster Paddles<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h2><div class="sub">SKU 1.05.026 · 高肘抱水 / 阻力训练</div></div><span class="family">高肘抱水 + 阻力</span></div>
+<div class="facts">
+<div class="fact"><span>固定</span><b>腕部魔术贴 + 指部固定</b></div><div class="fact"><span>版型</span><b>宽板延伸到腕部</b></div><div class="fact"><span>泳姿</span><b>四种泳姿</b></div>
+<div class="fact"><span>核心变量</span><b>腕部稳定 + 高肘抱水</b></div><div class="fact"><span>官方等级</span><b>初级 / 中级</b></div><div class="fact"><span>美国站价格（核对时）</span><b>42 美元</b></div>
+</div>
+<div class="product-grid">
+<div>
+<div class="mechanism"><b>原理：</b>板面延伸到腕部，魔术贴稳定手腕；既减少折腕，又扩大受水面，强化“手掌 + 前臂”整体受力。</div>
+<h4>官方说明</h4>
+<ul class="bullets"><li>提升手腕—前臂连接感。</li><li>宽板稳定手腕，并在拉水全程增加水阻。</li><li>用于高肘抱水和四种泳姿技术练习。</li><li>产品页还称可延长发力峰值速度并强化专项力量的神经适应；缺少产品专项独立验证。</li></ul>
+<h4>分析</h4>
+<p><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> = <strong>前臂姿态训练 + 负荷</strong>；动作变形、疲劳或肩部不适时，不宜继续加量。</p>
+<p>成人自学者若尚未掌握高肘抱水，先用 <span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 或先建立动作，再使用 <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p>
+</div>
+<div><figure class="product-visual"><img alt="FINIS Bolster 官方展示图" class="product-visual-img" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/><figcaption><span class="look-for">外形</span>宽手掌板向腕部延伸；指部固定 + 宽魔术贴腕带。</figcaption></figure>
+<h4>尺码</h4><p>当前美国站无尺码选项，Tech Sheet 也无尺码表；按单一规格理解。</p>
+<h4>最适合</h4><p><span class="tag yellow">高肘抱水（EVF）</span><span class="tag">腕部稳定</span><span class="tag">专项力量</span><span class="tag">四种泳姿专项练习</span></p>
+<h4>注意</h4><p>固定越强，动作出错时越难自然卸载；建议短组使用，并频繁裸手验证。</p>
+</div>
+</div>
+<div class="source-row"><a href="https://www.finisswim.com/Bolster-Paddles" target="_blank">产品页</a><a href="https://www.finisswim.com/documents/TechSheets/BolsterPaddles_TechSheet.pdf" target="_blank">Tech Sheet</a></div>
+</article>
+</div>
+</section>
+<section class="section" id="pairs">
+<span class="kicker">对比</span>
+<h2>相似产品对比</h2>
+<div class="pair-grid">
+<div class="pair"><h3><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 对比 <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><p><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：增加水阻，训练较大负荷下的完整拉水。</p><p><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：放大掌压中断，板面偏移或掉落就是反馈。</p><p>力量 / DPS → <span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；抱水 / 掌压反馈 → <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p></div>
+<div class="pair"><h3><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 对比 <span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><p><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：看是否持续压住水。</p><p><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：看压力偏向哪一侧、是否过度扫水。</p><p>基础反馈 → <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；精细掌压 → <span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p></div>
+<div class="pair"><h3><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 对比 <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><p><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：掌压和抱水连续性。</p><p><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：入水、前伸方向和跨中线。</p><p>抓不到水 → <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；手总走歪 → <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p></div>
+<div class="pair"><h3><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 对比 <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></h3><p><span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：姿态约束，几乎不加阻力。</p><p><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>：姿态约束 + 明显水阻。</p><p>学习高肘抱水 → <span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>；带负荷巩固 → <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>。</p></div>
+</div>
+</section>
+<section class="section" id="choose">
+<span class="kicker">选择</span>
+<h2>按问题选择</h2>
+<div class="decision">
+<div class="question">自由泳入水 / 前伸跨中线，身体左右摆</div><div class="question answer"><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> → 裸手验证路线</div>
+<div class="question">抱水时掌压不稳、容易滑水</div><div class="question answer"><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+<div class="question">左右手受力差异大，或过度内扫 / 外扫</div><div class="question answer"><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span>（已有抱水基础）</div>
+<div class="question">折腕、掉肘，前臂没有形成受力面</div><div class="question answer"><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+<div class="question">已掌握高肘抱水，需要增加负荷</div><div class="question answer"><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+<div class="question">动作稳定，想练拉水力量和 DPS</div><div class="question answer"><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+<div class="question">只买一款技术反馈型划手掌</div><div class="question answer"><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+<div class="question">只买一款力量型划手掌</div><div class="question answer"><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></div>
+</div>
+<div class="notice"><b>成人教学组合：</b><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> + <span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 覆盖抱水反馈、自由泳路线、高肘抱水和力量；<span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 按具体问题追加。</div>
+</section>
+<section class="section" id="training">
+<span class="kicker">训练</span>
+<h2>训练用法</h2>
+<p>以下为训练示例，不是 FINIS 官方处方。基本方法：<strong>器材 → 裸手 → 对比感觉</strong>。</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>产品</th><th>示例</th><th>关注点</th><th>停止 / 换裸手</th></tr></thead>
+<tbody>
+<tr><td><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>6–10 × 25–50 m，中等强度；每 1–2 趟插入裸手</td><td>掌压、完整拉水；不要刻意压低划频</td><td>肩前侧不适；手腕 / 肘因水阻变形</td></tr>
+<tr><td><span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>25 m 器材 + 25 m 裸手，4–8 组</td><td>板面是否稳定；不要用拇指夹紧</td><td>为了不掉板而僵硬抓紧</td></tr>
+<tr><td><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>两种佩戴方向短距离练习，再换裸手</td><td>旋转方向、内外侧压力、左右差异</td><td>注意力只剩“和板较劲”</td></tr>
+<tr><td><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>6–8 × 25–50 m，自由泳；交替裸手</td><td>入水点、前伸方向、跨中线</td><td>为追求 DPS 出现明显停顿</td></tr>
+<tr><td><span class="pname" data-product="fulcrum">Forearm Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>8–12 × 25 m；器材 / 裸手 1:1</td><td>手腕与前臂是否形成稳定受力面</td><td>脱掉后完全无法复现动作</td></tr>
+<tr><td><span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span></td><td>4–8 × 25 m 技术短组，充分恢复</td><td>高肘抱水下保持手腕稳定，不要硬拽</td><td>耸肩、肩前顶或拉水路线明显变形</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section" id="evidence">
+<span class="kicker">证据</span>
+<h2>证据与使用边界</h2>
+<div class="table-wrap evidence">
+<table>
+<thead><tr><th>说法</th><th>证据判断</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>划手掌可增加单次划水距离，并改变划频与划水时序</td><td><span class="confidence high">较强</span></td><td>多项研究观察到 DPS 增加、划频下降或协调变化；结果受板面、速度和训练任务影响。</td></tr>
+<tr><td>大面积一定等于更高训练负荷</td><td><span class="confidence mid">条件成立</span></td><td>大板面提高潜在水动力，但也会改变手速和划频；同速条件下，不一定提高推进力或机械功。</td></tr>
+<tr><td><span class="pname" data-product="manta">Manta<img alt="FINIS Manta 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.152-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="agility">Agility<img alt="FINIS Agility 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.129-Yellow.L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 能“更安全地”进行力量训练</td><td><span class="confidence low">不宜作安全保证</span></td><td>没有找到针对 Manta / Agility 的肩部安全试验。</td></tr>
+<tr><td><span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 能隔离指定肌群</td><td><span class="confidence low">证据不足</span></td><td>非对称板面会改变压力和力矩；没有 ISO 专项 EMG 研究验证肌群隔离。</td></tr>
+<tr><td><span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 可减少肩部压力或预防肩伤</td><td><span class="confidence low">不能作临床结论</span></td><td>纠正跨中线或错误抱水可能改善力学，但划手掌使用过量也会增加肩部应力。</td></tr>
+<tr><td><span class="pname" data-product="fulcrum">Fulcrum<img alt="FINIS Forearm Fulcrum 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.028-Yellow.Sr-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> / <span class="pname" data-product="bolster">Bolster<img alt="FINIS Bolster 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.026-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 能帮助学习高肘抱水（EVF）</td><td><span class="confidence mid">机制合理</span></td><td>结构上可限制折腕、强化前臂参与；缺少 FINIS 产品的独立对照试验。</td></tr>
+<tr><td>器材练习应围绕训练目标调整尺寸、频率与使用时机</td><td><span class="confidence high">较强</span></td><td>2023 年研究将划手掌和脚蹼视为任务约束；尺寸、频率和使用时机应按训练目标调整。</td></tr>
+</tbody>
+</table>
+</div>
+<div class="notice red"><b>肩部：</b>Tech Sheet 中“降低 / 预防肩部压力”等表述不等于伤病预防保证。有肩痛或使用后疼痛时，应减少或停止器材负荷。</div>
+</section>
+<section class="section" id="sources">
+<span class="kicker">来源</span>
+<h2>资料来源</h2>
+<h3>FINIS 官方</h3>
+<ol class="footnotes"><li>产品图均来自 FINIS 当前产品页的 Studio Main；主站 / B2B 图片地址互为备用。</li>
+<li><a href="https://www.finisswim.com/shop/training-gear/paddles" target="_blank">FINIS 划手掌当前分类页</a>：核对当前 7 个商品条目、价格和在售状态。</li>
+<li><a href="https://www.finisswim.com/documents/ComparisonGuides/Paddles_ComparisonGuide.pdf" target="_blank">划手掌参考 / 对比指南</a>：核对官方级别、用途、版型和主要收益。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/Manta%20Paddle_TechSheet.pdf" target="_blank">Manta Tech Sheet</a>：含第 2 页中指孔尺码表。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/FloatingAgilityPaddle_TechSheet.pdf" target="_blank">Floating Agility Tech Sheet</a>。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/TechSheet_Iso.pdf" target="_blank">ISO Tech Sheet</a>。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/FreestylerPaddles_TechSheet.pdf" target="_blank">Freestyler Tech Sheet</a>；<a href="https://www.finisswim.com/documents/FAQs/FreestylerPaddles_FAQ%27S.pdf" target="_blank">Freestyler 常见问题</a>。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/ForearmFulcrum_TechSheet.pdf" target="_blank">Forearm Fulcrum Tech Sheet</a>；<a href="https://www.finisswim.com/documents/FAQs/ForearmFulcrum_FAQ%27S.pdf" target="_blank">Forearm Fulcrum 常见问题</a>。</li>
+<li><a href="https://www.finisswim.com/documents/TechSheets/BolsterPaddles_TechSheet.pdf" target="_blank">Bolster Tech Sheet</a>。</li>
+</ol>
+<h3>独立研究 / 综述</h3>
+<ol class="footnotes">
+<li>López-Plaza D, et al. <i>The Influence of Different Hand Paddle Size on 100-m Front Crawl Kinematics</i>. Journal of Human Kinetics. 2012;34:112–118. DOI: <a href="https://doi.org/10.2478/v10078-012-0070-0" target="_blank">10.2478/v10078-012-0070-0</a>.</li>
+<li>Tsunokawa T, et al. <i>The effect of using paddles on hand propulsive forces and Froude efficiency in arm-stroke-only front-crawl swimming at various velocities</i>. Human Movement Science. 2019;64:378–388. DOI: <a href="https://doi.org/10.1016/j.humov.2019.03.007" target="_blank">10.1016/j.humov.2019.03.007</a>.</li>
+<li>De Matos CC, et al. <i>Effects of paddles and fins on front crawl kinematics, arm stroke efficiency, coordination, and estimated energy cost</i>. Frontiers in Physiology. 2023;14:1174090. DOI: <a href="https://doi.org/10.3389/fphys.2023.1174090" target="_blank">10.3389/fphys.2023.1174090</a>.</li>
+<li>Matos CC, Barbosa AC, Castro FAS. <i>The use of hand paddles and fins in front crawl: biomechanical and physiological responses</i>. 2013 年文献综述，共纳入 30 篇论文。 <a href="https://www.scielo.br/j/rbcdh/a/9K7Dy3qMdBRjyDWcBMGYBFM/?lang=en" target="_blank">SciELO 全文</a>.</li>
+<li>Tovin BJ. <i>Prevention and Treatment of Swimmer's Shoulder</i>. North American Journal of Sports Physical Therapy. 2006. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2953356/" target="_blank">PMC 全文</a>.</li>
+</ol>
+<p class="small"><b>版本说明：</b>FINIS 当前分类页有 7 个商品条目，其中 <span class="pname" data-product="freestyler">Freestyler<img alt="FINIS Freestyler 缩略图" class="pname-thumb" data-fallback="https://b2b.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://www.finisswim.com/images/products/1.05.020.50-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 成人版和青少年版共用同一设计与 Tech Sheet，因此按 6 款产品比较。价格为 2026-08-24 美国站信息；<span class="pname" data-product="iso">ISO<img alt="FINIS ISO 缩略图" class="pname-thumb" data-fallback="https://www.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500" decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://b2b.finisswim.com/images/products/1.05.033-L-Studio.Main-01.jpg?resizeh=500&amp;resizeid=13&amp;resizew=500"/></span> 尺码空档来自官方原表。</p>
+</section>
+</main>
+</div>
+<script>
+  const buttons=[...document.querySelectorAll('.filter')];
+  const cards=[...document.querySelectorAll('.product')];
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{
+    buttons.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+    const f=btn.dataset.filter;
+    cards.forEach(card=>{
+      const tags=(card.dataset.tags||'').split(/\s+/);
+      card.classList.toggle('hidden',f!=='all'&&!tags.includes(f));
+    });
+  }));
+
+
+  // Official-image fallback: FINIS main site and B2B use the same product assets.
+  document.querySelectorAll('img[data-fallback]').forEach(img=>{
+    img.addEventListener('error',()=>{
+      const fallback=img.dataset.fallback;
+      if(fallback && !img.dataset.fallbackTried){
+        img.dataset.fallbackTried='1';
+        img.src=fallback;
+      }else{
+        img.classList.add('img-failed');
+      }
+    });
+  });
+</script>
+</body>
+</html>
