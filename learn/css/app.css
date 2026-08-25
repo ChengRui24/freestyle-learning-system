@@ -5,7 +5,7 @@
   --line-strong: #161616;
   --link: #0b3a58;
   --nav-w: 12.5rem;
-  --max: 56rem;
+  --max: 64rem;
 }
 
 * { box-sizing: border-box; }
@@ -280,15 +280,29 @@ td strong { white-space: nowrap; }
 
 #symptoms, #tests { overflow-x: auto; }
 
-.drill {
-  padding: 0.75rem 0 0.9rem;
-  margin: 0;
-  border-bottom: 1px solid var(--line);
+.drill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  margin: 0 0 0.4rem;
 }
 
-.drill h3 { margin: 0 0 0.3rem; font-size: 0.98rem; }
-.drill .en { color: var(--muted); font-weight: 400; font-size: 0.86rem; }
-.drill p, .drill ul, .drill ol { font-size: 0.92rem; }
+.drill {
+  margin: 0;
+  padding: 0.65rem 0.75rem 0.75rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.drill h3 { margin: 0 0 0.3rem; font-size: 0.9rem; line-height: 1.35; }
+.drill .en { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
+.drill h4 { margin: 0.55rem 0 0.2rem; font-size: 0.8rem; }
+.drill p, .drill ul, .drill ol { font-size: 0.82rem; line-height: 1.5; }
+.drill p { margin: 0.28rem 0; }
+.drill ul, .drill ol { margin: 0.2rem 0 0.35rem; padding-left: 1.1rem; }
+.drill li { margin: 0.08rem 0; }
+.drill p:first-of-type { margin-top: 0; }
 
 .warn {
   border: 1px solid var(--line-strong);
@@ -313,6 +327,7 @@ td strong { white-space: nowrap; }
   .side nav .g { width: 100%; }
   .stage dl { grid-template-columns: 5.5rem 1fr; }
   .cols-2 { grid-template-columns: 1fr; }
+  .drill-grid { grid-template-columns: 1fr; }
   .main { padding: 1.1rem 1rem 3rem; }
 }
 

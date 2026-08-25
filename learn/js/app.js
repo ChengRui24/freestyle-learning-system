@@ -327,6 +327,7 @@
     let last = "";
     data.drills.forEach(function (d) {
       if (d.prefix !== last) {
+        if (last) html += "</div>";
         html +=
           '<h3 class="cat-h" id="cat-' +
           d.prefix +
@@ -334,7 +335,7 @@
           d.prefix +
           " " +
           esc(d.category) +
-          "</h3>";
+          '</h3><div class="drill-grid">';
         last = d.prefix;
       }
       html +=
@@ -349,6 +350,7 @@
         md(d.body) +
         "</article>";
     });
+    if (last) html += "</div>";
     $("#drills").innerHTML = html;
   }
 
