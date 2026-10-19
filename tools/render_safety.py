@@ -7,9 +7,12 @@ from __future__ import annotations
 
 import html
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from seo import head_for  # noqa: E402
 SAFETY = ROOT / "safety"
 RAW_DIR = SAFETY / "raw"
 
@@ -406,13 +409,13 @@ def page_html(preamble: str, sections: list[tuple[str, str, str]]) -> str:
             "    </section>"
         )
     inner = "\n\n    ".join(body_sections)
+    seo = head_for("safety")
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>成人水中自救与个人生存</title>
-  <meta name="description" content="成人水中自救与个人生存完整学习、教学与专项训练体系。稳、浮、看、喊、抓、移、出。">
+{seo}
   <link rel="stylesheet" href="../learn/css/app.css">
   <link rel="stylesheet" href="../css/site.css">
 </head>

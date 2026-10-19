@@ -7,9 +7,12 @@ from __future__ import annotations
 
 import html
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from seo import head_for  # noqa: E402
 LEARN = ROOT / "learn"
 SOURCE = LEARN / "source.md"
 
@@ -397,13 +400,13 @@ def page_html(title: str, preamble: str, sections: list[tuple[str, str, str]]) -
             "    </section>"
         )
     inner = "\n\n    ".join(body)
+    seo = head_for("learn")
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>USMS 成人游泳训练体系</title>
-  <meta name="description" content="USMS 成人游泳训练体系核对汇总版：入水、四式、出发转身、训练方法与安全边界。">
+{seo}
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="../css/site.css">
 </head>

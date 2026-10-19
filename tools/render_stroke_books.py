@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from render_learn import heading_id, inline, render_blocks  # noqa: E402
+from seo import head_for  # noqa: E402
 
 LEARN = ROOT / "learn"
 
@@ -154,12 +155,13 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
         )
     main = "\n\n    ".join(body)
     nav_html = "\n      ".join(nav)
+    seo = head_for(key)
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{html.escape(title)}</title>
+{seo}
   <link rel="stylesheet" href="../css/app.css">
   <link rel="stylesheet" href="../css/teach.css">
   <link rel="stylesheet" href="../../css/site.css">
