@@ -1,0 +1,46 @@
+/* 课堂教学 fragments (from 四泳姿 V8), scoped so the handbook styles stay in charge. */
+.v8-teach { max-width: var(--max); }
+.v8-teach .teach-view > h3 { font-size: 1.05rem; margin: 1.8rem 0 0.4rem; }
+.v8-teach .stroke-panel > h3 { display: none; }
+.v8-teach .unit { margin: 0 0 2rem; }
+.v8-teach .unit-head { padding-bottom: 0.4rem; }
+.v8-teach .module-title-line h3 { margin: 1.4rem 0 0.2rem; font-size: 1rem; }
+.v8-teach .brief { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0 0.4rem; }
+.v8-teach .unit-head details { font-size: 0.82rem; color: var(--muted); }
+.v8-teach summary { cursor: pointer; width: fit-content; }
+.v8-teach .details-body { font-size: 0.88rem; color: var(--muted); padding-top: 0.5rem; }
+.v8-teach .details-body p { margin: 0 0 0.4rem; line-height: 1.65; }
+.v8-teach .details-body p > b { color: var(--fg); font-weight: 650; margin-right: 0.6em; }
+.v8-teach .source-ref { font-size: 0.75rem; white-space: nowrap; }
+.v8-teach .evidence { font-size: 0.75rem; color: var(--muted); }
+.v8-teach .stage-group { margin-top: 1.1rem; }
+.v8-teach .stage-head { display: flex; align-items: baseline; gap: 0.55rem; border-bottom: 1px solid var(--line); padding-bottom: 0.4rem; }
+.v8-teach .stage-no { font-size: 0.72rem; color: var(--muted); }
+.v8-teach .stage-head h4 { margin: 0; font-size: 0.95rem; }
+.v8-teach .stage-hint { font-size: 0.8rem; color: var(--muted); margin: 0.5rem 0 0; line-height: 1.6; }
+.v8-teach .record { padding: 0.8rem 0; border-bottom: 1px solid var(--line); scroll-margin-top: 6rem; }
+.v8-teach .record-heading { display: flex; gap: 0.5rem; justify-content: space-between; align-items: baseline; margin-bottom: 0.45rem; }
+.v8-teach .record-heading h5 { margin: 0; font-size: 0.95rem; font-weight: 650; }
+.v8-teach .record-id { font-size: 0.68rem; white-space: nowrap; color: var(--muted); }
+.v8-teach .cue-points { margin: 0; }
+.v8-teach .cue-points > div { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.6rem; margin: 0.25rem 0; align-items: baseline; }
+.v8-teach .cue-points dt { font-size: 0.8rem; font-weight: 650; color: var(--link); overflow-wrap: anywhere; }
+.v8-teach .cue-points dd { margin: 0; overflow-wrap: anywhere; line-height: 1.6; font-size: 0.94rem; }
+.v8-teach .teacher { margin-top: 0.55rem; }
+.v8-teach .teacher > summary { font-size: 0.75rem; color: var(--muted); }
+.v8-teach .module-extras { margin-top: 1rem; padding: 0.6rem 0.8rem; background: #fff; border: 1px solid var(--line); }
+.v8-teach .module-extras > summary { font-size: 0.88rem; font-weight: 650; }
+.v8-teach .module-extras .record:last-child { border-bottom: 0; }
+.v8-teach .category-head { margin: 1.3rem 0 0.2rem; padding-bottom: 0.45rem; border-bottom: 1px solid var(--line); font-size: 1rem; }
+.v8-teach .error { padding: 0.8rem 0; }
+.v8-teach .error h5 { margin: 0 0 0.3rem; font-size: 0.95rem; }
+.v8-teach .error-cue { display: flex; gap: 0.7rem; line-height: 1.6; font-size: 0.94rem; }
+.v8-teach .error-cue > b { flex: 0 0 1.1rem; font-size: 0.8rem; font-weight: 650; color: var(--link); padding-top: 0.2rem; }
+.v8-teach .tech .cue-points > div { grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0.55rem; }
+.v8-teach .jump { font-size: 0.82rem; }
+.v8-teach .jump small { font-size: 0.7rem; color: var(--muted); }
+.v8-teach .learn-label { display: none; }
+.v8-teach .transition-detail { background: #fff; border: 1px solid var(--line); padding: 0.3rem 0.7rem; margin: 0.5rem 0; }
+@media (max-width: 600px) {
+  .v8-teach .cue-points > div { grid-template-columns: 4rem minmax(0, 1fr); gap: 0.5rem; }
+}

@@ -17,21 +17,21 @@ BOOKS = {
     "back": {
         "brand": "仰泳学习体系",
         "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
-        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的仰泳模块。",
+        "sub": "用来定阶段、看现象、选一个专项，再按课堂教学的口令上课。",
         "stroke": "back",
         "stroke_label": "仰泳",
     },
     "breast": {
         "brand": "蛙泳学习体系",
         "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
-        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的蛙泳模块。",
+        "sub": "用来定阶段、看现象、选一个专项，再按课堂教学的口令上课。",
         "stroke": "breast",
         "stroke_label": "蛙泳",
     },
     "fly": {
         "brand": "蝶泳学习体系",
         "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
-        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的蝶泳模块。",
+        "sub": "用来定阶段、看现象、选一个专项，再按课堂教学的口令上课。",
         "stroke": "fly",
         "stroke_label": "蝶泳",
     },
@@ -41,6 +41,8 @@ BOOKS = {
         "sub": "学习流程、通过条件，以及一节课的热身、专项、主项和放松。",
     },
 }
+
+TEACH = {"back": "back", "breast": "breast", "fly": "fly"}
 
 SIBLINGS = [
     ("freestyle/", "自由泳"),
@@ -93,6 +95,8 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
     def cur(name: str) -> str:
         return ' aria-current="page"' if name == key else ""
     nav = []
+    if key in TEACH:
+        nav.append('<a href="#teach">课堂教学</a>')
     for sid, stitle, _ in sections:
         nav.append(f'<a href="#{html.escape(sid)}">{html.escape(stitle)}</a>')
     siblings = []
@@ -109,14 +113,14 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
             '<a href="../back/">仰泳</a>、'
             '<a href="../fly/">蝶泳</a>、'
             '<a href="../breast/">蛙泳</a>。'
-            '上课口令见 <a href="../../strokes/">四泳姿</a>。'
+            '上课口令在各册的课堂教学里。四泳姿页只留通用路径和连贯口令。'
             '入水共同课见 <a href="../#alts">USMS 汇总</a>。</p>'
         )
     else:
         cross = (
             '<p class="site-cross">四式阶段诊断：'
             f"{sib}。"
-            f'上课口诀见 <a href="../../strokes/#stroke-{meta["stroke"]}">四泳姿 · {meta["stroke_label"]}</a>。'
+            '课堂教学（口令、纠错、要点）在本册下文。'
             '入水共同课见 <a href="../#alts">USMS 汇总</a>。'
             '一节课怎么排见 <a href="../course/">课程安排</a>。'
             '个人自救见 <a href="../../safety/">水中自救</a>。</p>'
@@ -130,6 +134,16 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
         f"      {render_blocks(preamble, 'lede')}\n"
         "    </header>"
     )
+    if key in TEACH:
+        frag = (LEARN / "teach" / f"{TEACH[key]}.html").read_text(encoding="utf-8")
+        body.append(
+            '<section id="teach">\n'
+            "      <h2>课堂教学：口令、纠错与要点</h2>\n"
+            "      <p>从陆上到水中按口诀与练习走；看见的现象到分类纠错里核对；"
+            "动作原理看技术要点。一节课只取其中一个模块。</p>\n"
+            f"      {frag}\n"
+            "    </section>"
+        )
     as_list = key in {"back", "breast", "fly"}
     for sid, stitle, text in sections:
         body.append(
@@ -147,6 +161,7 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
   <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/teach.css">
   <link rel="stylesheet" href="../../css/site.css">
 </head>
 <body class="page-learn">

@@ -369,7 +369,7 @@ def page_html(title: str, preamble: str, sections: list[tuple[str, str, str]]) -
         '<header class="page-head">\n'
         f"      <h1>{inline(title)}</h1>\n"
         "      <p class=\"sub\">核对汇总版原文。下面按逐字稿展开，不按摘要压缩。</p>\n"
-        "      <p class=\"site-cross\">上课口诀见 <a href=\"../strokes/\">四泳姿教学</a>。"
+        "      <p class=\"site-cross\">连贯口令见 <a href=\"../strokes/\">四泳姿</a>，课堂教学在各式册子里。"
         "个人自救见 <a href=\"../safety/\">水中自救</a>。"
         "阶段诊断见 <a href=\"freestyle/\">自由泳</a>、"
         "<a href=\"back/\">仰泳</a>、"

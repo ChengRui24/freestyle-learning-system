@@ -4,7 +4,7 @@
 
 - [课程安排](https://chengrui24.github.io/freestyle-learning-system/learn/course/)
 - [USMS 成人游泳训练体系](https://chengrui24.github.io/freestyle-learning-system/learn/)
-- [四泳姿教学](https://chengrui24.github.io/freestyle-learning-system/strokes/)
+- [四泳姿教学](https://chengrui24.github.io/freestyle-learning-system/strokes/)：四式共用路径与连贯口令；课堂教学在各式册子里
 - [自由泳学习体系](https://chengrui24.github.io/freestyle-learning-system/learn/freestyle/)
 - [仰泳学习体系](https://chengrui24.github.io/freestyle-learning-system/learn/back/)
 - [蝶泳学习体系](https://chengrui24.github.io/freestyle-learning-system/learn/fly/)
