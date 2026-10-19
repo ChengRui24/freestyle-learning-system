@@ -68,7 +68,10 @@ html{scroll-padding-top:0}
   body.page-strokes .tools-panel {
     box-shadow: none;
   }
-  body.page-strokes .controls { top: var(--site-bar-h); z-index: 180; }
+  body.page-strokes .controls {
+    top: calc(var(--site-bar-h) + var(--section-nav-h));
+    z-index: 180;
+  }
   body.page-strokes .stroke-panel,
   body.page-strokes #generalSafety,
   body.page-strokes #basicSkills,
@@ -77,22 +80,28 @@ html{scroll-padding-top:0}
   body.page-strokes .record,
   body.page-strokes .category-block,
   body.page-strokes .source-item {
-    scroll-margin-top: calc(var(--site-bar-h) + var(--nav-h) + 14px);
+    scroll-margin-top: calc(var(--site-bar-h) + var(--section-nav-h) + var(--nav-h) + 14px);
   }
 </style>
 </head><body class="page-strokes">
 <header class="site-bar">
   <a class="site-brand" href="../">成人游泳训练</a>
   <nav aria-label="站点">
-    <a href="../learn/">学习</a>
+    <a href="../learn/" aria-current="page">学习</a>
     <a href="../safety/">自救</a>
-    <a href="../gear/snorkels/">呼吸管</a>
-    <a href="../gear/paddles/">划手掌</a>
-    <a href="../gear/fins/">脚蹼</a>
+    <a href="../gear/">器材</a>
   </nav>
 </header>
+<nav class="section-nav" aria-label="学习">
+  <a href="./" aria-current="page">四泳姿</a>
+  <a href="../learn/">汇总</a>
+  <a href="../learn/freestyle/">自由泳</a>
+  <a href="../learn/back/">仰泳</a>
+  <a href="../learn/fly/">蝶泳</a>
+  <a href="../learn/breast/">蛙泳</a>
+</nav>
 <div class="shell">
-<header class="masthead"><div class="title-line"><h1>四泳姿教学</h1><span class="version-label">目录版 · V8</span></div><p class="subtitle">分解看要点，过渡记衔接，连贯练节奏。</p><p class="subtitle">体系依据见 <a href="../learn/">USMS 汇总</a>。自由泳诊断见 <a href="../learn/freestyle/">完整学习体系 3.0</a>。</p></header>
+<header class="masthead"><div class="title-line"><h1>四泳姿教学</h1><span class="version-label">目录版 · V8</span></div><p class="subtitle">分解看要点，过渡记衔接，连贯练节奏。</p><p class="subtitle">体系依据见 <a href="../learn/">USMS 汇总</a>。阶段诊断见 <a href="../learn/freestyle/">自由泳</a>、<a href="../learn/back/">仰泳</a>、<a href="../learn/fly/">蝶泳</a>、<a href="../learn/breast/">蛙泳</a>。</p></header>
 <nav aria-label="全文导航" class="no-js-only no-js-nav"><a href="#stroke-crawl">爬泳</a><a href="#stroke-back">仰泳</a><a href="#stroke-fly">蝶泳</a><a href="#stroke-breast">蛙泳</a><a href="#errorView">分类纠错</a><a href="#techView">技术要点</a><a href="#archiveView">原始资料</a></nav>
 <div class="js-only controls" id="controls"><nav aria-label="泳姿" class="stroke-tabs"><button aria-pressed="false" data-swim="crawl" type="button">爬泳</button><button aria-pressed="false" data-swim="back" type="button">仰泳</button><button aria-pressed="false" data-swim="fly" type="button">蝶泳</button><button aria-pressed="false" data-swim="breast" type="button">蛙泳</button></nav><div class="control-row"><a class="contents-jump" href="#toc-course-crawl" id="contentsJump">本节目录 ↑</a><button aria-pressed="false" class="mode-button" id="reciteBtn" type="button">背诵</button><details class="tools" id="tools"><summary>更多</summary><div class="tools-panel"><label>搜索当前泳姿<input autocomplete="off" id="searchBox" placeholder="动作、错误或关键词" type="search"/></label><label>练习范围<select id="stageFilter"><option value="all">全部阶段</option><option value="L">陆上模仿</option><option value="过渡">只看过渡</option><option value="H">半陆半水</option><option value="F">水中固定支撑</option><option value="P">水中有辅助</option><option value="U">水中独立完成</option></select></label><label>文字大小<select id="fontSize"><option value="17">标准</option><option value="19">较大</option><option value="21">大字</option></select></label><div class="tool-buttons"><button id="randomBtn" type="button">随机抽背</button><button aria-pressed="false" id="markedBtn" type="button">只看待复习</button><button id="printCurrent" type="button">打印当前范围</button><button id="printFull" type="button">打印全部正文</button><button id="archiveBtn" type="button">原文与来源</button><button id="resetBtn" type="button">清除筛选</button></div></div></details></div></div>
 <nav aria-label="内容" class="view-tabs js-only"><button class="active" data-view="course" type="button">口诀与练习</button><button data-view="error" type="button">分类纠错</button><button data-view="tech" type="button">技术要点</button></nav>

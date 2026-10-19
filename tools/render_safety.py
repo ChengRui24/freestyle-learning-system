@@ -386,8 +386,10 @@ def page_html(preamble: str, sections: list[tuple[str, str, str]]) -> str:
         "      <h1>成人水中自救与个人生存</h1>\n"
         "      <p class=\"sub\">完整学习、教学与专项训练体系。下面按对话原文展开，不按摘要压缩。</p>\n"
         '      <p class="site-cross">泳姿学习见 <a href="../learn/">USMS 成人游泳训练体系</a>。'
-        "自由泳阶段诊断见 "
-        '<a href="../learn/freestyle/">完整学习体系 3.0</a>。'
+        '阶段诊断见 <a href="../learn/freestyle/">自由泳</a>、'
+        '<a href="../learn/back/">仰泳</a>、'
+        '<a href="../learn/fly/">蝶泳</a>、'
+        '<a href="../learn/breast/">蛙泳</a>。'
         "会自由泳不等于会自救。器材隔离变量见 "
         '<a href="../gear/snorkels/">呼吸管</a>、'
         '<a href="../gear/fins/">脚蹼</a>、'
@@ -420,9 +422,7 @@ def page_html(preamble: str, sections: list[tuple[str, str, str]]) -> str:
   <nav aria-label="站点">
     <a href="../learn/">学习</a>
     <a href="./" aria-current="page">自救</a>
-    <a href="../gear/snorkels/">呼吸管</a>
-    <a href="../gear/paddles/">划手掌</a>
-    <a href="../gear/fins/">脚蹼</a>
+    <a href="../gear/">器材</a>
   </nav>
 </header>
 <div class="app">

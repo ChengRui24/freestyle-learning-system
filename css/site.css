@@ -1,5 +1,6 @@
 :root {
   --site-bar-h: 2.75rem;
+  --section-nav-h: 2.35rem;
   --site-bg: #f6f6f3;
   --site-fg: #111214;
   --site-muted: #5a5e64;
@@ -47,8 +48,8 @@ body.page-snorkels .topbar,
 body.page-paddles .topbar,
 body.page-fins .topbar {
   position: sticky;
-  top: var(--site-bar-h);
-  z-index: 190;
+  top: calc(var(--site-bar-h) + var(--section-nav-h));
+  z-index: 180;
   background: rgba(246, 246, 243, 0.93);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(17, 18, 20, 0.1);
@@ -157,6 +158,48 @@ body.page-fins .topbar nav a:hover {
   font-weight: 750;
 }
 
+.section-nav {
+  position: sticky;
+  top: var(--site-bar-h);
+  z-index: 195;
+  display: flex;
+  gap: 4px 16px;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--section-nav-h);
+  margin: 0;
+  padding: 0 28px;
+  overflow: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  background: var(--site-bg);
+  border-bottom: 1px solid var(--site-line);
+  font: 13px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+.section-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav a,
+.section-nav a:hover {
+  color: var(--site-muted);
+  text-decoration: none;
+}
+
+.section-nav a[aria-current="page"],
+body.page-home .section-nav a[aria-current="page"] {
+  color: var(--site-fg);
+  font-weight: 750;
+}
+
+body.page-home .section-nav a,
+body.page-home .section-nav a:hover {
+  color: var(--site-muted);
+  text-decoration: none;
+}
+
 .site-cross {
   font-size: 0.9rem;
   color: var(--site-muted);
@@ -169,7 +212,11 @@ body.page-fins .topbar nav a:hover {
   text-underline-offset: 2px;
 }
 
-body.page-learn .side,
+body.page-learn .side {
+  top: calc(var(--site-bar-h) + var(--section-nav-h));
+  height: calc(100vh - var(--site-bar-h) - var(--section-nav-h));
+}
+
 body.page-safety .side {
   top: var(--site-bar-h);
   height: calc(100vh - var(--site-bar-h));
@@ -180,7 +227,10 @@ body.page-learn .stage,
 body.page-learn section,
 body.page-learn tr,
 body.page-learn .cat-h,
-body.page-learn h3,
+body.page-learn h3 {
+  scroll-margin-top: calc(var(--site-bar-h) + var(--section-nav-h) + 0.7rem);
+}
+
 body.page-safety section,
 body.page-safety tr {
   scroll-margin-top: calc(var(--site-bar-h) + 0.7rem);
@@ -398,7 +448,8 @@ body.page-snorkels .compat span {
 }
 
 @media print {
-  .site-bar {
+  .site-bar,
+  .section-nav {
     display: none;
   }
 }

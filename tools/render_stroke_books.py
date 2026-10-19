@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""Render the four-stroke diagnosis booklets from learn/{back,breast,fly}/source.md."""
+from __future__ import annotations
+
+import html
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from render_learn import heading_id, inline, render_blocks  # noqa: E402
+
+LEARN = ROOT / "learn"
+
+BOOKS = {
+    "back": {
+        "brand": "仰泳学习体系",
+        "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
+        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的仰泳模块。",
+        "stroke": "back",
+        "stroke_label": "仰泳",
+    },
+    "breast": {
+        "brand": "蛙泳学习体系",
+        "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
+        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的蛙泳模块。",
+        "stroke": "breast",
+        "stroke_label": "蛙泳",
+    },
+    "fly": {
+        "brand": "蝶泳学习体系",
+        "ver": "阶段 / 诊断 / 专项 · 对齐四泳姿",
+        "sub": "用来定阶段、看现象、选一个专项。上课口令用四泳姿的蝶泳模块。",
+        "stroke": "fly",
+        "stroke_label": "蝶泳",
+    },
+}
+
+SIBLINGS = [
+    ("freestyle/", "自由泳"),
+    ("back/", "仰泳"),
+    ("fly/", "蝶泳"),
+    ("breast/", "蛙泳"),
+]
+
+
+def parse_book(md: str) -> tuple[str, str, list[tuple[str, str, str]]]:
+    lines = md.split("\n")
+    title = "学习体系"
+    if lines and lines[0].startswith("# "):
+        title = lines[0][2:].strip()
+        lines = lines[1:]
+    preamble: list[str] = []
+    sections: list[tuple[str, str, str]] = []
+    cur_id = ""
+    cur_title = ""
+    cur_body: list[str] = []
+    seen: dict[str, int] = {}
+
+    def flush() -> None:
+        nonlocal cur_id, cur_title, cur_body
+        if cur_id:
+            sections.append((cur_id, cur_title, "\n".join(cur_body).rstrip()))
+        cur_id, cur_title, cur_body = "", "", []
+
+    for line in lines:
+        if line.startswith("## "):
+            flush()
+            cur_title = line[3:].strip()
+            base = heading_id(cur_title)
+            n = seen.get(base, 0) + 1
+            seen[base] = n
+            cur_id = base if n == 1 else f"{base}-{n}"
+            cur_body = []
+            continue
+        if not cur_id:
+            preamble.append(line)
+        else:
+            cur_body.append(line)
+    flush()
+    return title, "\n".join(preamble).strip("\n"), sections
+
+
+def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str]]) -> str:
+    meta = BOOKS[key]
+
+    def cur(name: str) -> str:
+        return ' aria-current="page"' if name == key else ""
+    nav = []
+    for sid, stitle, _ in sections:
+        nav.append(f'<a href="#{html.escape(sid)}">{html.escape(stitle)}</a>')
+    siblings = []
+    for href, label in SIBLINGS:
+        if href.startswith(key):
+            siblings.append(label)
+        else:
+            siblings.append(f'<a href="../{href}">{label}</a>')
+    sib = " · ".join(siblings)
+    body = []
+    body.append(
+        '<header class="page-head">\n'
+        f"      <h1>{inline(title)}</h1>\n"
+        f'      <p class="sub">{html.escape(meta["sub"])}</p>\n'
+        '      <p class="site-cross">四式阶段诊断：'
+        f"{sib}。"
+        f'上课口诀见 <a href="../../strokes/#stroke-{meta["stroke"]}">四泳姿 · {meta["stroke_label"]}</a>。'
+        '入水共同课见 <a href="../#alts">USMS 汇总</a>。'
+        '个人自救见 <a href="../../safety/">水中自救</a>。</p>\n'
+        f"      {render_blocks(preamble, 'lede')}\n"
+        "    </header>"
+    )
+    for sid, stitle, text in sections:
+        body.append(
+            f'<section id="{html.escape(sid)}">\n'
+            f"      <h2>{inline(stitle)}</h2>\n"
+            f"      {render_blocks(text, sid)}\n"
+            "    </section>"
+        )
+    main = "\n\n    ".join(body)
+    nav_html = "\n      ".join(nav)
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{html.escape(title)}</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../../css/site.css">
+</head>
+<body class="page-learn">
+<header class="site-bar">
+  <a class="site-brand" href="../../">成人游泳训练</a>
+  <nav aria-label="站点">
+    <a href="../" aria-current="page">学习</a>
+    <a href="../../safety/">自救</a>
+    <a href="../../gear/">器材</a>
+  </nav>
+</header>
+<nav class="section-nav" aria-label="学习">
+  <a href="../../strokes/">四泳姿</a>
+  <a href="../">汇总</a>
+  <a href="../freestyle/"{cur("freestyle")}>自由泳</a>
+  <a href="../back/"{cur("back")}>仰泳</a>
+  <a href="../fly/"{cur("fly")}>蝶泳</a>
+  <a href="../breast/"{cur("breast")}>蛙泳</a>
+</nav>
+<div class="app">
+  <aside class="side">
+    <p class="brand">{html.escape(meta["brand"])}</p>
+    <div class="ver">{html.escape(meta["ver"])}</div>
+    <nav>
+      {nav_html}
+    </nav>
+  </aside>
+  <main class="main">
+    {main}
+  </main>
+</div>
+<script src="../js/nav.js?4"></script>
+</body>
+</html>
+"""
+
+
+def main() -> None:
+    for key in BOOKS:
+        src = LEARN / key / "source.md"
+        md = src.read_text(encoding="utf-8")
+        title, preamble, sections = parse_book(md)
+        if not sections:
+            raise SystemExit(f"{src} has no sections")
+        out = LEARN / key / "index.html"
+        out.write_text(page(key, title, preamble, sections), encoding="utf-8")
+        print(f"{key}: {len(sections)} sections -> {out.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

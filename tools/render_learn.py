@@ -335,7 +335,10 @@ def page_html(title: str, preamble: str, sections: list[tuple[str, str, str]]) -
         "      <p class=\"sub\">核对汇总版原文。下面按逐字稿展开，不按摘要压缩。</p>\n"
         "      <p class=\"site-cross\">上课口诀见 <a href=\"../strokes/\">四泳姿教学</a>。"
         "个人自救见 <a href=\"../safety/\">水中自救</a>。"
-        "自由泳阶段诊断另见 <a href=\"freestyle/\">完整学习体系 3.0</a>。"
+        "阶段诊断见 <a href=\"freestyle/\">自由泳</a>、"
+        "<a href=\"back/\">仰泳</a>、"
+        "<a href=\"fly/\">蝶泳</a>、"
+        "<a href=\"breast/\">蛙泳</a>。"
         "器材见 <a href=\"../gear/snorkels/\">呼吸管</a>、"
         "<a href=\"../gear/fins/\">脚蹼</a>、"
         "<a href=\"../gear/paddles/\">划手掌</a>。</p>\n"
@@ -374,11 +377,17 @@ def page_html(title: str, preamble: str, sections: list[tuple[str, str, str]]) -
   <nav aria-label="站点">
     <a href="./" aria-current="page">学习</a>
     <a href="../safety/">自救</a>
-    <a href="../gear/snorkels/">呼吸管</a>
-    <a href="../gear/paddles/">划手掌</a>
-    <a href="../gear/fins/">脚蹼</a>
+    <a href="../gear/">器材</a>
   </nav>
 </header>
+<nav class="section-nav" aria-label="学习">
+  <a href="../strokes/">四泳姿</a>
+  <a href="./" aria-current="page">汇总</a>
+  <a href="freestyle/">自由泳</a>
+  <a href="back/">仰泳</a>
+  <a href="fly/">蝶泳</a>
+  <a href="breast/">蛙泳</a>
+</nav>
 <div class="app">
   <aside class="side">
     <p class="brand">USMS 成人游泳训练体系</p>
