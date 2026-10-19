@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LEARN = ROOT / "learn"
+LEARN = ROOT / "learn" / "freestyle"
 MD = (LEARN / "source.md").read_text(encoding="utf-8")
 
 

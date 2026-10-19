@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>自由泳完整学习体系 3.0</title>
-  <meta name="description" content="爬泳／自由泳学习阶段、里程碑、问题诊断与专项练习库。专项练习不是终点，回到完整自由泳后仍然改善，才算真正学会。">
+  <title>USMS 成人游泳训练体系</title>
+  <meta name="description" content="USMS 成人游泳训练体系核对汇总版：入水、四式、出发转身、训练方法与安全边界。">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="../css/site.css">
 </head>
@@ -13,6 +13,7 @@
   <a class="site-brand" href="../">成人游泳训练</a>
   <nav aria-label="站点">
     <a href="./" aria-current="page">学习</a>
+    <a href="../safety/">自救</a>
     <a href="../gear/snorkels/">呼吸管</a>
     <a href="../gear/paddles/">划手掌</a>
     <a href="../gear/fins/">脚蹼</a>
@@ -20,197 +21,1163 @@
 </header>
 <div class="app">
   <aside class="side">
-    <p class="brand">自由泳完整学习体系</p>
-    <div class="ver">3.0 · 阶段 / 诊断 / 专项库</div>
+    <p class="brand">USMS 成人游泳训练体系</p>
+    <div class="ver">核对汇总版 · 2026-08-21</div>
     <nav>
-      <div class="g">使用</div>
-      <a href="#use">怎么用</a>
-      <div class="g">阶段</div>
-      <a href="#std">掌握标准</a>
-      <a href="#line">学习主线 A0–A8</a>
-      <div class="g">诊断</div>
-      <a href="#diag">六步诊断</a>
-      <a href="#tests-sec">快速测试</a>
-      <a href="#symptoms-sec">现象定位 C</a>
-      <div class="g">练习</div>
-      <a href="#drills-sec">专项库 D</a>
-      <a href="#chains-sec">练习链</a>
+      <div class="g">入口</div>
+      <a href="#map">总图</a>
+      <a href="#meta">体例</a>
+      <a href="#alts">入水 / ALTS</a>
+      <a href="#s101">Swimming 101</a>
+      <div class="g">四式</div>
+      <a href="#guides">Guide 怎么用</a>
+      <a href="#drills">220 条索引</a>
+      <a href="#free">自由泳</a>
+      <a href="#back">仰泳</a>
+      <a href="#breast">蛙泳</a>
+      <a href="#fly">蝶泳</a>
+      <div class="g">池壁</div>
+      <a href="#starts">出发</a>
+      <a href="#turns">转身</a>
+      <a href="#underwater">水下海豚腿</a>
+      <a href="#wall">Transition</a>
       <div class="g">训练</div>
-      <a href="#session">单次闭环 E</a>
-      <a href="#advance">进阶 / 退阶 F</a>
-      <a href="#goals">目标重点</a>
-      <a href="#safety">安全</a>
+      <a href="#layers">Drill / Set / Workout</a>
+      <a href="#terms">训练语言</a>
+      <a href="#gear-usms">器材约束</a>
+      <a href="#stroke-principles">四式原则与路径</a>
+      <a href="#transfer">Drill 迁移</a>
+      <a href="#intensity">强度方法</a>
+      <a href="#workout">写一堂课</a>
+      <a href="#plans">计划 / 六周</a>
+      <a href="#assess">测试与追踪</a>
+      <div class="g">目标</div>
+      <a href="#ow">开放水域</a>
+      <a href="#special">铁三 / 回归 / 低容量</a>
+      <a href="#dryland">陆上</a>
+      <div class="g">安全与诊断</div>
+      <a href="#train-safety">训练安全</a>
+      <a href="#video">录像分析</a>
+      <a href="#path">按目标选路径</a>
+      <a href="#diag">诊断模板</a>
+      <a href="#fields">处方字段</a>
+      <div class="g">附录</div>
+      <a href="#sources">官方来源</a>
+      <a href="#close">结论</a>
     </nav>
   </aside>
 
   <main class="main">
     <header class="page-head">
-      <h1>自由泳完整学习体系 3.0</h1>
-      <p class="sub">日常把爬泳称为自由泳，本文统一用「自由泳」。</p>
+      <h1>USMS 成人游泳训练体系：动作、技术、学习路径、训练方法与强度安排（核对汇总版）</h1>
+      <p class="sub">核对汇总版原文。下面按逐字稿展开，不按摘要压缩。</p>
+      <p class="site-cross">上课口诀见 <a href="../strokes/">四泳姿教学</a>。个人自救见 <a href="../safety/">水中自救</a>。自由泳阶段诊断另见 <a href="freestyle/">完整学习体系 3.0</a>。器材见 <a href="../gear/snorkels/">呼吸管</a>、<a href="../gear/fins/">脚蹼</a>、<a href="../gear/paddles/">划手掌</a>。</p>
+      <p><strong>版本：2026-08-21｜资料范围：U.S. Masters Swimming（USMS）与 LaneMate/USMS 官方页面、USMS Adult Learn-to-Swim 官方教材。</strong></p>
+<blockquote><p>本文的目标不是把 USMS 内容改写成另一套“自创课程”，而是把分散在 Guides、ALTS、Workout Library、Six-Week Training Plans、Fitness Series、Video Stroke Analysis、Open Water 101、教练教育和专题训练文章中的内容，整理成一个可检索、可教学、可训练的 Markdown 体系。</p></blockquote>
     </header>
-    <section id="use">
-      <p class="k">使用顺序</p>
-      <div class="order use-path">
-        <span>A 阶段</span><span class="arr" aria-hidden="true">→</span>
-        <span>C 现象</span><span class="arr" aria-hidden="true">→</span>
-        <span>B 根因</span><span class="arr" aria-hidden="true">→</span>
-        <span>D 专项</span><span class="arr" aria-hidden="true">→</span>
-        <span>E 闭环</span><span class="arr" aria-hidden="true">→</span>
-        <span>F 规则</span>
-      </div>
-      <table class="kv">
-        <thead><tr><th>步骤</th><th>看什么</th></tr></thead>
-        <tbody>
-          <tr><td>A 阶段</td><td>当前真正卡在哪一层</td></tr>
-          <tr><td>C 现象</td><td>先写看到了什么</td></tr>
-          <tr><td>B 根因</td><td>按优先序找最早失效环节</td></tr>
-          <tr><td>D 专项</td><td>1 个主问题 + 最多 1 个辅助</td></tr>
-          <tr><td>E 闭环</td><td>专项后必须完整泳复测</td></tr>
-          <tr><td>F 规则</td><td>巩固、进阶或退阶</td></tr>
-        </tbody>
-      </table>
-      <p>学习主线不是打腿 → 划手 → 换气 → 拼起来。专项是否有效，只看：<strong>回到完整自由泳以后，原来的问题是否减少。</strong></p>
+
+    <section id="meta" class="meta">
+      <h3 id="meta-h1">证据与标记规则</h3>
+<ul><li><strong>[USMS]</strong>：直接来自 USMS 当前官方 Guide、官方教材或官方训练文章的内容。</li><li><strong>[结构化整理]</strong>：为了把 USMS 分散内容连接起来而做的分类、层级或路径整理；不是 USMS 官方命名的新课程。</li><li><strong>[补充/历史]</strong>：USMS 较早的官方训练文章或教练文章；用于说明训练思路，不应被误解为当前唯一标准。</li><li>技术动作名称尽量保留英文原名，并提供中文教学译名。中文名是本文译法，不代表 USMS 官方中文名称。</li><li>USMS 当前 Guides 是动态内容；专题文章库也持续增加，因此“动作总数”指本文核对日期下的 <strong>Current Guides 主动作条目</strong>，不等于 USMS 历史上出现过的全部 drill。</li></ul>
+<h3 id="meta-h2">本文覆盖范围</h3>
+<p>1. 成人零基础 Learn-to-Swim 路径；2. Swimming 101 与训练识读；3. 四种泳姿技术原理；4. Current Guides 220 条水中 drill 主索引；5. 出发、转身、水下段；6. Drill→Set→Workout 的使用方法；7. 训练术语与器材；8. 强度、配速、休息、CSS、Best Average、Race Pace、Sprint、VO₂-max 等训练方法；9. 17 套六周目标计划与 7 类 Workout Library；10. Open Water、Triathlon、回归训练、低容量训练；11. Dryland；12. 测试、追踪与反馈；13. Periodization、Taper、Recovery；14. Video Stroke Analysis 与教练体系；15. 安全边界。</p>
     </section>
 
-    <section id="std">
-      <h2>阶段是否真正掌握</h2>
-      <p>不能因为偶然完成一次或游够某个距离就算掌握。四项需同时满足。</p>
-      <ol class="proc">
-        <li><b>1 可重复</b>同一动作连续至少 3 次或 3 组。</li>
-        <li><b>2 可控制</b>较慢、较放松完成；不依赖憋气、冲刺、拼命打腿、大幅度代偿。</li>
-        <li><b>3 无明显新代偿</b>例如为换气又出现抬头、剪刀腿、前手下压、过度翻转。</li>
-        <li><b>4 能带回完整泳</b>分解很好但完整泳一开始全部消失，不算通过。</li>
-      </ol>
-      <p class="rule">憋气冲完 25 米 ≠ 掌握 25 米自由泳。</p>
+    <section id="map">
+      <h2>0. 一张图理解 USMS 的完整训练生态</h2>
+      <p><strong>[结构化整理]</strong> USMS 并不是一条“先自由泳、再蛙泳”的固定课程，而是多个入口共同构成的成人游泳发展系统：</p>
+<pre><code>成人不会游 / 怕水
+    ↓ ALTS
+水适应 → 呼吸 → 漂浮 → 恢复站立 → 滑行 → 打腿 → 基础自由泳
+    ↓
+Swimming 101：泳池、器材、泳道礼仪、训练术语、四泳姿与赛事基础
+    ↓
+四泳姿 Guides：Body Position / Breathing / Pull / Kick / Timing
+    ↓
+Drill Progression → Drill/Swim Transfer → Sets → Workout
+    ↓
+Starts / Turns / Underwater / Breakout / IM Transitions
+    ↓
+目标分流
+    ├─ Fitness / General Masters
+    ├─ Sprint / Middle Distance / Distance
+    ├─ Stroke / IM
+    ├─ Open Water
+    ├─ Triathlon
+    ├─ Low-Volume / Limited Mobility
+    └─ Return-to-Swimming
+    ↓
+Assessment：Time / Pace / Stroke Count / DPS / SWOLF / CSS / Test Set
+    ↓
+Training Plan → Execute → Record → Reassess → Adjust</code></pre>
+<p>USMS 当前 Guides 官方总入口把资源分为 <strong>101-level guides、stroke guides、transition guides</strong>。四泳姿 Guide 再把泳姿拆成技术模块，并为模块配套技术文章、渐进 drill、训练 set 和 dryland。出发、转身、水下腿则作为与泳姿平级的 transition 技术处理。</p>
+<p>官方入口：<a href="https://www.usms.org/fitness-and-training/guides">https://www.usms.org/fitness-and-training/guides</a></p>
     </section>
 
-    <section id="line">
-      <h2>学习主线 A0–A8</h2>
-      <div class="spine" id="spine"></div>
-      <div class="stages" id="stages"></div>
+    <section id="alts">
+      <h2>1. 成人零基础：USMS Adult Learn-to-Swim（ALTS）路径</h2>
+      <h3 id="s-1-1">1.1 先判断是哪类成人学员</h3>
+<p><strong>[USMS]</strong> ALTS Volunteer Teacher Swim Lesson Guide 把常见成人学员至少分为四类：</p>
+<ul><li>不怕水的不会游者；</li><li>已会游、需要改善泳姿者；</li><li>会游但呼吸困难者；</li><li>怕水的不会游者。</li></ul>
+<p>教学开始前先了解既往水中经历和目标。成人即使已有狗刨等基础，教材仍建议从基础能力开始检查，以确认基础技能确实掌握；一项能力表现出来后立即进入下一项，进度跟随学员，而不是要求所有人按同样课时推进。</p>
+<p>官方教材：<a href="https://www.usms.org/alts/alts_aprilvolunteerguide.pdf">https://www.usms.org/alts/alts_aprilvolunteerguide.pdf</a></p>
+<h3 id="water">1.2 General Teaching Progression：官方基础顺序</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>阶段</th><th>USMS 技能</th><th>核心教学内容</th><th>通过信号/注意点</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Bobs 沉浮呼吸</strong></td><td>站立扶墙，下潜时向水中呼气，出水只完成吸气；教材建议课初至少做约 10 次</td><td>重点观察水下是否真正呼气、出水是否还在吐气；吸气走嘴</td></tr>
+<tr><td>2</td><td><strong>Front Float 俯卧漂浮</strong></td><td>深吸气后面部入水，利用肺中空气感知浮力；必要时轻打腿</td><td>初学尝试时控制时间，避免因紧张在面部仍入水时吸气；抬头会使腿下沉</td></tr>
+<tr><td>3</td><td><strong>Standing Up 漂浮恢复站立</strong></td><td>双手向下压/扫水，同时抬头、双膝收向胸部，从水平恢复垂直</td><td>两膝应同时收回，不要一条腿拖在身后</td></tr>
+<tr><td>4</td><td><strong>Back Float 仰漂</strong></td><td>学会仰卧让水支撑身体；能自然呼吸、观察环境、必要时呼救</td><td>头部后放、腹部向上；抬头常导致髋部下沉</td></tr>
+<tr><td>5</td><td><strong>Front Glide 俯卧蹬壁滑行</strong></td><td>一手扶墙、双脚蹬墙，吸气后面入水，两手叠放，肘伸直、上臂夹耳</td><td>目标是建立流线型和无额外动作的前进感</td></tr>
+<tr><td>6</td><td><strong>Back Glide 仰卧蹬壁滑行</strong></td><td>仰卧、耳朵入水，温和蹬壁，保持身体伸展</td><td>避免因为紧张抬头使身体折叠</td></tr>
+<tr><td>7</td><td><strong>Flutter Kick 自由泳腿</strong></td><td>快、均匀、小幅；膝盖“直但放松”，脚踝放松；立即加入滑行</td><td>前踢时脚不要过度出水；仰踢时膝盖不要明显顶出水面</td></tr>
+<tr><td>8</td><td><strong>Freestyle without breathing 不换气自由泳</strong></td><td>先把蹬壁、打腿和基本手臂动作连起来，不同时增加侧向换气复杂度</td><td>一次只纠正 1–2 个重点，避免信息过载</td></tr>
+<tr><td>9</td><td><strong>Freestyle with breathing 加入自由泳换气</strong></td><td>回到 Bobs → 扶墙单臂与转头 → 一次换气 → 增加换气次数和距离</td><td>观察水中呼气、换气时是否抬头、出水时是否真正在吸气</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="s-1-3">1.3 呼吸困难成人的检查方法</h3>
+<p><strong>[USMS]</strong> 对“会游一池但很快喘”的成人，ALTS 教材建议先看其完整游一池，然后只检查呼吸相关信号：水中是否持续出现气泡；换气时是否把头抬出水面；转头后是否还能听到呼气声。如果是，应先让学员把注意力从手腿动作移开，集中在“把气排到水里、转头时用嘴吸气”。</p>
+<h3 id="s-1-4">1.4 ALTS 与竞技呼吸训练不能混淆</h3>
+<p>初学者首先解决的是安全的空气交换与水中舒适度；进阶泳者才可能做 restricted breathing 等专项。USMS 2023 的 breath-control 安全文章明确指出：水下憋气存在 shallow-water blackout 风险，呼吸控制训练绝不能无人监督，也不应变成极限憋气或过度换气训练。见第 18 节安全规则。</p>
+    </section>
+
+    <section id="s101">
+      <h2>2. 从“会游”到“会训练”：Swimming 101</h2>
+      <p><strong>[USMS]</strong> Swimming 101 推荐的四部分顺序是：<strong>The Basics → The Stroke Basics → Adult Swim Training → Events 101</strong>；可以按需求跳转，不是强制线性课程。</p>
+<h3 id="s-2-1">2.1 训练识读能力</h3>
+<p>真正进入 Masters 训练前，至少应会理解：</p>
+<ul><li>泳池长度、泳道、池底标线、仰泳旗、15 米标记等；</li><li>泳道礼仪、circle swim、超越与跟游；</li><li>pace clock；</li><li><code>5 x 100</code>、<code>@1:30</code>、<code>@:20 rest</code> 等写法；</li><li>warm-up、drill、kick、pull、main set、cool-down；</li><li>choice、free、stroke、IM；</li><li>open turn、flip turn、streamline、underwater。</li></ul>
+<p>Swimming 101：<a href="https://www.usms.org/fitness-and-training/guides/swimming-101">https://www.usms.org/fitness-and-training/guides/swimming-101</a></p>
+    </section>
+
+    <section id="guides">
+      <h2>3. USMS 技术 Guide 的标准使用方式</h2>
+      <p><strong>[USMS]</strong> 当前四泳姿和 transition Guides 的典型模块结构是：</p>
+<ul><li>约 <strong>6 篇 big-picture 技术文章</strong>：解释机制、常见错误、速度/耐力影响；</li><li><strong>10 个 progressive drills</strong>：从较简单到更复杂；</li><li>通常 <strong>5 个 sets</strong>：把 drill 与完整泳姿、速度、划数、距离结合；Turns 的 dedicated set 页面当前为每类 4 组；</li><li><strong>10 个 dryland exercises</strong>：补充活动度、稳定、力量或爆发能力。</li></ul>
+<h3 id="s-3-1">3.1 Current Guides 主水中动作数量</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>系统</th><th>模块</th><th>Drill 条目</th></tr></thead>
+<tbody>
+<tr><td>自由泳</td><td>Body Position / Pull / Kick / Breathing</td><td>40</td></tr>
+<tr><td>仰泳</td><td>Body Position / Pull / Kick</td><td>30</td></tr>
+<tr><td>蛙泳</td><td>Body Position / Pull / Kick / Timing</td><td>40</td></tr>
+<tr><td>蝶泳</td><td>Body Position / Pull / Kick / Timing</td><td>40</td></tr>
+<tr><td>出发</td><td>Forward / Backstroke / Relay</td><td>30</td></tr>
+<tr><td>转身</td><td>Flip / Open</td><td>20</td></tr>
+<tr><td>水下海豚腿</td><td>Body Alignment / Propulsion</td><td>20</td></tr>
+<tr><td><strong>合计</strong></td><td>22 个 dedicated drill 模块</td><td><strong>220 条</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>这里的 <strong>220 是条目数，不是 220 个完全不同的动作</strong>。例如 Ball Float、Closed Fist、Vertical Kick、Stroke-Count Swimming 会跨模块重复。IM turns 当前官方页明确要求使用并调整 open-turn drills/sets/dryland，因此不另加一个虚构的“IM 10 drill”。</p>
+    </section>
+
+    <section id="layers">
+      <h2>4. Drill、Set、Workout：三层不能混为一谈</h2>
+      <h3 id="s-4-1">4.1 Drill</h3>
+<p><strong>[USMS]</strong> Drill 是专门改善技术组成部分的练习。USMS 的 workout-writing 指南强调：每个 set 都要有目的；drill 的重点是正确执行，不是为了游快。如果 drill 做错，会强化错误习惯，因此需要及时反馈。</p>
+<h3 id="s-4-2">4.2 Set</h3>
+<p>Set 把“动作 + 距离 + 次数 + 强度/目标 + rest/send-off + 器材”组合成一个训练刺激。例如同一个 Closed Fist：做 4×25 慢速技术感知和做 8×50 fist/open 交替并要求相同划数，是完全不同的训练任务。</p>
+<h3 id="s-4-3">4.3 Workout</h3>
+<p>USMS workout-writing 指南给出的典型 Masters 结构：</p>
+<p>1. Warm-up；2. Drill/technique focus；3. Main set；4. Pull or kick set；5. Supplementary set；6. Cool-down。</p>
+<p>Warm-up 与 cool-down 被该指南视为必要组成；其余模块根据目标增删和排序。Main set 通常占整堂训练约 <strong>1/3–2/3</strong>，但不是硬性规则。</p>
+<p>官方说明：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-write-a-swimming-workout">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-write-a-swimming-workout</a></p>
+    </section>
+
+    <section id="terms">
+      <h2>5. 训练语言、强度和控制变量</h2>
+      <h3 id="s-5-1">5.1 USMS 常用训练操作符</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>术语</th><th>USMS 含义/使用方式</th></tr></thead>
+<tbody>
+<tr><td><strong>Swim</strong></td><td>完整泳姿游，承担技术整合与主要体能训练</td></tr>
+<tr><td><strong>Drill</strong></td><td>有意改变动作以练习某个技术组成部分；常见 drill 25 / swim 25 迁移</td></tr>
+<tr><td><strong>Kick</strong></td><td>主要用腿推进，可配浮板、流线、侧身、仰卧、阻力等</td></tr>
+<tr><td><strong>Pull</strong></td><td>主要用上肢，通常用 pull buoy，可加 paddles</td></tr>
+<tr><td><strong>Scull</strong></td><td>小范围扫水，强化压力感知、手掌/前臂用水</td></tr>
+<tr><td><strong>Build</strong></td><td>在一次重复内部逐渐加速</td></tr>
+<tr><td><strong>Descend</strong></td><td>一组重复中，每次完成时间逐渐下降，即逐次游快</td></tr>
+<tr><td><strong>Descending Interval</strong></td><td>send-off 逐次缩短</td></tr>
+<tr><td><strong>Negative Split</strong></td><td>后半程快于前半程</td></tr>
+<tr><td><strong>DPS</strong></td><td>Distance per Stroke；每次划水的推进距离</td></tr>
+<tr><td><strong>Stroke Count</strong></td><td>每池/每段划水次数；与时间一起看更有意义</td></tr>
+<tr><td><strong>Sprint</strong></td><td>顶速/接近顶速短距离</td></tr>
+<tr><td><strong>Race Pace</strong></td><td>目标比赛距离对应的比赛速度</td></tr>
+<tr><td><strong>Recovery</strong></td><td>低强度主动恢复</td></tr>
+<tr><td><strong>Test Set</strong></td><td>在一年中以同样条件重复，比较训练进展</td></tr>
+<tr><td><strong>VO₂ Max Set</strong></td><td>USMS glossary 描述为尽可能快地游，休息约为游泳时间两倍，重复到速度明显下降</td></tr>
+<tr><td><strong>SDK</strong></td><td>Streamline Dolphin Kick</td></tr>
+<tr><td><strong>SKPS</strong></td><td>Swim–Kick–Pull–Swim</td></tr>
+<tr><td><strong>SWOLF</strong></td><td>通常把时间与划数相加形成粗略效率指标；应与速度背景一起解释</td></tr>
+</tbody>
+</table>
+</div>
+<p>术语表：<a href="https://www.usms.org/workout-library/glossary-of-swimming-terms">https://www.usms.org/workout-library/glossary-of-swimming-terms</a></p>
+<h3 id="s-5-2">5.2 Rest 与 Send-off</h3>
+<ul><li><code>@:20 rest</code>：每次完成后固定休息 20 秒；不同速度泳者的出发时刻不同。</li><li><code>@1:30</code>：每 1分30秒统一开始下一次；游得越快，本次获得的休息越多。</li><li>USMS workout-writing 指南明确指出：<strong>工作/休息比决定训练性质</strong>。最大速度需要长恢复；距离配速训练通常用更短恢复。相同的 <code>10×50 @2:00</code> 对 30 秒完成 50 的泳者可能是 sprint set，对需要 1:30 才完成的初学者则不是同样的生理刺激。</li></ul>
+<h3 id="s-5-3">5.3 不把 USMS 虚构成统一“Zone 1–5”</h3>
+<p><strong>[结构化整理]</strong> 当前 USMS Workout Library 与 Guides 实际同时使用 easy/cruise/steady/solid/strong/fast、pace、race pace、CSS、fixed rest、send-off、best average、sprint、test set 等表达。本文因此不声称存在一个 USMS 官方统一五区心率表。需要强度处方时，应优先保留 USMS 页面给出的 <strong>目标速度 + 重复距离 + 休息/间歇 + 技术要求</strong>。</p>
+    </section>
+
+    <section id="gear-usms">
+      <h2>6. 器材：不是“越多越好”，而是改变任务约束</h2>
+      <div class="table-wrap">
+<table>
+<thead><tr><th>器材/限制</th><th>USMS 中的典型用途</th><th>使用原则</th></tr></thead>
+<tbody>
+<tr><td><strong>Fins 脚蹼</strong></td><td>增加推进、帮助身体位置、让一臂蝶等高技术动作更容易维持节奏，也可做高速/腿部训练</td><td>既可“辅助”也可“加负荷”；撤掉脚蹼后要回到完整泳姿验证迁移</td></tr>
+<tr><td><strong>Snorkel 呼吸管</strong></td><td>暂时移除转头/抬头呼吸干扰，让注意力集中在身体位置、划水或腿</td><td>不能长期用来逃避真正的呼吸问题；自由泳 breathing guide 建议有/无呼吸管交替</td></tr>
+<tr><td><strong>Kickboard 浮板</strong></td><td>隔离腿部、提供浮力；也可竖起做 Tombstone 增阻</td><td>某些 USMS 教练文章提醒长期高头扶板可能造成不理想姿态；应按训练目的选择仰卧/侧身/流线等替代</td></tr>
+<tr><td><strong>Pull buoy 夹浮漂</strong></td><td>减少腿部贡献、维持髋腿位置，让注意力集中在上肢</td><td>蛙泳“夹浮漂蹬腿”是特殊技术 drill，会增加膝部压力，官方要求慢开始，只用于技术而不是体能堆量</td></tr>
+<tr><td><strong>Paddles 划手板</strong></td><td>增加手臂接触面积和反馈；Upside-Down / Pinch 等特殊握法用于锁定腕部或强调前臂</td><td>目标是增强水感/阻力/反馈，不是仅为了游得快</td></tr>
+<tr><td><strong>Parachute / DragSox</strong></td><td>增阻，放大脚/手对水压力，发展力量与技术</td><td>通常短距离，保证动作质量；阻力大到破坏动作时停止</td></tr>
+<tr><td><strong>Tennis balls</strong></td><td>限制手部帮助，使转身更依赖紧凑收膝/身体旋转</td><td>用于 turn 技能，不用于高速撞墙式冒险</td></tr>
+<tr><td><strong>T-shirt / shorts</strong></td><td>水下海豚腿身体排列 drill 中增加局部阻力，强化对 drag 的感知</td><td>去除阻力后比较水流感觉与身体姿态</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="drills">
+      <h2>7. Current Guides 220 条水中 Drill 主索引</h2>
+      <p>以下按 USMS 当前 Guide 的模块顺序列出。每个模块的“用途/做法”是对官方 drill 页的中文压缩转述；若动作涉及出发、水下呼吸限制、深水或明显阻力，必须同时看第 18 节安全边界。</p>
+    </section>
+
+    <section id="free">
+      <h2 class="h2-sub">7.1 自由泳</h2>
+      <h3 id="free-h1">自由泳｜身体位置 Body Position</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/freestyle/body-position/drills">https://www.usms.org/fitness-and-training/guides/freestyle/body-position/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Ball Float</strong></td><td>抱膝团身漂浮</td><td>深吸气后抱膝成球并等待身体稳定，核心是感知肺部浮力支撑。</td></tr>
+<tr><td>2</td><td><strong>Basketball Bounce</strong></td><td>篮球弹跳式浮力感知</td><td>由同伴向下压后感受身体被浮力推回水面的感觉，用于放大浮力反馈。</td></tr>
+<tr><td>3</td><td><strong>Passive Jellyfish</strong></td><td>被动水母漂</td><td>尽量放松肢体，观察身体在浮力下的自然位置，建立对“无需持续划动也能被水支撑”的感知。</td></tr>
+<tr><td>4</td><td><strong>Active Jellyfish</strong></td><td>主动水母漂</td><td>在水母漂基础上主动调整头胸/躯干，学习控制身体在水中的上下位置。</td></tr>
+<tr><td>5</td><td><strong>Letter Floats</strong></td><td>字母造型漂浮</td><td>把身体伸展成不同字母形状，比较肢体位置变化对漂浮和排列的影响。</td></tr>
+<tr><td>6</td><td><strong>Ball Float to Letter Float</strong></td><td>团身漂到字母漂</td><td>从最容易感知肺浮力的团身姿势，逐步伸展到更接近游泳的身体排列。</td></tr>
+<tr><td>7</td><td><strong>Elevator Swim</strong></td><td>电梯式身体位置游</td><td>主动改变头胸/身体位置，体验身体“升高/降低”带来的阻力与姿态变化。</td></tr>
+<tr><td>8</td><td><strong>Straight-Arm, Breath-Every-Stroke Freestyle</strong></td><td>直臂、每划一次换气自由泳</td><td>用高直臂移臂和频繁换气夸大转体幅度，帮助长期游得过平的泳者感知转体。</td></tr>
+<tr><td>9</td><td><strong>Underwater Recovery</strong></td><td>水下移臂自由泳</td><td>移臂留在水下，水阻迫使肩部与对侧划水协调转动，用于训练转体时序。</td></tr>
+<tr><td>10</td><td><strong>Over-Under Freestyle</strong></td><td>一臂水上、一臂水下移臂自由泳</td><td>从水下移臂向正常自由泳过渡；一侧正常移臂、一侧水下移臂，保持两臂反向协调。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="free-h2">自由泳｜划水 Pull</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/freestyle/pull/drills">https://www.usms.org/fitness-and-training/guides/freestyle/pull/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>11</td><td><strong>Wall Pull</strong></td><td>池边压臂</td><td>用手和前臂整体压池边，学习以前臂+手作为受力面，并感知“向后施压”。</td></tr>
+<tr><td>12</td><td><strong>Power Pulls with Buoy</strong></td><td>夹浮漂强力划水</td><td>夹浮漂保持身体位置，耐心建立抓水位置后强力向后推水。</td></tr>
+<tr><td>13</td><td><strong>Human Paddle</strong></td><td>人体划桨</td><td>以更大的手臂受力面推动身体，强化整个前臂参与抓水/推水的感觉。</td></tr>
+<tr><td>14</td><td><strong>Underwater Recovery</strong></td><td>水下移臂</td><td>用水下移臂简化动作并强化划水方向、转体与对侧手臂协调。</td></tr>
+<tr><td>15</td><td><strong>Power Catch-Up</strong></td><td>强力追赶游</td><td>以前臂抓水和完整向后推进为重点，在接近 catch-up 的结构中逐次完成高质量划水。</td></tr>
+<tr><td>16</td><td><strong>Over-Under Freestyle</strong></td><td>一臂水上、一臂水下移臂</td><td>把水下移臂的转体/划水技能逐步迁移到正常自由泳。</td></tr>
+<tr><td>17</td><td><strong>Closed Fist</strong></td><td>握拳自由泳</td><td>拿掉手掌面积，迫使前臂参与推进；随后张手比较水感。</td></tr>
+<tr><td>18</td><td><strong>Upside-Down Paddles</strong></td><td>反握/倒置划手板</td><td>不用正常绑法而倒置握板，限制腕部动作，促使手与前臂作为整体受力。</td></tr>
+<tr><td>19</td><td><strong>Pinch Paddles</strong></td><td>捏持划手板</td><td>捏住板边游，要求腕部稳定并强化有效受力。</td></tr>
+<tr><td>20</td><td><strong>Stroke-Count Swimming</strong></td><td>划水次数控制游</td><td>通过减少、增加或稳定每池划数，练习可重复的划水效率，而不是机械追求“越少越好”。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="free-h3">自由泳｜打腿 Kick</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/freestyle/kick/drills">https://www.usms.org/fitness-and-training/guides/freestyle/kick/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>21</td><td><strong>Streamline Kicking on Your Back</strong></td><td>仰卧流线型自由泳腿</td><td>仰卧暴露过度屈膝问题，强化上踢与大腿后侧参与；膝盖尽量不冲出水面。</td></tr>
+<tr><td>22</td><td><strong>Vertical Kick</strong></td><td>垂直自由泳腿</td><td>在深水垂直打腿，较容易体会腿从髋部发起、膝盖保持放松而不是“踩自行车”。</td></tr>
+<tr><td>23</td><td><strong>Kicking on Your Side</strong></td><td>侧身自由泳腿</td><td>把垂直打腿的双向发力迁移到前进姿态，并同时维持髋部位置。</td></tr>
+<tr><td>24</td><td><strong>Wall Kick</strong></td><td>扶壁自由泳腿</td><td>对着固定池壁打腿，增加脚部压力反馈，学习用脚保持对水压力。</td></tr>
+<tr><td>25</td><td><strong>Snorkel Kicking</strong></td><td>呼吸管打腿</td><td>移除抬头换气干扰，在水平姿态中保持紧凑、持续打腿。</td></tr>
+<tr><td>26</td><td><strong>Surf Kicking</strong></td><td>抬头自由泳腿</td><td>没有浮板支撑而抬头打腿，要求腿部更积极维持髋部位置。</td></tr>
+<tr><td>27</td><td><strong>Tombstone Drill</strong></td><td>竖板阻力打腿</td><td>竖起浮板增加正面阻力，以压力反馈强化脚部推进。</td></tr>
+<tr><td>28</td><td><strong>Resisted Kicking</strong></td><td>阻力打腿</td><td>用 DragSox、降落伞、宽松短裤等增加腿部阻力，强化脚对水感和腿部力量。</td></tr>
+<tr><td>29</td><td><strong>Over-Kicking</strong></td><td>强化打腿自由泳</td><td>完整自由泳中主动提高腿部贡献，学习在需要速度时使用更强打腿。</td></tr>
+<tr><td>30</td><td><strong>Stroke-Count Kicking</strong></td><td>限制划数强化打腿</td><td>主动少划几次（官方 set 示例少 4–6 次/25），迫使腿承担更多速度，同时保持流畅节奏。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="free-h4">自由泳｜呼吸 Breathing</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/freestyle/breathing">https://www.usms.org/fitness-and-training/guides/freestyle/breathing</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>31</td><td><strong>Bobs</strong></td><td>沉浮节律呼吸</td><td>水下呼气、出水快速吸气；把呼吸节奏从游泳动作中单独拿出来学习。</td></tr>
+<tr><td>32</td><td><strong>Blowout Bobs</strong></td><td>快速排空沉浮呼吸</td><td>下潜后较早把气排出，增加空气不足感下维持节律的难度；属于进阶 breath-control 情境。</td></tr>
+<tr><td>33</td><td><strong>Stroke and Roll</strong></td><td>划臂—滚转呼吸</td><td>每次需要换气时滚到仰卧，学习“沿身体长轴转动”而不是抬头/横移头部。</td></tr>
+<tr><td>34</td><td><strong>Paddle Cap Freestyle</strong></td><td>头顶划手板自由泳</td><td>把划手板平放头顶，掉板会直接反馈抬头、换气过长或侧向位移。</td></tr>
+<tr><td>35</td><td><strong>Snorkel Swimming</strong></td><td>呼吸管自由泳</td><td>先体验完全没有侧向呼吸干扰时的身体线，再与无呼吸管游交替比较。</td></tr>
+<tr><td>36</td><td><strong>Cheat Breathing</strong></td><td>假换气/半换气</td><td>故意只做极小转头、甚至不真正吸气，用极端“小动作”学习换气幅度可以多小。</td></tr>
+<tr><td>37</td><td><strong>Bilateral Breathing</strong></td><td>双侧换气</td><td>用每3/5划或分池交替左右侧，练习两侧换气与动作对称。</td></tr>
+<tr><td>38</td><td><strong>Restricted Breathing</strong></td><td>限制换气频率</td><td>预先规定比平常更少的换气频率，在空气需求升高时仍保持技术；必须遵守 breath-control 安全规则。</td></tr>
+<tr><td>39</td><td><strong>Blowout Freestyle</strong></td><td>排空后自由泳</td><td>出发前先排气，再开始游并在需要时恢复正常快速小换气；属于高风险度更高的专项，只能监督下使用。</td></tr>
+<tr><td>40</td><td><strong>Quick-Breath Freestyle</strong></td><td>快速换气自由泳</td><td>把“头回水”与移臂动作拆开，练习更快完成呼吸并把头提前回到中立位置。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="back">
+      <h2 class="h2-sub">7.2 仰泳</h2>
+      <h3 id="back-h1">仰泳｜划水 Pull</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/backstroke/pull/drills">https://www.usms.org/fitness-and-training/guides/backstroke/pull/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>41</td><td><strong>Side-Wall Pull</strong></td><td>侧身池边压水</td><td>侧对池边，用整段前臂和手向下施压，感知用背部大肌群和前臂受力。</td></tr>
+<tr><td>42</td><td><strong>Side Pull</strong></td><td>侧身划水</td><td>侧卧、下侧手先建立前臂/手朝后的姿势，再直向后拉，练习真正的向后推进。</td></tr>
+<tr><td>43</td><td><strong>One-Arm Backstroke</strong></td><td>单臂仰泳</td><td>单臂完成入水、建立抓水、向后拉和恢复，降低双臂协调复杂度。</td></tr>
+<tr><td>44</td><td><strong>Double-Arm Backstroke</strong></td><td>双臂同时仰泳</td><td>两臂同时入水和拉水，练习直向后推水与手速加速。</td></tr>
+<tr><td>45</td><td><strong>Single-Single-Double</strong></td><td>单—单—双臂仰泳</td><td>左单臂→右单臂→双臂，把不同划水感觉与转体时序连接。</td></tr>
+<tr><td>46</td><td><strong>Backstroke With Band or Buoy</strong></td><td>绑腿或夹浮漂仰泳</td><td>降低腿部推进，让上肢必须产生足够推进；可结合时间/划数目标。</td></tr>
+<tr><td>47</td><td><strong>Closed Fist</strong></td><td>握拳仰泳</td><td>减少手掌面积，迫使前臂参与；恢复张手后比较水感。</td></tr>
+<tr><td>48</td><td><strong>Upside-Down Paddles</strong></td><td>倒置划手板仰泳</td><td>锁定腕部，使前臂和手同步朝后建立受力面。</td></tr>
+<tr><td>49</td><td><strong>Pinch Paddles</strong></td><td>捏板仰泳</td><td>用捏板要求腕部稳定，纠正松软腕导致的漏水。</td></tr>
+<tr><td>50</td><td><strong>Stroke-Count Swimming</strong></td><td>仰泳划数控制</td><td>练习改变或稳定划数；重点是可控制性和技术一致性，而不是永远追求最低划数。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="back-h2">仰泳｜打腿 Kick</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/backstroke/kick/drills">https://www.usms.org/fitness-and-training/guides/backstroke/kick/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>51</td><td><strong>Boat Kick</strong></td><td>Boat Kick 船形打腿</td><td>通过特定仰卧姿态练习维持身体位置与持续自由泳腿。</td></tr>
+<tr><td>52</td><td><strong>Kicking on Your Back with Kickboard</strong></td><td>仰卧扶板打腿</td><td>在仰卧状态借浮板隔离腿部，观察并稳定打腿。</td></tr>
+<tr><td>53</td><td><strong>Kicking in Streamlined Position</strong></td><td>仰卧流线型打腿</td><td>手臂流线型，练腿同时要求维持低阻力身体线。</td></tr>
+<tr><td>54</td><td><strong>Kicking in Balanced Position</strong></td><td>平衡姿势打腿</td><td>在仰泳平衡体位练习腿部持续输出和身体稳定。</td></tr>
+<tr><td>55</td><td><strong>Vertical Kick</strong></td><td>垂直打腿</td><td>强化从髋部发起、双向打腿与脚踝放松。</td></tr>
+<tr><td>56</td><td><strong>Wall Kick</strong></td><td>扶壁打腿</td><td>利用固定墙面放大脚对水压力感。</td></tr>
+<tr><td>57</td><td><strong>Vertical Kick in Streamlined Position</strong></td><td>流线型垂直打腿</td><td>手臂上举后垂直打腿，提高稳定与腿部负荷。</td></tr>
+<tr><td>58</td><td><strong>Resisted Kick With Parachute</strong></td><td>阻力伞打腿</td><td>增加阻力，短距离强化腿部推进和脚部水感。</td></tr>
+<tr><td>59</td><td><strong>Over-Kick</strong></td><td>强化打腿仰泳</td><td>完整仰泳中提高打腿输出，学习在速度需求上升时增加腿部贡献。</td></tr>
+<tr><td>60</td><td><strong>Stroke-Count Kick</strong></td><td>限制划数强化打腿</td><td>减少手臂划次，让腿承担更多推进，同时保持身体排列。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="back-h3">仰泳｜身体位置 Body Position</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/backstroke/body-position/drills">https://www.usms.org/fitness-and-training/guides/backstroke/body-position/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>61</td><td><strong>Ball Float</strong></td><td>团身漂浮</td><td>感知肺部浮力是身体稳定的支点。</td></tr>
+<tr><td>62</td><td><strong>Inner Tube Float</strong></td><td>内胎式漂浮</td><td>通过不同肢体位置体验上身浮力与髋腿位置关系。</td></tr>
+<tr><td>63</td><td><strong>X Float</strong></td><td>X 形漂浮</td><td>伸展四肢后学习在更大体型下保持舒适、水平漂浮。</td></tr>
+<tr><td>64</td><td><strong>I Float</strong></td><td>I 形漂浮</td><td>身体拉成长线，接近游泳低阻力姿态。</td></tr>
+<tr><td>65</td><td><strong>Elevator Swim</strong></td><td>电梯式身体位置游</td><td>尝试不同头位/躯干姿态，寻找能让髋腿靠近水面的个人最佳位置。</td></tr>
+<tr><td>66</td><td><strong>Side Pull</strong></td><td>侧身划水</td><td>在侧身状态把身体位置、转体和有效抓水结合。</td></tr>
+<tr><td>67</td><td><strong>One-Arm Backstroke</strong></td><td>单臂仰泳</td><td>降低协调难度，集中感知转体与身体线。</td></tr>
+<tr><td>68</td><td><strong>Delay Backstroke</strong></td><td>延迟仰泳</td><td>延长一侧转体/划水阶段，学习仰泳并非匀速不停地左右滚动，而是在拉水完成后快速转体。</td></tr>
+<tr><td>69</td><td><strong>Underwater-Recovery Backstroke</strong></td><td>水下移臂仰泳</td><td>用水阻限制移臂，放大身体转动和时序反馈。</td></tr>
+<tr><td>70</td><td><strong>Head-Up Backstroke</strong></td><td>抬头仰泳</td><td>故意增加保持水平的难度，用来强化身体位置控制；完成后回到正常头位比较。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="breast">
+      <h2 class="h2-sub">7.3 蛙泳</h2>
+      <h3 id="breast-h1">蛙泳｜划水 Pull</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/breaststroke/pull/drills">https://www.usms.org/fitness-and-training/guides/breaststroke/pull/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>71</td><td><strong>Side Wall Pull</strong></td><td>侧向池边压水</td><td>用前臂和手整体压池边并把手臂“收向身体”，感知蛙泳拉水受力。</td></tr>
+<tr><td>72</td><td><strong>Power Pulls With Buoy</strong></td><td>夹浮漂强力双臂划水</td><td>双臂从前方展开、建立受力后直向后推，水下同时前伸恢复；强调耐心建立抓水。</td></tr>
+<tr><td>73</td><td><strong>Sculling</strong></td><td>扫水</td><td>手掌/前臂左右扫动并改变掌面方向，训练蛙泳横向动作中的压力管理。</td></tr>
+<tr><td>74</td><td><strong>Breaststroke With Dolphin Kick</strong></td><td>海豚腿蛙泳</td><td>每次划手配一次海豚腿，减少蛙泳蹬腿时序干扰，让注意力集中在划手；踢腿在手臂恢复结束附近。</td></tr>
+<tr><td>75</td><td><strong>Breaststroke With Flutter Kick</strong></td><td>自由泳腿蛙泳</td><td>持续自由泳腿迫使手臂更连续、更快前伸，改善手臂卡在胸下。</td></tr>
+<tr><td>76</td><td><strong>Three-Pull, One-Kick</strong></td><td>三划一蹬</td><td>连续三次划手后一次蛙泳腿，增加独立练手次数，再把手重新放回完整节奏。</td></tr>
+<tr><td>77</td><td><strong>Two-Pull, One-Kick</strong></td><td>两划一蹬</td><td>比三划一蹬更接近完整蛙泳，是划手从隔离到整合的过渡。</td></tr>
+<tr><td>78</td><td><strong>Closed Fist</strong></td><td>握拳蛙泳</td><td>减少手掌面积，迫使前臂参与受力。</td></tr>
+<tr><td>79</td><td><strong>Upside-Down Paddles</strong></td><td>倒置划手板蛙泳</td><td>锁定腕部，让手和前臂共同调整方向。</td></tr>
+<tr><td>80</td><td><strong>Stroke-Count Swimming</strong></td><td>划数控制蛙泳</td><td>可练少划、相同划数游快、相同速度少划；目标是提高每次动作效率。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="breast-h2">蛙泳｜蹬腿 Kick</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/breaststroke/kick/drills">https://www.usms.org/fitness-and-training/guides/breaststroke/kick/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>81</td><td><strong>Vertical Kick</strong></td><td>垂直蛙泳腿</td><td>在深水用蛙泳腿保持头部在水面；反馈蹬腿方向、脚外翻和脚速。</td></tr>
+<tr><td>82</td><td><strong>Kicking on Your Back</strong></td><td>仰卧蛙泳腿</td><td>仰卧时膝盖过度前送会明显出水，帮助学习“脚跟向臀部回收”而不是大幅收髋。</td></tr>
+<tr><td>83</td><td><strong>Kick on Your Back With a Board on Your Knees</strong></td><td>仰卧膝上放板蛙泳腿</td><td>浮板直接反馈膝盖是否过度顶起；目标是减少用膝撞板。</td></tr>
+<tr><td>84</td><td><strong>Kicking With a Board</strong></td><td>扶板蛙泳腿</td><td>用浮板提供支撑，隔离练蹬腿；可抬头或配呼吸管。</td></tr>
+<tr><td>85</td><td><strong>Wall Kick</strong></td><td>扶壁蛙泳腿</td><td>对固定墙面打腿，放大脚部压力，发现蹬腿某阶段是否“漏水”。</td></tr>
+<tr><td>86</td><td><strong>Three-Kick, One-Pull</strong></td><td>三蹬一划</td><td>手臂流线型保持在前方，多做两次腿，强调蹬腿并开始整合时序。</td></tr>
+<tr><td>87</td><td><strong>Two-Kick, One-Pull</strong></td><td>两蹬一划</td><td>从三蹬一划向正常一蹬一划过渡。</td></tr>
+<tr><td>88</td><td><strong>Kick With Pull Buoy Between Legs</strong></td><td>腿间夹浮漂蹬腿</td><td>浮漂限制膝盖外开，迫使脚更有效外翻；官方明确要求慢开始，膝压力较大，只用于技术。</td></tr>
+<tr><td>89</td><td><strong>Piston Kick</strong></td><td>活塞式单腿回收</td><td>一条腿快速收脚跟—伸回，左右交替，不外翻脚，专练快速回收。</td></tr>
+<tr><td>90</td><td><strong>Kicking With a Kick Count</strong></td><td>蹬腿次数控制</td><td>在固定距离记录蹬腿次数，用作效率和技术一致性反馈。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="breast-h3">蛙泳｜身体位置 Body Position</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/breaststroke/body-position/drills">https://www.usms.org/fitness-and-training/guides/breaststroke/body-position/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>91</td><td><strong>Ball Float</strong></td><td>团身漂浮</td><td>感知肺部浮力支撑。</td></tr>
+<tr><td>92</td><td><strong>Ball Float to X Float</strong></td><td>团身漂到 X 漂</td><td>从团身逐渐展开，练习把肺部浮力转化成水平身体位置。</td></tr>
+<tr><td>93</td><td><strong>Breaststroke With a Snorkel</strong></td><td>呼吸管蛙泳</td><td>暂时移除抬头呼吸，比较无呼吸干扰时的身体位置。</td></tr>
+<tr><td>94</td><td><strong>Breathing Every Other Stroke</strong></td><td>隔一次动作换气</td><td>一划换气、一划不换气，直接比较呼吸对髋部和身体线的影响。</td></tr>
+<tr><td>95</td><td><strong>Head-Up Breaststroke</strong></td><td>抬头蛙泳</td><td>故意持续高头位放大髋部下沉等负面后果，用于建立体感。</td></tr>
+<tr><td>96</td><td><strong>Alternating Head-Up Breaststroke</strong></td><td>交替抬头蛙泳</td><td>高头与正常呼吸交替，比较髋部恢复和身体位置差异。</td></tr>
+<tr><td>97</td><td><strong>Breaststroke With Flutter Kick</strong></td><td>自由泳腿蛙泳</td><td>持续自由泳腿压低上下起伏，帮助过度“上下跳”的泳者学习更平的姿态。</td></tr>
+<tr><td>98</td><td><strong>Breaststroke With Dolphin Kick</strong></td><td>海豚腿蛙泳</td><td>在手臂恢复结束时海豚腿，帮助感知髋部回到水面的时点。</td></tr>
+<tr><td>99</td><td><strong>Resisted Arm Recoveries</strong></td><td>阻力手臂前伸</td><td>给腕/手臂增加阻力，迫使前伸恢复更积极；撤阻后比较手臂恢复速度。</td></tr>
+<tr><td>100</td><td><strong>Breaststroke With Stroke Counts</strong></td><td>划数控制蛙泳</td><td>通过不同划数练习低阻力滑行与动作效率，而不是单纯加大蹬/划力量。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="breast-h4">蛙泳｜配合 Timing</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/breaststroke/timing/drills">https://www.usms.org/fitness-and-training/guides/breaststroke/timing/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>101</td><td><strong>Three Pulls, One Kick</strong></td><td>三划一蹬</td><td>多次划手时腿保持伸展，明显分离手腿动作，学习手腿不要同时发力。</td></tr>
+<tr><td>102</td><td><strong>Three Kicks, One Pull</strong></td><td>三蹬一划</td><td>双臂流线型时连续蹬腿，学习在前伸位置完成腿部推进。</td></tr>
+<tr><td>103</td><td><strong>Delay Breaststroke</strong></td><td>延迟蛙泳</td><td>故意延长划—蹬之间、蹬—下一划之间的停顿，学习主动控制手腿分离程度。</td></tr>
+<tr><td>104</td><td><strong>Two Pulls, One Kick</strong></td><td>两划一蹬</td><td>比三划一蹬更接近完整节奏，继续练手腿分离。</td></tr>
+<tr><td>105</td><td><strong>Two Kicks, One Pull</strong></td><td>两蹬一划</td><td>比三蹬一划更接近完整节奏。</td></tr>
+<tr><td>106</td><td><strong>Underwater Breaststroke</strong></td><td>水下蛙泳</td><td>舒适范围内在水下做普通蛙泳手腿（不是 pullout），水阻会放大时序错误；涉及水下呼吸限制，遵守安全规则。</td></tr>
+<tr><td>107</td><td><strong>Upside-Down Underwater Breaststroke</strong></td><td>仰向水下蛙泳</td><td>水下翻成仰向做蛙泳，改变重力/方向感，强化上下起伏与时序体感；仅舒适距离并监督。</td></tr>
+<tr><td>108</td><td><strong>Stroke-Count Gears</strong></td><td>划数档位</td><td>主动用更多/更少划数按 25 交替，体验时序、努力程度和速度如何随划幅改变。</td></tr>
+<tr><td>109</td><td><strong>Breaststroke With Parachute</strong></td><td>阻力伞蛙泳</td><td>阻力让速度变化和推进质量更容易被感知，也给出更多时间完成正确时序。</td></tr>
+<tr><td>110</td><td><strong>Speed Gears</strong></td><td>速度档位</td><td>不先增加主观用力，而先通过缩短划—蹬间隔改变时序来提速，学习用 timing 创造速度。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="fly">
+      <h2 class="h2-sub">7.4 蝶泳</h2>
+      <h3 id="fly-h1">蝶泳｜划水 Pull</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/butterfly/pull/drills">https://www.usms.org/fitness-and-training/guides/butterfly/pull/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>111</td><td><strong>Setting Up Your Stroke</strong></td><td>陆上建立抓水姿势</td><td>站立双臂上举，肘向外、手向下，使前臂朝向脚，先在陆上学习抓水重定位。</td></tr>
+<tr><td>112</td><td><strong>Wall Pull</strong></td><td>池边压臂</td><td>整段前臂压池边，寻找舒服且有力的受力姿势。</td></tr>
+<tr><td>113</td><td><strong>Power Pulls with Pull Buoy</strong></td><td>夹浮漂强力划水</td><td>俯卧伸臂、夹浮漂，先建立抓水，再用尽可能多的手臂面积向后推水。</td></tr>
+<tr><td>114</td><td><strong>Power Pull-Downs</strong></td><td>水下强力下拉</td><td>蹬壁后在水下做完整下拉，手/前臂朝后后逐渐加压并加速；可在开始和结束各配一次蝶腿。</td></tr>
+<tr><td>115</td><td><strong>Skate Drill</strong></td><td>贴水滑行/Skate</td><td>先踢腿和建立抓水，划水时下巴沿水面向前“滑”，划手结束时第二次强腿；同时练划水、呼吸、时序。</td></tr>
+<tr><td>116</td><td><strong>Sculling</strong></td><td>扫水</td><td>在抓水、中段、末端等位置左右扫水，练压力管理。</td></tr>
+<tr><td>117</td><td><strong>Straight-Arm Freestyle Pull</strong></td><td>直臂自由泳划水</td><td>夹浮漂做自由泳但水上移臂保持直臂，用较简单模式模拟蝶泳上肢机械并建立体能。</td></tr>
+<tr><td>118</td><td><strong>Closed Fist</strong></td><td>握拳蝶泳</td><td>减少手掌面积，迫使前臂参与推进。</td></tr>
+<tr><td>119</td><td><strong>OK Hands</strong></td><td>OK 手型蝶泳</td><td>拇指食指成圈，水流穿过小孔；侧向动作过多会破坏稳定水流，作为横向摆动反馈。</td></tr>
+<tr><td>120</td><td><strong>Stroke-Count Swimming</strong></td><td>蝶泳划数控制</td><td>用划数变化监控疲劳下技术效率和每划推进。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="fly-h2">蝶泳｜打腿 Kick</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/butterfly/kick/drills">https://www.usms.org/fitness-and-training/guides/butterfly/kick/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>121</td><td><strong>Vertical Butterfly Kick</strong></td><td>垂直海豚腿</td><td>深水垂直做紧凑快速海豚腿；抬高手臂可增加难度。</td></tr>
+<tr><td>122</td><td><strong>Butterfly Kick with a Kickboard</strong></td><td>扶板海豚腿</td><td>浮板提供支撑，隔离练双腿同步、紧凑稳定海豚腿。</td></tr>
+<tr><td>123</td><td><strong>Butterfly Kick With a Snorkel and Board</strong></td><td>呼吸管+浮板海豚腿</td><td>模拟头在下、身体更水平时的那一次蝶腿，减少呼吸干扰。</td></tr>
+<tr><td>124</td><td><strong>Butterfly Kick With a Snorkel in Streamlined Position</strong></td><td>呼吸管流线型海豚腿</td><td>撤掉浮板稳定，要求自己维持流线与持续强腿。</td></tr>
+<tr><td>125</td><td><strong>Streamlined Butterfly Kick on Your Back</strong></td><td>仰卧流线型海豚腿</td><td>强化反向/上踢和大腿后侧肌群，使海豚腿双向更完整。</td></tr>
+<tr><td>126</td><td><strong>Surf Kick</strong></td><td>抬头海豚腿</td><td>无浮板抬头，必须用更强海豚腿防止髋部下沉。</td></tr>
+<tr><td>127</td><td><strong>Wall Kick</strong></td><td>扶壁海豚腿</td><td>对固定墙面踢，放大脚部压力反馈。</td></tr>
+<tr><td>128</td><td><strong>Tombstone Kick</strong></td><td>竖板阻力海豚腿</td><td>浮板竖起增加阻力，要求核心稳定并强化脚对水。</td></tr>
+<tr><td>129</td><td><strong>4-Kick, 1-Pull</strong></td><td>四腿一划</td><td>一划配四腿；仍保留手入水一次腿、手出水一次腿，并在入水后增加两腿，用于把腿迁移到完整蝶泳。</td></tr>
+<tr><td>130</td><td><strong>Kicking With DragSox</strong></td><td>DragSox 阻力海豚腿</td><td>大阻力强化腿部力量与全身波动节奏；如果只从膝盖踢通常难以前进。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="fly-h3">蝶泳｜身体位置 Body Position</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/butterfly/body-position/drills">https://www.usms.org/fitness-and-training/guides/butterfly/body-position/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>131</td><td><strong>Ball Float</strong></td><td>团身漂浮</td><td>感知肺部浮力是蝶泳身体位置基础。</td></tr>
+<tr><td>132</td><td><strong>Aqua Jumping Jacks</strong></td><td>水中开合跳式漂浮</td><td>从团身漂展开手腿并在水面做开合，练在肢体移动时仍控制浮力和姿态。</td></tr>
+<tr><td>133</td><td><strong>Skate Drill</strong></td><td>Skate Drill</td><td>呼吸时下巴沿水面向前，避免高抬头破坏身体位置。</td></tr>
+<tr><td>134</td><td><strong>One-Arm Butterfly With Flutter Kick and Nonstroking Arm Extended</strong></td><td>单臂蝶+自由泳腿，非划手臂前伸</td><td>自由泳腿和前伸手臂共同压平波动，学习减少过度上下起伏。</td></tr>
+<tr><td>135</td><td><strong>One-Arm Butterfly With Flutter Kick and Nonstroking Arm Down</strong></td><td>单臂蝶+自由泳腿，非划手臂贴体</td><td>进一步提高前端身体位置控制难度，仍要求保持较平。</td></tr>
+<tr><td>136</td><td><strong>One-Arm Butterfly With Nonstroking Arm Extended</strong></td><td>单臂蝶，非划手臂前伸</td><td>用前伸手臂限制波幅，练用腿抬髋而不夸大波动。</td></tr>
+<tr><td>137</td><td><strong>One-Arm Butterfly With Nonstroking Arm Down</strong></td><td>单臂蝶，非划手臂贴体</td><td>允许更大波动但要求主动控制；适合比较“抬髋不足”和“波动过大”。</td></tr>
+<tr><td>138</td><td><strong>Alternating Breathing Patterns</strong></td><td>交替换气模式</td><td>在频繁换气与少换气之间切换，感知呼吸对身体位置的影响。</td></tr>
+<tr><td>139</td><td><strong>Butterfly With Flutter Kick</strong></td><td>自由泳腿蝶泳</td><td>用自由泳腿把身体压平，纠正过度上下跳动。</td></tr>
+<tr><td>140</td><td><strong>Head-up Butterfly</strong></td><td>抬头蝶泳</td><td>故意让维持髋部位置更困难，迫使腿和身体控制更强；回到正常头位后比较。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="fly-h4">蝶泳｜配合 Timing</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/butterfly/timing/drills">https://www.usms.org/fitness-and-training/guides/butterfly/timing/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>141</td><td><strong>Skate Drill</strong></td><td>Skate Drill</td><td>先踢腿再开始划手；第二腿随划手结束而结束，建立两次腿的基本时点。</td></tr>
+<tr><td>142</td><td><strong>One-Arm Butterfly With Nonstroking Arm Extended</strong></td><td>单臂蝶，非划手臂前伸</td><td>降低双臂恢复负担，连续练手入水与手出水两个踢腿时点。</td></tr>
+<tr><td>143</td><td><strong>One-Arm Butterfly With Nonstroking Arm Down</strong></td><td>单臂蝶，非划手臂贴体</td><td>同样练两次腿，但允许不同波幅情境。</td></tr>
+<tr><td>144</td><td><strong>Butterfly With Fins</strong></td><td>脚蹼蝶泳</td><td>脚蹼放大腿部反馈并降低从单臂到完整蝶的难度；关注两次腿时点。</td></tr>
+<tr><td>145</td><td><strong>Butterfly With Snorkel</strong></td><td>呼吸管蝶泳</td><td>移除呼吸干扰，集中在手入水/手出水两次腿的同步。</td></tr>
+<tr><td>146</td><td><strong>4-Kick, 1-Pull</strong></td><td>四腿一划</td><td>在正确两次腿之间加入额外两腿，迫使泳者理解踢腿插入时序。</td></tr>
+<tr><td>147</td><td><strong>Head-Up Butterfly</strong></td><td>抬头蝶泳</td><td>强调第二腿：手出水时强而及时的第二腿帮助髋部靠近水面、完成移臂。</td></tr>
+<tr><td>148</td><td><strong>Butterfly With DragSox</strong></td><td>DragSox 阻力蝶泳</td><td>增加腿部阻力，在高压力下保持正确 timing。</td></tr>
+<tr><td>149</td><td><strong>Stroke Count Gears</strong></td><td>划数档位</td><td>主动改变每池划数，保持流畅 timing；再回到正常划数比较。</td></tr>
+<tr><td>150</td><td><strong>Speed Gears</strong></td><td>速度档位</td><td>从慢到快改变速度，要求 timing 在速度升高、动作时间窗口缩短时仍稳定。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="starts">
+      <h2 class="h2-sub">7.5 出发</h2>
+      <h3 id="starts-h1">出发｜正面出发 Forward Start</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/starts/forward-starts/drills">https://www.usms.org/fitness-and-training/guides/starts/forward-starts/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>151</td><td><strong>Wall Pull and Roll</strong></td><td>池边拉压+前滚</td><td>用手臂拉池边启动身体前移/翻转，学习出发最初的向前驱动；不靠前腿推。</td></tr>
+<tr><td>152</td><td><strong>One-Legged Wall Standing Start</strong></td><td>池边单腿站立出发</td><td>从站立单腿前倒并蹬离池边，隔离前腿驱动。</td></tr>
+<tr><td>153</td><td><strong>One-Legged Wall Start From Starting Position</strong></td><td>池边起始姿势单腿出发</td><td>保持正式起始姿势但抬起后腿，迫使手臂启动+前腿强蹬。</td></tr>
+<tr><td>154</td><td><strong>Wall Starts</strong></td><td>池边出发</td><td>从池边完整做起始姿势和入水，继续强调手臂启动和前腿蹬伸。</td></tr>
+<tr><td>155</td><td><strong>Bottom Jumps</strong></td><td>池底流线跳</td><td>在略深于身高水域以流线型向上跳并落回同一点，反馈身体是否真正成直线。</td></tr>
+<tr><td>156</td><td><strong>Hole-in-One Entries</strong></td><td>同一洞口入水</td><td>从最简单、无水花的入水开始，逐步增加跳远和出发强度；目标是同一小“洞口”干净入水。</td></tr>
+<tr><td>157</td><td><strong>One-Legged Block Standing Start</strong></td><td>出发台单腿站立出发</td><td>在出发台隔离前腿驱动，逐步适应更高平台。</td></tr>
+<tr><td>158</td><td><strong>One-Legged Forward Start From Starting Position</strong></td><td>出发台起始姿势单腿出发</td><td>正式姿势抬起后腿，强化手臂启动和前腿蹬台。</td></tr>
+<tr><td>159</td><td><strong>Streamlined Starts</strong></td><td>流线型出发</td><td>从台上预先保持流线，练向外投射、直线入水和入水后保持速度。</td></tr>
+<tr><td>160</td><td><strong>Cactus Starts</strong></td><td>仙人掌手臂出发</td><td>双手像“仙人掌”预置，在跳水过程中快速合到流线，练手臂从抓台到入水流线的转换。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="starts-h2">出发｜仰泳出发 Backstroke Start</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/starts/backstroke-starts/drills">https://www.usms.org/fitness-and-training/guides/starts/backstroke-starts/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>161</td><td><strong>Hip Launches</strong></td><td>髋部发射</td><td>从仰泳出发姿势强蹬墙，把髋和身体尽量抬出水面，专练向上、向外投射。</td></tr>
+<tr><td>162</td><td><strong>Toe-Touch Start</strong></td><td>触脚式出发</td><td>出发后尝试在空中摸脚，迫使泳者更强地蹬墙、让身体真正离水。</td></tr>
+<tr><td>163</td><td><strong>Backstroke Start Flips</strong></td><td>仰泳出发后翻</td><td>强蹬、头后甩、收膝后滚，强化仰泳出发的后仰与脚离水。</td></tr>
+<tr><td>164</td><td><strong>Back Dives</strong></td><td>后跃入水</td><td>站在池边背对水做后向跳水，先建立对后向入水的舒适度。</td></tr>
+<tr><td>165</td><td><strong>Ladder Start Progression</strong></td><td>扶梯渐进仰泳出发</td><td>在深水扶梯不同高度练后向出发，从低位置逐级接近正式仰泳出发。</td></tr>
+<tr><td>166</td><td><strong>Gutter Starts</strong></td><td>池沿仰泳出发</td><td>不用出发把手而抓池沿，从更低位置做出发，增加投射难度。</td></tr>
+<tr><td>167</td><td><strong>Bottom Jumps</strong></td><td>池底流线跳</td><td>练入水后流线型和直线保持。</td></tr>
+<tr><td>168</td><td><strong>Armless Back Dives</strong></td><td>无手臂后跃入水</td><td>只强烈后甩头而不同时甩手，隔离头部后伸/后向入水技能。</td></tr>
+<tr><td>169</td><td><strong>Ball-Kick Drill</strong></td><td>踢球仰泳出发</td><td>同伴在水面上方持球，出发时用脚触球，迫使脚离开水面并提高蹬墙积极性。</td></tr>
+<tr><td>170</td><td><strong>Altered Backstroke Start</strong></td><td>改变条件仰泳出发</td><td>改变脚距、髋距墙远近、高低和手位，探索个体最佳姿势并提升适应性。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="starts-h3">出发｜接力出发 Relay Start</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/starts/relay-starts/drills">https://www.usms.org/fitness-and-training/guides/starts/relay-starts/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>171</td><td><strong>Step-and-Swing on Land</strong></td><td>陆上跨步摆臂</td><td>陆上反复练“前跨一步+摆臂”同步，先建立节奏。</td></tr>
+<tr><td>172</td><td><strong>Wall Step-and-Swing With Jump</strong></td><td>池边跨步摆臂跳入水</td><td>在池边加入跳跃，练摆臂和跨步共同把身体送向水面。</td></tr>
+<tr><td>173</td><td><strong>Wall Step-and-Swing With Dive</strong></td><td>池边跨步摆臂跳水</td><td>从谨慎小幅开始，把跨步摆臂连接到真正跳水。</td></tr>
+<tr><td>174</td><td><strong>Block Step-and-Swing With Jump</strong></td><td>出发台跨步摆臂跳入水</td><td>在台上练更积极的跨步、摆臂和向外投射。</td></tr>
+<tr><td>175</td><td><strong>Bottom Jumps</strong></td><td>池底流线跳</td><td>练入水后身体直线与流线保持。</td></tr>
+<tr><td>176</td><td><strong>Step-and-Swing From Wall Into Hole-in-One Dive</strong></td><td>池边跨步摆臂无水花入水</td><td>先降低强度，要求干净入水，再逐步增加动作强度。</td></tr>
+<tr><td>177</td><td><strong>Step-and-Swing From Block Into Hole-in-One Dive</strong></td><td>出发台跨步摆臂无水花入水</td><td>把干净入水要求迁移到更快的出发台接力出发。</td></tr>
+<tr><td>178</td><td><strong>Dive and Glide</strong></td><td>接力出发后只滑行</td><td>出发后不划水、尽量滑远；用滑行距离反馈“出发创造的速度+入水后保速”。</td></tr>
+<tr><td>179</td><td><strong>Timing Drills</strong></td><td>接棒时机练习</td><td>与队友实做：目标是来泳者触壁时自己离台；不同泳姿/距离需要重复校准。</td></tr>
+<tr><td>180</td><td><strong>Altered Start</strong></td><td>改变接力出发方式</td><td>更换前导脚、步法等，提升对接力出发的整体技能并寻找更适合自己的方式。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="turns">
+      <h2 class="h2-sub">7.6 转身</h2>
+      <h3 id="turns-h1">转身｜翻滚转身 Flip Turn</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/turns/flip-turns/drills">https://www.usms.org/fitness-and-training/guides/turns/flip-turns/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>181</td><td><strong>Stationary Flips</strong></td><td>原地前滚翻</td><td>在无墙环境练紧凑前滚，减少对墙距离判断的干扰。</td></tr>
+<tr><td>182</td><td><strong>Jump Flips</strong></td><td>跳起滚翻</td><td>加入向前动量后再滚翻，逐步接近真实进墙速度。</td></tr>
+<tr><td>183</td><td><strong>Flip Turns With Tennis Balls</strong></td><td>手握网球翻滚转身</td><td>限制手臂帮助，迫使收膝、核心和身体旋转完成转身。</td></tr>
+<tr><td>184</td><td><strong>Bottom Jumps</strong></td><td>池底直线跳</td><td>练蹬墙时直线发力和身体排列。</td></tr>
+<tr><td>185</td><td><strong>Bottom Jump With Quarter/Half/Full Turns</strong></td><td>池底跳+1/4/1/2/整圈转体</td><td>在直线蹬伸基础上加入轴向旋转，仍要求落回原点。</td></tr>
+<tr><td>186</td><td><strong>Turn and Glide</strong></td><td>转身后只滑行</td><td>完整转身后只做蹬壁流线滑行，用距离反馈蹬壁力度与流线质量。</td></tr>
+<tr><td>187</td><td><strong>Hands on Deck</strong></td><td>手扶池边转身练习</td><td>利用池边固定上肢，强化紧凑收膝和快速把脚放到墙上。</td></tr>
+<tr><td>188</td><td><strong>Surfacing Requirements</strong></td><td>规定出水位置</td><td>在离墙一定距离放标志，要求在标志后才开始出水动作，逼迫稳定蹬壁与流线。</td></tr>
+<tr><td>189</td><td><strong>Hands on Deck With Tennis Balls</strong></td><td>手扶池边+网球限制</td><td>进一步限制手掌使用，强化核心/收膝完成转身。</td></tr>
+<tr><td>190</td><td><strong>Swim With Mid-Pool Flip Into Fast Finish</strong></td><td>途中滚翻后快速游完</td><td>池中途无墙滚翻、随后立刻加速，训练从速度损失中快速恢复并减少进翻犹豫。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="turns-h2">转身｜开放式转身 Open Turn</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/turns/open-turns/drills">https://www.usms.org/fitness-and-training/guides/turns/open-turns/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>191</td><td><strong>Surface Backflips</strong></td><td>水面后滚翻</td><td>俯卧水面把膝盖猛收向胸部完成后滚，夸大开放式转身的紧凑收膝。</td></tr>
+<tr><td>192</td><td><strong>No-Hand Turns</strong></td><td>不用手开放式转身</td><td>不靠手抓墙，迫使膝盖主动收向胸部并把脚快速送上墙。</td></tr>
+<tr><td>193</td><td><strong>Open Turns With Tennis Balls</strong></td><td>手握网球开放式转身</td><td>限制手部帮助，用更紧凑身体完成转身。</td></tr>
+<tr><td>194</td><td><strong>Bottom Jumps</strong></td><td>池底直线跳</td><td>练蹬墙时沿直线输出。</td></tr>
+<tr><td>195</td><td><strong>Bottom Jumps With Quarter/Half/Full Turns</strong></td><td>池底跳+不同角度转体</td><td>在蹬伸时加入转向，练“直线推离+旋转”的组合。</td></tr>
+<tr><td>196</td><td><strong>Hands on Deck</strong></td><td>双手触壁后后滚</td><td>游到墙双手触壁，不把脚放墙而先做完整后滚并抓池沿，强调低位紧凑收膝。</td></tr>
+<tr><td>197</td><td><strong>Turn and Glide</strong></td><td>转身后只滑行</td><td>用滑行距离反馈蹬墙和流线质量。</td></tr>
+<tr><td>198</td><td><strong>Surfacing Requirement</strong></td><td>规定出水位置</td><td>在墙外约 3–5 yd/m 放标记，转身后未过标志前不开始划/踢，强化流线。</td></tr>
+<tr><td>199</td><td><strong>Hands on Wall With Tennis Balls</strong></td><td>手握网球触壁后滚</td><td>触壁后完整后滚再触壁，网球限制手帮助，强化收膝。</td></tr>
+<tr><td>200</td><td><strong>Swim With Mid-Pool Flip Into Fast Finish</strong></td><td>途中翻转后快速游完</td><td>池中途转向后快速返回，训练失速后重新加速和进转身积极性。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="underwater">
+      <h2 class="h2-sub">7.7 水下海豚腿</h2>
+      <h3 id="underwater-h1">水下海豚腿｜身体排列 Body Alignment</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/underwater-kick/body-alignment/drills">https://www.usms.org/fitness-and-training/guides/underwater-kick/body-alignment/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>201</td><td><strong>Wall Kick</strong></td><td>扶壁水下海豚腿</td><td>双手固定墙面、做大幅积极海豚腿，学习上身稳定时从躯干传递波动。</td></tr>
+<tr><td>202</td><td><strong>Vertical Kick</strong></td><td>垂直海豚腿</td><td>双臂交叉胸前，保持头部尽量稳定，积极海豚腿；练控制上身波幅。</td></tr>
+<tr><td>203</td><td><strong>Vertical Kick in Streamline While Holding an Object</strong></td><td>流线垂直腿+手持物</td><td>手持浮漂/轻物并保持其尽量稳定；物体移动越少，说明上身控制越好。</td></tr>
+<tr><td>204</td><td><strong>Underwater Dolphin Kick in Streamline While Holding an Object</strong></td><td>水下流线腿+手持物</td><td>蹬壁流线并手持小物，海豚腿时让物体尽量稳定，练上身稳定与波动起点。</td></tr>
+<tr><td>205</td><td><strong>Underwater Dolphin Kick With Arms Across Chest</strong></td><td>双臂交叉胸前水下腿</td><td>故意变差流线并限制手臂，回到正常流线时更容易感知上身稳定的重要性。</td></tr>
+<tr><td>206</td><td><strong>Underwater Dolphin Kick With Arms Crossed Behind Head</strong></td><td>双臂交叉脑后水下腿</td><td>进一步改变上身姿态，增加排列难度，用反差建立流线感知。</td></tr>
+<tr><td>207</td><td><strong>Underwater Dolphin Kick Big to Small</strong></td><td>大波幅到小波幅</td><td>从异常大幅逐步缩小，探索个人推进与阻力的平衡点。</td></tr>
+<tr><td>208</td><td><strong>Underwater Dolphin Kick Small to Big</strong></td><td>小波幅到大波幅</td><td>从异常小幅逐步扩大，与上一动作配对寻找最佳幅度。</td></tr>
+<tr><td>209</td><td><strong>Underwater Dolphin Kick With a T-Shirt</strong></td><td>穿 T 恤水下腿</td><td>增加上身阻力，放大水流/阻力感觉；脱掉后比较更低阻力姿态。</td></tr>
+<tr><td>210</td><td><strong>Underwater Dolphin Kick With Shorts</strong></td><td>穿短裤水下腿</td><td>增加髋腿局部阻力，学习对阻力的感知和姿态微调。</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="underwater-h2">水下海豚腿｜推进 Propulsion</h3>
+<p>官方动作页：<a href="https://www.usms.org/fitness-and-training/guides/underwater-kick/propulsion/drills">https://www.usms.org/fitness-and-training/guides/underwater-kick/propulsion/drills</a></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>USMS 原名</th><th>中文教学名</th><th>目标与使用摘要</th></tr></thead>
+<tbody>
+<tr><td>211</td><td><strong>Vertical Kick</strong></td><td>垂直海豚腿</td><td>如果脚不能有效“抓水”就会下沉；练脚速、范围和双向推进。</td></tr>
+<tr><td>212</td><td><strong>Flipper Kick</strong></td><td>Flipper 泼水式海豚腿</td><td>仰卧略坐起做大而快海豚腿，以持续大水花作为范围+脚速的客观反馈。</td></tr>
+<tr><td>213</td><td><strong>Streamline Dolphin Kick on Your Back at the Surface</strong></td><td>水面仰卧流线海豚腿</td><td>在无需憋气的情况下大量练身体后侧方向的强踢，并发展对应体能。</td></tr>
+<tr><td>214</td><td><strong>Vertical Kick Moving Forward</strong></td><td>垂直腿向前移动</td><td>垂直腿中主动向前移动，必须强化身体后侧方向的踢腿。</td></tr>
+<tr><td>215</td><td><strong>Vertical Kick Moving Backward</strong></td><td>垂直腿向后移动</td><td>垂直腿中主动后移，必须强化身体前侧方向的踢腿。</td></tr>
+<tr><td>216</td><td><strong>Single-Leg Dolphin Kick</strong></td><td>单腿海豚腿</td><td>只用一条腿做海豚腿，可配浮板/呼吸管/脚蹼；要求维持全身传导节奏。</td></tr>
+<tr><td>217</td><td><strong>Tombstone Kick</strong></td><td>竖板阻力海豚腿</td><td>浮板竖起形成阻力，增强脚部压力反馈。</td></tr>
+<tr><td>218</td><td><strong>Head-Up Dolphin Kick</strong></td><td>抬头海豚腿</td><td>头出水会让髋下沉，必须高频、有效海豚腿维持位置。</td></tr>
+<tr><td>219</td><td><strong>Kick With a Parachute</strong></td><td>阻力伞海豚腿</td><td>水面或水下短距离阻力腿，迫使更有效产生推进。</td></tr>
+<tr><td>220</td><td><strong>Kick With DragSox</strong></td><td>DragSox 海豚腿</td><td>高阻力发展腿部力量与鞭状技术；保持短距离以免动作崩坏。</td></tr>
+</tbody>
+</table>
+</div>
+    </section>
+
+    <section id="stroke-principles">
+      <h2>8. 四种泳姿的关键技术原则与学习路径</h2>
+      <p>这一节只写 USMS 当前 Guide 明确强调的核心机制；“路径”部分是把这些技术模块按前置关系做的 <strong>[结构化整理]</strong>，不是 USMS 强制课表。</p>
+    </section>
+
+    <section id="free-path">
+      <h2 class="h2-sub">8.1 自由泳</h2>
+      <h3 id="free-path-h1">技术重点 [USMS]</h3>
+<ul><li><strong>身体位置</strong>：当前 Freestyle Body Position Guide 把身体位置视为自由泳速度/效率的基础。肺部浮力提供支撑；通过头胸位置、髋腿控制和转体减少阻力。</li><li><strong>呼吸</strong>：目标是低、直、快的呼吸；换气时尽量保持头与脊柱对齐，靠旋转而不是抬头/侧拉头部。水下完成大部分呼气，嘴出水时快速吸气。</li><li><strong>划水</strong>：当前 Guide 强调手+前臂共同形成有效受力面，建立抓水后向后推水；手臂恢复应服务于下一次有效入水/抓水。</li><li><strong>打腿</strong>：自由泳腿是小幅、高频、相对直腿的交替踢；USMS Guide 强调它同时承担身体位置、转体协调和推进。</li><li><strong>换气频率不是一个固定数字</strong>：Guide 根据比赛持续时间、个人划频和舒适度讨论不同模式，并明确单侧或双侧都可能有效；训练中偶尔练弱侧有助于对称。</li></ul>
+<h3 id="free-path-h2">学习/纠错路径 [结构化整理]</h3>
+<p>水适应与稳定呼吸 → 肺部浮力/身体线 → 无呼吸干扰的划水/打腿 → 低而快侧向呼吸 → 转体与双臂时序 → drill/swim 迁移 → 划数+DPS+速度 → 疲劳/高速下保持技术。</p>
+<h3 id="free-path-h3">官方 Set 使用例：Body Position Set 1</h3>
+<ul><li>6 轮；每次之间休 10–15 秒。</li><li>第 1/4 轮 cruise；第 2/5 轮所有游泳数划；第 3/6 轮 build。</li><li>每轮：10 秒 Ball Float + 25 free → 10 秒 Passive Jellyfish + 25 → 10 秒 Active Jellyfish + 25 → 10 秒 X-float + 25 → 50 free。</li><li>设计思想：每次完整自由泳前重新唤起身体位置感觉；随后分别用巡航、划数和加速增加迁移难度。</li></ul>
+<h3 id="free-path-h4">官方 Set 使用例：Kick Set 2（速度变化）</h3>
+<ul><li>2 轮，重复间休 15–20 秒。</li><li>3×（Wall Kick：10 秒 solid + 10 秒 strong + 10 秒 fast + 20 秒休）；3×50 free 按腿部力度 descend；3×50 snorkel kick descend；再 3×50 free descend。</li><li>再以 Vertical Kick 复现同样 solid→strong→fast，随后自由泳；最后仰卧流线打腿 3×50 descend + 自由泳整合。</li><li>核心不是“某一趟绝对多快”，而是学会可预测地用腿改变速度。</li></ul>
+    </section>
+
+    <section id="back-path">
+      <h2 class="h2-sub">8.2 仰泳</h2>
+      <h3 id="back-path-h1">技术重点 [USMS]</h3>
+<ul><li><strong>身体水平</strong>：尽量让头、髋、脚接近水面。Guide 用“肺部是跷跷板支点”解释为什么降低头/肩可帮助髋腿上浮，但同时提醒不要用腰椎过度反弓来“压头”。</li><li><strong>转体</strong>：USMS 当前 Body Position Guide 特别纠正“仰泳应持续匀速左右滚动”的误解：拉水阶段可以保持一侧转体，拉水结束后再快速转向另一侧。</li><li><strong>划水</strong>：尽早让手和前臂朝后，建立弯肘受力面，再向后推水；恢复臂相对直，转体帮助肩部完成大范围动作。</li><li><strong>打腿</strong>：小幅、持续 flutter kick；腿不仅推进，也维持身体位置和节奏。</li></ul>
+<h3 id="back-path-h2">学习路径 [结构化整理]</h3>
+<p>仰漂舒适 → 头/髋/腿排列 → 基本 flutter kick → 侧身平衡 → 单臂抓水 → 双臂交替 → 延迟转体 → 划数/速度 → 长距离/高速保持。</p>
+    </section>
+
+    <section id="breast-path">
+      <h2 class="h2-sub">8.3 蛙泳</h2>
+      <h3 id="breast-path-h1">技术重点 [USMS]</h3>
+<ul><li>蛙泳速度高度依赖 <strong>推进与阻力的交替管理</strong>，不是手腿“同时向后发力”。Current Timing Guide 的大量 drill 正是在训练手腿分离、流线和时序。</li><li><strong>腿部回收</strong>：Kick Guide 的仰卧动作重点是脚跟向臀部回收，同时控制膝盖向前移动；脚部外翻和快速完成推进很关键。</li><li><strong>手臂</strong>：前臂+手共同受力；拉水之后要积极把手臂送回流线。</li><li><strong>身体位置</strong>：呼吸抬头过高会让髋下沉；Snorkel、Every-Other-Stroke Breathing、Head-Up 等 drill 用“去掉或夸大呼吸”来建立反差。</li><li><strong>Timing 会随距离/速度改变</strong>：Stroke-Count Gears 与 Speed Gears 明确训练不同划幅和速度下的配合，而不是把一种节奏当作所有距离的唯一答案。</li></ul>
+<h3 id="breast-path-h2">学习路径 [结构化整理]</h3>
+<p>流线与身体位置 → 蛙泳腿 → 手臂抓水/前伸 → 手腿分离（3/2 pull-kick drills）→ 正常一划一蹬 → 呼吸与髋部位置 → 划数/时序档位 → 速度和比赛节奏。</p>
+<h3 id="breast-path-h3">官方 Timing Set 1 例</h3>
+<ul><li>1–2 轮；单次约休 20 秒，轮间约 40 秒。</li><li>8×25：奇数 Underwater Breaststroke，偶数 Delay Breaststroke。</li><li>4×25 正常蛙泳：每 25 比平常少 1 次动作。</li><li>8×25：奇数 Two Pulls, One Kick；偶数 Two Kicks, One Pull。</li><li>4×25 正常蛙泳：每 25 比平常多 1 次动作。</li><li>用途：在“分离动作”和“完整动作”之间来回切换，并主动探索划数改变后的时序。</li></ul>
+    </section>
+
+    <section id="fly-path">
+      <h2 class="h2-sub">8.4 蝶泳</h2>
+      <h3 id="fly-path-h1">技术重点 [USMS]</h3>
+<ul><li><strong>两次腿的时点</strong>：Current Timing Guide 明确强调每次完整划臂两次腿——一次在手入水后帮助重新建立身体排列，一次在划手完成/手出水附近完成，帮助髋部上升、手臂恢复和推进。</li><li><strong>不是波动越大越好</strong>：Body Position Guide 用 flutter-kick butterfly、前伸/贴体单臂蝶等动作控制波幅。</li><li><strong>划水</strong>：先建立手和前臂朝后的受力位置，再加速向后推；划水产生的手速帮助双臂水上恢复。</li><li><strong>动作质量优先</strong>：USMS 蝶泳相关文章反复建议，疲劳到动作严重破坏时继续堆低质量完整蝶的价值有限；短距离、高质量重复和 drill 过渡更适合很多 Masters 成人。</li></ul>
+<h3 id="fly-path-h2">学习路径 [结构化整理]</h3>
+<p>浮力/身体位置 → 海豚腿双向推进 → 单臂蝶控制波幅 → Skate 建立划水与两次腿 → 呼吸位置 → 脚蹼/呼吸管辅助完整蝶 → 撤辅助 → 划数/速度档位 → 短距离高质量反复 → 更长距离耐力。</p>
+<h3 id="fly-path-h3">官方 Timing Set 1 例</h3>
+<ul><li>4 轮；奇数轮戴脚蹼，偶数轮不戴；每次休 20 秒，轮间 40 秒。</li><li>2×25 单臂蝶（非划手臂前伸，左右各一次）→ 25 Skate → 2×25 单臂蝶（非划手臂贴体）→ 25 Skate → 25 butterfly strong → 25 scull easy。</li><li>设计思想：从低复杂度单臂 timing → 双臂 Skate → 完整蝶强度输出，再用 scull 恢复。</li></ul>
+    </section>
+
+    <section id="wall">
+      <h2>9. 池壁与 Transition：出发、转身、水下不是“附属动作”</h2>
+      <p>USMS 当前把 Starts、Turns、Underwater Kick 单独做成 Guides，说明池壁技术是训练能力，而不是泳姿学完后顺便一提。</p>
+    </section>
+
+    <section id="s-9-1">
+      <h2 class="h2-sub">9.1 出发的共同结构 [USMS]</h2>
+      <p>正面、仰泳、接力出发虽然姿势不同，但都可拆成：<strong>起始姿势 → 发力/离台或离墙 → 空中阶段 → 入水 → 从入水到正常游的 transition</strong>。</p>
+<p><strong>正面出发核心</strong>：不要只追“尽快离台”，还要把身体有效投射到水面上方，并通过干净入水和流线保留速度。</p>
+<p><strong>仰泳出发核心</strong>：从水中强蹬墙，向上/向后投射并形成后向入水，再迅速进入流线。</p>
+<p><strong>接力出发核心</strong>：跨步/摆臂带来更高初速度，但必须与来泳者触壁时间同步；高速度也使干净入水更难，因此 progression 先把动作和入水质量建立起来。</p>
+    </section>
+
+    <section id="s-9-2">
+      <h2 class="h2-sub">9.2 翻滚转身 [USMS]</h2>
+      <p>完整质量链：<strong>保持进墙速度 → 最后完整划水 → 紧凑滚翻/双膝向胸 → 脚落墙 → 强蹬 → 先建立流线再离墙 → 平顺 breakout</strong>。常见错误包括提前减速、翻滚松散、蹬墙弱、流线差、突然抬头出水。</p>
+    </section>
+
+    <section id="s-9-3">
+      <h2 class="h2-sub">9.3 开放式转身 [USMS]</h2>
+      <p>核心仍是速度、紧凑收膝、强蹬和流线。蝶/蛙比赛触壁有规则要求；自由泳也可使用单手开放式转身作为 flip turn 的替代。</p>
+    </section>
+
+    <section id="s-9-4">
+      <h2 class="h2-sub">9.4 IM transitions [USMS]</h2>
+      <ul><li><strong>Butterfly → Backstroke</strong>：以蝶泳规则触壁并完成类似开放式转身的紧凑收膝，但蹬墙后直接在背面进入仰泳。</li><li><strong>Backstroke → Breaststroke</strong>：需在背面触壁并在正面蹬出；Guide 介绍侧转开放式、后滚式、crossover 等不同技术。</li><li><strong>Breaststroke → Freestyle</strong>：与蛙泳开放式转身最接近，但蹬墙深度和随后水下策略可不同。</li><li>Current IM page 明确让泳者把 <strong>open-turn drills、sets、dryland</strong> 调整后用于 IM，而不是另造一套完全独立动作。</li></ul>
+<p>IM Guide：<a href="https://www.usms.org/fitness-and-training/guides/turns/im-turns">https://www.usms.org/fitness-and-training/guides/turns/im-turns</a></p>
+    </section>
+
+    <section id="s-9-5">
+      <h2 class="h2-sub">9.5 水下海豚腿 [USMS]</h2>
+      <p>USMS Current Underwater Kick Guide 把它拆成两条能力：</p>
+<ol><li><strong>Body Alignment</strong>：上身稳定、脊柱排列、流线、控制躯干波幅、寻找个人最合适的腿部幅度；</li><li><strong>Propulsion</strong>：脚在有效范围内快速移动、双向推进、加速踢水，并用 vertical/resisted/single-leg 等动作放大推进反馈。</li></ol>
+<p>Guide 反复强调“推进与阻力的权衡”：腿幅太小推进不足，太大又增加阻力；需要通过 Big-to-Small / Small-to-Big 等 drill 找到个人平衡。</p>
+    </section>
+
+    <section id="transfer">
+      <h2>10. Drill 怎么真正“用起来”：技术迁移方法</h2>
+      <h3 id="s-10-1">10.1 USMS 常见的 Drill → Swim 结构</h3>
+<p>Current Guide 的 sets 很少让泳者连续长时间只做一个 drill，而是经常采用：</p>
+<p><strong>短 drill → 完整泳姿 → 再 drill → 更快/更长完整泳姿 → 划数或配速约束。</strong></p>
+<p>这样做的意义是检验：专项中出现的动作感觉能否迁移回真正游泳。</p>
+<h3 id="s-10-2">10.2 一项 drill 至少有四种用法 [结构化整理自 USMS set 设计]</h3>
+<p>1. <strong>感知型</strong>：低速短距离，只找某个感觉，如 Wall Pull、Ball Float。</p>
+<p>2. <strong>隔离型</strong>：暂时移除一个复杂因素，如 snorkel 去呼吸、pull buoy 去腿部推进。</p>
+<p>3. <strong>约束型</strong>：用拳、倒置划手板、网球、阻力等限制某个补偿动作。</p>
+<p>4. <strong>迁移型</strong>：drill 后立即完整泳姿，并加入 stroke count、build、descend、race pace 或距离。</p>
+<h3 id="s-10-3">10.3 什么时候不能继续加距离</h3>
+<p>USMS workout-writing 指南的原则是：drill 错误会强化错误动作。速度/耐力文章同样反复强调，如果技术开始明显崩坏，需要改变强度、距离、休息或动作形式，而不是只追训练量。</p>
+    </section>
+
+    <section id="intensity">
+      <h2>11. 强度训练体系：按 USMS 实际方法整理</h2>
+      <p>下面不是虚构的统一“能量区间标准”，而是把 USMS 当前 glossary、Guide sets 与训练文章使用的处方方式放在同一张表中。</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>类型</th><th>目标</th><th>USMS 常见控制方式</th><th>官方示例/参数</th></tr></thead>
+<tbody>
+<tr><td>技术 / Skill</td><td>改动作、降低阻力</td><td>慢速、短距离、充分反馈</td><td>Drill focus 可以慢，首要目标是正确执行</td></tr>
+<tr><td>Recovery</td><td>恢复且保持水感</td><td>easy/comfortable、无目标最快时间</td><td>Recovery workout 可混合 kick/drill/swim，不要求 fast</td></tr>
+<tr><td>Aerobic / Base</td><td>可持续有氧与训练容量</td><td>cruise/steady、短休、较长重复</td><td>Workout Library Basic/Open Water/High Volume 中广泛出现</td></tr>
+<tr><td>Pace</td><td>学会稳定重复目标速度</td><td>固定 target pace + rest/send-off</td><td>USMS Pace Workout 例中 100s 与 500/400/300 长段围绕 500 pace</td></tr>
+<tr><td>CSS</td><td>个体化阈值附近速度</td><td>400+200 测试推算每100 CSS；逐周增加 CSS 100s</td><td>USMS 文章建议可从较少100逐步增到 10×100，再重测</td></tr>
+<tr><td>Best Average / Test</td><td>测重复高速能力</td><td>相同 set、约 15–20 秒休、尽量稳定最快平均</td><td>经典 USMS 示例：10×100 best average</td></tr>
+<tr><td>Race Pace</td><td>特定比赛专项</td><td>目标比赛速度、分段/破分</td><td>Glossary 将 Race Pace Training 定义为模拟比赛速度</td></tr>
+<tr><td>Sprint</td><td>最大速度/速度储备</td><td>12.5/25/50 短距离 + 长恢复</td><td>USMS distance-sprinter article：fresh 25–50 all-out，2–3 分钟充分恢复是一个示例</td></tr>
+<tr><td>VO₂-max-style</td><td>很高强度重复</td><td>尽可能快；休息约游泳时间 2 倍；速度明显下降时停止</td><td>USMS Workout Library glossary</td></tr>
+<tr><td>Resistance</td><td>放大力量/水感</td><td>parachute/DragSox/Tombstone 等，通常短距离</td><td>Freestyle/Butterfly/Underwater Guides</td></tr>
+<tr><td>Assisted / Skill-support</td><td>让动作在更高速度或较低复杂度下出现</td><td>fins/snorkel/buoy</td><td>Butterfly timing、freestyle breathing 等 Guides</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="s-11-1">11.1 CSS：USMS 官方文章的使用流程</h3>
+<ol><li>做 <strong>400 yd/m time trial</strong>；</li><li>短主动恢复后做 <strong>200 yd/m time trial</strong>；</li><li>用 CSS calculator 得到每 100 的个人 interval/pace；</li><li>在训练中用该 interval 做重复；USMS 文章提供“每周增加 1×100，最终做到约 10×100 CSS”的渐进例；</li><li>做到目标容量后重新做 400+200 测试并更新 CSS。</li></ol>
+<p>注意：该 USMS 文章把 CSS 描述为一种个体化训练工具，不意味着所有成人都必须用 CSS。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals</a></p>
+<h3 id="s-11-2">11.2 10×100 Best Average：测试而不是“前两趟拼命”</h3>
+<p>USMS 的 Best Workouts 文章给出的经典 test set 思路：长热身后 <strong>10×100 free</strong>，选择能提供约 <strong>15–20 秒休息</strong>的 interval；目标是全部 10 次尽可能快但保持相近速度，不能前面过快崩盘，也不能前面保留到最后才冲。测试应在未来以相同条件重做，比较平均速度。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/best-workouts-for-masters-swimmers">https://www.usms.org/fitness-and-training/articles-and-videos/articles/best-workouts-for-masters-swimmers</a></p>
+<h3 id="s-11-3">11.3 Sprint：长距离泳者也可以训练速度</h3>
+<p>USMS 专题文章指出 distance swimmer 仍能从短 sprint 中获益。一个教练示例是：在身体较新鲜时做 <strong>25–50 yd/m all-out</strong>，保持技术，重复间休 <strong>2–3 分钟</strong>；如果最大努力时每25划数相比平时失控地增加许多，说明更像乱划而不是有效提速。文章作者还把 sprint 作为 distance pace training 的补充，而不是替代。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/six-reasons-distance-swimmers-should-sprint">https://www.usms.org/fitness-and-training/articles-and-videos/articles/six-reasons-distance-swimmers-should-sprint</a></p>
+    </section>
+
+    <section id="workout">
+      <h2>12. 单次 Workout 的设计与调整</h2>
+      <h3 id="s-12-1">12.1 先问目标，再写训练</h3>
+<p>USMS 2023 workout-writing 指南要求先明确：目标是什么、为谁写、出勤是否稳定、术语如何解释、训练如何传达。每一个 set 都应能说清楚目的，例如降低阻力、提高 power、aerobic fitness、水感、心理韧性或恢复。</p>
+<h3 id="s-12-2">12.2 Main Set 的核心变量</h3>
+<ul><li>Duration；</li><li>Repeat distance；</li><li>Stroke；</li><li>Rest 或 send-off；</li><li>Number of repeats；</li><li>Recovery swim；</li><li>必要时器材、划数、呼吸模式、turn/underwater 要求。</li></ul>
+<h3 id="s-12-3">12.3 同一 set 如何适配不同速度</h3>
+<p>USMS 指南给出三种典型调整：</p>
+<ol><li>慢泳者减少 repetitions；</li><li>保持 repetitions，但缩短每次距离；</li><li>把 set 写成固定总时长，每个人在这段时间内完成自己能完成的 swim/rest 循环。</li></ol>
+<h3 id="s-12-4">12.4 器材不能当“作弊工具”</h3>
+<p>USMS workout-writing 指南明确指出 fins、buoy、snorkel 等可以增加力、提高速度或改变 drag profile，但应有明确训练目的，而不是仅为了让训练变轻松。</p>
+    </section>
+
+    <section id="plans">
+      <h2>13. 长周期训练与目标计划</h2>
+      
+    </section>
+
+    <section id="s-13-1">
+      <h2 class="h2-sub">13.1 USMS 17 套 Six-Week Training Plans</h2>
+      <p><strong>[USMS]</strong> 当前共有 <strong>17 套</strong>，每套 <strong>6 周、24 次训练</strong>，允许自行适配；器材不是必需，但每个 workout 会标识可用器材。</p>
+<h3 id="s-13-1-h1">A. 连续游距离目标</h3>
+<ul><li>200 nonstop；500 nonstop；750 nonstop；1,000 nonstop；1,650 nonstop；3,000 nonstop。</li></ul>
+<h3 id="s-13-1-h2">B. 100 yd 自由泳成绩目标</h3>
+<ul><li>2:30；2:00；1:45；1:30；1:15；1:00。</li></ul>
+<h3 id="s-13-1-h3">C. 开放水域比赛距离</h3>
+<ul><li>300 m；750 m；1 mile；2.4 mile；5K。</li></ul>
+<p>官方页面：<a href="https://cd3.usms.org/fitness-and-training/six-week-swim-training-plans/six-week-swim-training-plan-information">https://cd3.usms.org/fitness-and-training/six-week-swim-training-plans/six-week-swim-training-plan-information</a></p>
+    </section>
+
+    <section id="s-13-2">
+      <h2 class="h2-sub">13.2 Workout Library 的 7 类训练入口</h2>
+      <div class="table-wrap">
+<table>
+<thead><tr><th>Specialty</th><th>官方定位</th></tr></thead>
+<tbody>
+<tr><td>Basic Training</td><td>Wide Variety</td></tr>
+<tr><td>High-Intensity Training</td><td>Sprinting and Speed</td></tr>
+<tr><td>Stroke and IM Training</td><td>Mainly non-freestyle</td></tr>
+<tr><td>Open Water Training</td><td>Longer sets</td></tr>
+<tr><td>High-Volume Training</td><td>Around 5K</td></tr>
+<tr><td>Triathlon Training</td><td>Efficient swim leg</td></tr>
+<tr><td>Low-Volume or Limited Mobility Training</td><td>Around 2K</td></tr>
+</tbody>
+</table>
+</div>
+<p>Library 支持按 course、distance、set type 筛选，并可打印或通过 Swim.com 发送到兼容设备；Swim.com 还可进一步修改 workout。</p>
+<p>官方页面：<a href="https://www.usms.org/workout-library/">https://www.usms.org/workout-library/</a></p>
+    </section>
+
+    <section id="s-13-3">
+      <h2 class="h2-sub">13.3 Periodization：USMS 有周期思想，但没有一张适合所有成人的固定表</h2>
+      <p><strong>[补充/历史]</strong> USMS 的 periodization 文章用 preseason / in-season / off-season 解释全年规划，并强调先有明确目标。Current workout-writing 与 taper 文章继续采用“目标比赛—训练阶段—比赛准备—恢复”的思路。Masters 成人年龄、伤病、工作与家庭负荷差异很大，因此 taper 和训练周期应个体化。</p>
+<p>一个合乎 USMS 资料的 <strong>[结构化整理]</strong> 长周期闭环是：</p>
+<p><strong>Goal → Baseline → Technique/General Preparation → Base → Build → Race-specific → Taper → Event → Recovery → Reassessment。</strong></p>
+<p>Periodization：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/periodization">https://www.usms.org/fitness-and-training/articles-and-videos/articles/periodization</a></p>
+<p>Taper：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/what-to-consider-when-planning-your-taper">https://www.usms.org/fitness-and-training/articles-and-videos/articles/what-to-consider-when-planning-your-taper</a></p>
+    </section>
+
+    <section id="assess">
+      <h2>14. 测试、Benchmark 与数据反馈</h2>
+      
+    </section>
+
+    <section id="s-14-1">
+      <h2 class="h2-sub">14.1 Test Set</h2>
+      <p><strong>[USMS]</strong> Test Set 的关键不是“某个神奇测试”，而是 <strong>同一条件重复</strong>。可以是一条全力100，也可以是重复组。要记录日期、泳池长度、动作、器材、rest/send-off 和结果，未来才能比较。</p>
+    </section>
+
+    <section id="s-14-2">
+      <h2 class="h2-sub">14.2 技术效率指标</h2>
+      <ul><li><strong>Time / Split / Pace</strong>：速度的直接结果；</li><li><strong>Stroke Count</strong>：动作次数；必须与时间一起看，低划数但明显变慢不等于更高效率；</li><li><strong>DPS</strong>：每划距离；</li><li><strong>Stroke Rate</strong>：划频；不同速度/距离最佳值可能不同；</li><li><strong>SWOLF</strong>：时间+划数形成的粗略效率指标，适合同一个人、同样环境下趋势比较，不应脱离速度和泳姿解释。</li></ul>
+    </section>
+
+    <section id="s-14-3">
+      <h2 class="h2-sub">14.3 2026 Swim.com USMS Fitness Series</h2>
+      <div class="table-wrap">
+<table>
+<thead><tr><th>月份</th><th>2026 挑战</th><th>可用于观察什么</th></tr></thead>
+<tbody>
+<tr><td>1月</td><td>Benchmark 1：200 free for time</td><td>年初速度/中距离基线</td></tr>
+<tr><td>2月</td><td>200 kick for time</td><td>腿部能力</td></tr>
+<tr><td>3月</td><td>100 IM</td><td>四泳姿综合</td></tr>
+<tr><td>4月</td><td>Power 1K：1000 yd for time</td><td>较长距离能力</td></tr>
+<tr><td>5月</td><td>Benchmark 2：200 free</td><td>与年初比较</td></tr>
+<tr><td>6月</td><td>50 free for time</td><td>速度</td></tr>
+<tr><td>7月</td><td>4K accumulation</td><td>参与量/持续性</td></tr>
+<tr><td>8月</td><td>30-minute swim</td><td>持续能力</td></tr>
+<tr><td>9月</td><td>Benchmark 3：200 free</td><td>年度再次复测</td></tr>
+<tr><td>10月</td><td>200 non-free stroke</td><td>非自由泳能力</td></tr>
+<tr><td>11月</td><td>2K swim</td><td>中长距离完成</td></tr>
+<tr><td>12月</td><td>1 mile for time</td><td>年末距离表现</td></tr>
+</tbody>
+</table>
+</div>
+<p>这说明 USMS 对成人的“进步”不只等于正式比赛成绩，还包括 benchmark、连续游、累计距离和参与度。</p>
+<p>官方页面：<a href="https://www.usms.org/events/fitness-events/fitness-series">https://www.usms.org/events/fitness-events/fitness-series</a></p>
+    </section>
+
+    <section id="s-14-4">
+      <h2 class="h2-sub">14.4 Go The Distance</h2>
+      <p>GTD 是全年 self-directed distance challenge，核心是记录总距离，而不是速度。它代表另一条长期成人训练指标：<strong>adherence/volume</strong>。</p>
+    </section>
+
+    <section id="s-14-5">
+      <h2 class="h2-sub">14.5 Swim.com / FLOG 追踪</h2>
+      <p>USMS 与 Swim.com 集成可上传兼容设备记录、查看 workout/pace/stroke-rate 等数据并参与挑战；FLOG 则可手动记录距离、时间、notes。它们把训练闭环变成：</p>
+<p><strong>Plan → Workout → Device/Manual Log → Metrics → Benchmark/Test → Adjust。</strong></p>
+    </section>
+
+    <section id="ow">
+      <h2>15. Open Water：不是“泳池自由泳游得更长”</h2>
+      
+    </section>
+
+    <section id="s-15-1">
+      <h2 class="h2-sub">15.1 USMS Open Water 101 的范围</h2>
+      <p>Current Open Water 101 覆盖：安全、泳池与开放水域差异、装备、防寒泳衣、地点、常见风险、海洋生物、焦虑/恐慌、赛事选择和训练。</p>
+<p>官方入口：<a href="https://www.usms.org/fitness-and-training/guides/open-water-swimming-101">https://www.usms.org/fitness-and-training/guides/open-water-swimming-101</a></p>
+    </section>
+
+    <section id="s-15-2">
+      <h2 class="h2-sub">15.2 技能路径 [结构化整理自官方 Guide]</h2>
+      <p>泳池高效自由泳 → 长距离稳定技术 → 双侧/环境适应换气 → sighting → 直线游 → buoy turn → drafting → pack/身体接触 → 不同水况和划频 → pacing → feeding → 开放水域比赛策略与安全判断。</p>
+    </section>
+
+    <section id="s-15-3">
+      <h2 class="h2-sub">15.3 Sighting</h2>
+      <p>USMS Guide 举例的常见方式是 <strong>alligator eyes</strong>：头只抬到泳镜刚露出水面观察，随后迅速回到正常身体位置；Guide 给出的示例频率是约每 <strong>5–10 划</strong>观察一次，但真实频率要随能见度、航向和比赛环境调整。</p>
+    </section>
+
+    <section id="s-15-4">
+      <h2 class="h2-sub">15.4 Buoy Turn</h2>
+      <p>池内可以把浮板放在泳池中部模拟浮标，练绕过后改变方向；Guide 也介绍翻到仰面、用几次仰泳划水帮助绕标的策略。</p>
+    </section>
+
+    <section id="s-15-5">
+      <h2 class="h2-sub">15.5 Drafting</h2>
+      <p>开放水域要学会在其他泳者后方/侧后方利用尾流。USMS 把 drafting 视为重要开放水域技能；实际训练应在有同伴、规则明确的条件下进行，避免不断拍打前方泳者脚部。</p>
+    </section>
+
+    <section id="s-15-6">
+      <h2 class="h2-sub">15.6 泳池里怎么练开放水域</h2>
+      <ul><li>sighting；</li><li>straight-line swimming；</li><li>drafting / closely spaced swimming；</li><li>dead-stop starts/turns，减少对池壁反弹的依赖；</li><li>浮板模拟 buoy；</li><li>改变 stroke rate；</li><li>bilateral/environment-adaptive breathing；</li><li>长距离 pace；</li><li>在长距离赛事准备中练补给产品和踩水进食/喝水流程。</li></ul>
+    </section>
+
+    <section id="special">
+      <h2>16. Triathlon、回归训练、低容量：不同目标需要不同路径</h2>
+      
+    </section>
+
+    <section id="s-16-1">
+      <h2 class="h2-sub">16.1 Triathlon</h2>
+      <p>2026 USMS triathlon 专题把 Masters Swimming 的价值归纳为：现场技术反馈、结构化 interval、pacing、stroke variety、sprint、threshold、recovery swimming，以及 drafting/sighting 等开放水域技能。核心目标通常不是把泳池 50 米做到极致，而是在开放水域以较低能耗完成游泳段，并为自行车/跑步保留能力。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-triathletes-should-use-masters-swimming-to-improve-swim-times">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-triathletes-should-use-masters-swimming-to-improve-swim-times</a></p>
+    </section>
+
+    <section id="s-16-2">
+      <h2 class="h2-sub">16.2 Return-to-Swimming</h2>
+      <p>USMS 的“伤后/中断后重新游泳”文章强调回归是过程：伤病后先与医生沟通运动目标和许可；年龄增加后恢复通常更慢。<strong>[结构化整理]</strong> 对曾经竞技但长期停训的人，不应因为“技术记忆还在”就直接恢复过去训练量，宜先恢复水感/技术质量和低容量，再逐步加 volume 和 speed。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-start-swimming-again-after-an-injury-or-hiatus">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-start-swimming-again-after-an-injury-or-hiatus</a></p>
+    </section>
+
+    <section id="s-16-3">
+      <h2 class="h2-sub">16.3 Low-Volume / Limited Mobility</h2>
+      <p>Workout Library 专门保留约 2K 的 <strong>Low-Volume or Limited Mobility Training</strong>。这意味着“技术高级”与“训练量大”不是同一个维度；成人可以技术很成熟，但因为时间、年龄、恢复或活动能力选择低容量训练。</p>
+    </section>
+
+    <section id="dryland">
+      <h2>17. Dryland：从辅助项升级为正式能力系统</h2>
+      <p>Current stroke/transition Guides 给每个技术模块配置 dryland exercises，说明 USMS 并不把所有技术问题都只放在水里解决。</p>
+    </section>
+
+    <section id="s-17-1">
+      <h2 class="h2-sub">17.1 USMS 强度/动作分类思想</h2>
+      <p>USMS 经典 Strength Training: A Balanced Approach 建议按 <strong>movement pattern</strong> 而不是“胸日/腿日”思考：</p>
+<ul><li>Push；</li><li>Pull；</li><li>Knee-dominant（如 squat/lunge）；</li><li>Hip-dominant（如 deadlift/hinge）。</li></ul>
+<p>文章特别建议游泳者不要出现“推远多于拉”的力量计划，并强调下肢也要平衡 knee- 与 hip-dominant。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/strength-training-a-balanced-approach">https://www.usms.org/fitness-and-training/articles-and-videos/articles/strength-training-a-balanced-approach</a></p>
+    </section>
+
+    <section id="s-17-2">
+      <h2 class="h2-sub">17.2 核心不是只有卷腹</h2>
+      <p>USMS core 系列把核心视为三维的稳定/传力系统，包含仰卧、俯卧、垂直等方向训练。对游泳而言，目标是让四肢发力时躯干保持稳定并有效传递力量。</p>
+    </section>
+
+    <section id="s-17-3">
+      <h2 class="h2-sub">17.3 Dryland 测试</h2>
+      <p>USMS “Three Dryland Tests for Improved Swimming” 建议用简单测试找弱项，并大约每季度复测。文章包括肩部活动范围等项目，并建议用手机录像自评。</p>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/three-dryland-tests-for-improved-swimming">https://www.usms.org/fitness-and-training/articles-and-videos/articles/three-dryland-tests-for-improved-swimming</a></p>
+    </section>
+
+    <section id="s-17-4">
+      <h2 class="h2-sub">17.4 Guide 内 dryland 的基本剂量</h2>
+      <p>多个 Current Guide dryland 页面给出的通用起点是：多数动作 <strong>1–3 组 × 8–10 次</strong>（静态保持类除外）；新动作可先从 1 组开始，再逐渐增加。具体动作仍应按对应泳姿 Guide 的目的选择，而不是把所有 dryland 全堆在一次训练。</p>
+    </section>
+
+    <section id="train-safety">
+      <h2>18. 安全边界与注意事项</h2>
+      
+    </section>
+
+    <section id="s-18-1">
+      <h2 class="h2-sub">18.1 Breath control / 水下训练</h2>
+      <p><strong>[USMS 明确安全要求]</strong></p>
+<ul><li>水下憋气存在 shallow-water blackout 风险。</li><li>breath holding 与 breath control 不是同一回事；USMS 建议强调受控、渐进的呼气和呼吸节奏，而非追求极限憋气。</li><li><strong>绝不无人监督练习水下憋气/限制呼吸。</strong></li><li>需要空气就呼吸；不要把“几划一换气”当作必须完成的挑战。</li><li>逐步增加水下距离/减少呼吸，并给充分恢复，而不是突然挑战很长距离。</li></ul>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-work-safely-on-breath-control">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-work-safely-on-breath-control</a></p>
+    </section>
+
+    <section id="s-18-2">
+      <h2 class="h2-sub">18.2 出发</h2>
+      <p>Current Starts Drill pages 每页都明确写：<strong>出发及出发 drill 应由合格教练指导，并在泳池深水端练习。</strong> 不应在不明水深、浅水、拥挤泳道自行试跳台。</p>
+    </section>
+
+    <section id="s-18-3">
+      <h2 class="h2-sub">18.3 蛙泳夹浮漂蹬腿</h2>
+      <p>USMS 当前 Breaststroke Kick Drill 明确警告：<strong>Kick With Pull Buoy Between Legs</strong> 可能比其他蛙腿练习给膝盖更大压力；开始要慢，把它当技术练习而非体能训练。</p>
+    </section>
+
+    <section id="s-18-4">
+      <h2 class="h2-sub">18.4 高阻力动作</h2>
+      <p>Parachute、DragSox、Tombstone 等的目的在于放大压力和力量需求。Current Guides 多次把这类动作安排成短距离；当阻力使动作模式崩坏时，继续堆距离会偏离 drill 目的。</p>
+    </section>
+
+    <section id="s-18-5">
+      <h2 class="h2-sub">18.5 Open Water</h2>
+      <p>USMS Open Water 101 的核心安全原则包括：</p>
+<ul><li><strong>不要独游</strong>，优先与熟悉当地环境的开放水域群体/伙伴游；</li><li>使用醒目的泳帽和 tow float 提高可见性；</li><li>入水前评估水温、风向、船只/垂钓/冲浪等交通、天气和雷暴、潮汐/水流/离岸流、野生动物、水质和本地临时风险；</li><li>冷水未适应时缩短时间并靠近可快速上岸区域；</li><li>如果环境发生威胁性变化，应退出水域。</li></ul>
+<p>来源：<a href="https://www.usms.org/fitness-and-training/guides/open-water-swimming-101">https://www.usms.org/fitness-and-training/guides/open-water-swimming-101</a></p>
+    </section>
+
+    <section id="s-18-6">
+      <h2 class="h2-sub">18.6 恢复与成人个体差异</h2>
+      <p>USMS recovery 与 taper 资料反复强调成人年龄、伤病、训练史、工作和家庭负荷差异。恢复训练、cool-down、补水、营养和睡眠应视为训练组成；年龄增加通常需要更多恢复。</p>
+<p>Recovery：<a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/why-you-need-to-do-more-recovery-swims">https://www.usms.org/fitness-and-training/articles-and-videos/articles/why-you-need-to-do-more-recovery-swims</a></p>
+    </section>
+
+    <section id="video">
+      <h2>19. 诊断与反馈：Video Stroke Analysis / Stroke Clinic</h2>
+      
+    </section>
+
+    <section id="s-19-1">
+      <h2 class="h2-sub">19.1 Video Stroke Analysis</h2>
+      <p>Current USMS Video Stroke Analysis 的标准流程非常接近一个结构化技术闭环：</p>
+<ol><li>选择一个泳姿，或 starts/turns；</li><li>按规定角度录像；</li><li>USMS coach 给第一轮约 5 分钟分析；</li><li>聚焦 <strong>3 个主要改进点</strong>；</li><li>书面反馈给出对应 <strong>3 个 drills</strong> 和进一步资源；</li><li>泳者练习数周；</li><li>重新录像，做第二轮 follow-up。</li></ol>
+<p>这形成：<strong>Observation → Priority Problems → Drill Prescription → Practice → Revideo → Reassess</strong>。</p>
+<p>官方页面：<a href="https://www.usms.org/fitness-and-training/usms-video-stroke-analysis">https://www.usms.org/fitness-and-training/usms-video-stroke-analysis</a></p>
+    </section>
+
+    <section id="s-19-2">
+      <h2 class="h2-sub">19.2 Stroke Development Clinic</h2>
+      <p>USMS Clinic Course 明确训练教练如何设计 stroke development clinic，并使用四泳姿的 <strong>drill/swim progression</strong>。现场诊断的关键不是一次给出十条建议，而是选择有限重点、做 drill、反馈、再回到完整泳姿。</p>
+    </section>
+
+    <section id="coach">
+      <h2>20. 教练体系与当前状态</h2>
+      <p>USMS 过去的 Coach Certification 四级结构可以用来理解其知识框架：Level 1 偏成人学习者/训练写作，Level 2/Stroke School 偏四泳姿与出发转身纠错，Level 3 扩展到项目管理、特殊人群、dryland、营养和 injury prevention，Level 4 强调长期专业贡献。</p>
+<p>需要注意时效：<strong>USMS 已于 2026-05-08 起暂停原 Coach Certification program，表示计划重构。</strong> 因此本文把旧四级结构当作知识结构背景，而不把它写成当前正在正常开放的认证路径。</p>
+<p>当前页面：<a href="https://www.usms.org/coach-central/coach-certification">https://www.usms.org/coach-central/coach-certification</a></p>
+    </section>
+
+    <section id="path">
+      <h2>21. 按目标选择路径：把“技术水平”和“训练目标”分开</h2>
+      <p>以下是 <strong>[结构化整理]</strong>，用于把官方资源连接成实际使用路径。</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>人群/目标</th><th>优先路径</th><th>不应直接做的事</th></tr></thead>
+<tbody>
+<tr><td>完全不会游</td><td>ALTS：呼吸→漂浮→站立恢复→滑行→打腿→基础自由泳</td><td>直接做高肘抓水、限制呼吸、跳台出发</td></tr>
+<tr><td>会游但一池就喘</td><td>ALTS 呼吸诊断 + Freestyle Breathing</td><td>先用更多体能硬撑距离</td></tr>
+<tr><td>能连续游但技术粗糙</td><td>Swimming 101 → 四泳姿对应模块 → drill/swim sets</td><td>只做连续长游</td></tr>
+<tr><td>想把自由泳游远</td><td>Body position + breathing + pull/kick 效率 → base/pace → CSS/长距离</td><td>只练慢长距离而完全不练速度/技术</td></tr>
+<tr><td>50/100 速度</td><td>技术效率 → start/turn/underwater → sprint/race pace →充分恢复</td><td>疲劳中长期大量低质量冲刺</td></tr>
+<tr><td>200/400/500</td><td>technique + pace + threshold/CSS + speed reserve</td><td>只有 sprint 或只有长距离</td></tr>
+<tr><td>IM</td><td>四泳姿质量 → open/flip turns → IM transitions → Stroke &amp; IM workouts</td><td>只练四泳姿但不练转换</td></tr>
+<tr><td>Open Water</td><td>稳定自由泳 → sighting/drafting/buoy turn → long pace/feeding →环境训练</td><td>仅用泳池连续距离代替所有开放水域技能</td></tr>
+<tr><td>Triathlon</td><td>自由泳效率 + interval/threshold + OW skills + 与bike/run总负荷协调</td><td>把游泳训练当孤立项目无限加量</td></tr>
+<tr><td>久停回归</td><td>低容量技术重启 → 稳定频率 →渐进 volume →再加 speed</td><td>按过去巅峰训练量立即恢复</td></tr>
+<tr><td>时间/活动能力受限</td><td>Low-Volume / Limited Mobility + 技术优先</td><td>用“高级泳者=必须5K”判断训练</td></tr>
+</tbody>
+</table>
+</div>
     </section>
 
     <section id="diag">
-      <h2>问题诊断六步</h2>
-      <p class="rule">不要看到哪里动作难看，就直接改哪里；先找到最早失效的环节。</p>
-      <ol class="proc">
-        <li><b>B1 看具体现象</b>写「看到了什么」，例如换气时腿突然分开。不要直接写「核心弱」。</li>
-        <li>
-          <b>B2 最早失效环节</b>
-          <p>某环节失效，指它已经不能按正确要求做到、不稳定，或必须靠憋气、冲刺、代偿才能完成。</p>
-          <p>按下面这条优先序从前往后找第一个失效点</p>
-          <div class="order">
-            <span>呼吸</span><span class="arr" aria-hidden="true">→</span>
-            <span>头部和身体线型</span><span class="arr" aria-hidden="true">→</span>
-            <span>侧身平衡与转动</span><span class="arr" aria-hidden="true">→</span>
-            <span>打腿</span><span class="arr" aria-hidden="true">→</span>
-            <span>入水和水下划水</span><span class="arr" aria-hidden="true">→</span>
-            <span>完整配合和疲劳</span>
-          </div>
-        </li>
-        <li><b>B3 简化练习拆开</b><a href="../gear/snorkels/">正面呼吸管</a>、侧身打腿、单臂、夹浮漂、<a href="../gear/fins/">脚蹼</a>、<a href="../gear/paddles/">小划手</a>。</li>
-        <li><b>B4 直接问题 vs 上游</b>例如双腿分开可能只是现象，上游可能是换气抬头。</li>
-        <li><b>B5 选一个主要专项</b>不要一次纠正五个动作。1 个主问题 + 最多 1 个辅助。</li>
-        <li><b>B6 完整泳复测</b>无改善：练习选错、根因错、或尚未完成向完整泳迁移。</li>
-      </ol>
+      <h2>22. 一个可复用的 USMS 式技术诊断模板</h2>
+      <p><strong>[结构化整理自 Current Guides + Video Stroke Analysis]</strong></p>
+<pre><code>目标：这名泳者要解决什么？
+↓
+观察：真实完整泳姿中发生了什么？
+↓
+归类：Body Position / Breathing / Pull / Kick / Timing / Wall / Underwater
+↓
+优先级：只选最影响速度、阻力、安全或可持续性的 1–3 个问题
+↓
+选择低复杂度 Drill：让泳者先看见/感觉到问题
+↓
+Progressive Drill：增加移动、速度、完整度或去掉辅助器材
+↓
+Drill → Swim Transfer：短 drill 后立即正常游
+↓
+约束：Stroke Count / Pace / Build / Descend / Distance
+↓
+复测：完整泳姿、录像、时间、划数、DPS、主观感觉
+↓
+若仍失败：回退到前一层；若稳定：增加速度/距离/疲劳要求</code></pre>
     </section>
 
-    <section id="tests-sec">
-      <h2>快速诊断测试</h2>
-      <p class="small muted">戴器材只为隔离变量。选型见 <a href="../gear/snorkels/">呼吸管</a>、<a href="../gear/fins/">脚蹼</a>、<a href="../gear/paddles/">划手掌</a>。</p>
-      <div id="tests"></div>
+    <section id="fields">
+      <h2>23. 一个可复用的训练处方字段模型</h2>
+      <p>如果把 USMS 内容做成课程、数据库或数字教练，建议至少保存以下字段。这里是 <strong>[结构化整理]</strong>，不是 USMS 官方数据库 schema。</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>字段</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>Drill_ID</td><td>稳定动作ID</td></tr>
+<tr><td>Stroke/System</td><td>Free / Back / Breast / Fly / Start / Turn / Underwater / OW</td></tr>
+<tr><td>Module</td><td>Body / Breath / Pull / Kick / Timing 等</td></tr>
+<tr><td>USMS_Name</td><td>官方英文动作名</td></tr>
+<tr><td>CN_Name</td><td>中文教学译名</td></tr>
+<tr><td>Purpose</td><td>解决什么技术能力</td></tr>
+<tr><td>Observable_Symptom</td><td>什么现象提示可能使用</td></tr>
+<tr><td>Execution</td><td>怎么做</td></tr>
+<tr><td>Feedback</td><td>动作提供什么感知/客观反馈</td></tr>
+<tr><td>Equipment</td><td>器材</td></tr>
+<tr><td>Safety</td><td>水深、呼吸、膝/肩、阻力等限制</td></tr>
+<tr><td>Precondition</td><td>前置能力</td></tr>
+<tr><td>Regression</td><td>做不了时退阶</td></tr>
+<tr><td>Progression</td><td>做好后的进阶</td></tr>
+<tr><td>Full_Stroke_Transfer</td><td>怎样回完整泳姿</td></tr>
+<tr><td>Distance/Reps</td><td>官方 set 或教练处方的次数/距离</td></tr>
+<tr><td>Rest/Sendoff</td><td>休息或间歇</td></tr>
+<tr><td>Intensity</td><td>cruise/strong/fast/race pace/CSS 等</td></tr>
+<tr><td>Metrics</td><td>time / stroke count / DPS / rate / SWOLF</td></tr>
+<tr><td>Source</td><td>USMS 原始页面</td></tr>
+</tbody>
+</table>
+</div>
     </section>
 
-    <section id="symptoms-sec">
-      <h2>常见现象与问题定位</h2>
-      <div id="symptoms"></div>
+    <section id="sources">
+      <h2>24. 主要官方来源索引</h2>
+      <ol><li><strong>Swimming Guides 总入口</strong> — <a href="https://www.usms.org/fitness-and-training/guides">https://www.usms.org/fitness-and-training/guides</a></li><li><strong>Swimming 101</strong> — <a href="https://www.usms.org/fitness-and-training/guides/swimming-101">https://www.usms.org/fitness-and-training/guides/swimming-101</a></li><li><strong>ALTS Volunteer Teacher Swim Lesson Guide</strong> — <a href="https://www.usms.org/alts/alts_aprilvolunteerguide.pdf">https://www.usms.org/alts/alts_aprilvolunteerguide.pdf</a></li><li><strong>Freestyle Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/freestyle">https://www.usms.org/fitness-and-training/guides/freestyle</a></li><li><strong>Backstroke Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/backstroke">https://www.usms.org/fitness-and-training/guides/backstroke</a></li><li><strong>Breaststroke Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/breaststroke">https://www.usms.org/fitness-and-training/guides/breaststroke</a></li><li><strong>Butterfly Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/butterfly">https://www.usms.org/fitness-and-training/guides/butterfly</a></li><li><strong>Starts Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/starts">https://www.usms.org/fitness-and-training/guides/starts</a></li><li><strong>Turns Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/turns">https://www.usms.org/fitness-and-training/guides/turns</a></li><li><strong>Underwater Kick Guide</strong> — <a href="https://www.usms.org/fitness-and-training/guides/underwater-kick">https://www.usms.org/fitness-and-training/guides/underwater-kick</a></li><li><strong>Open Water 101</strong> — <a href="https://www.usms.org/fitness-and-training/guides/open-water-swimming-101">https://www.usms.org/fitness-and-training/guides/open-water-swimming-101</a></li><li><strong>Workout Library</strong> — <a href="https://www.usms.org/workout-library/">https://www.usms.org/workout-library/</a></li><li><strong>Workout Glossary</strong> — <a href="https://www.usms.org/workout-library/glossary-of-swimming-terms">https://www.usms.org/workout-library/glossary-of-swimming-terms</a></li><li><strong>How to Write a Swimming Workout</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-write-a-swimming-workout">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-write-a-swimming-workout</a></li><li><strong>Six-Week Training Plans</strong> — <a href="https://cd3.usms.org/fitness-and-training/six-week-swim-training-plans/six-week-swim-training-plan-information">https://cd3.usms.org/fitness-and-training/six-week-swim-training-plans/six-week-swim-training-plan-information</a></li><li><strong>Critical Swim Speed</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals</a></li><li><strong>Best Workouts / Best Average</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/best-workouts-for-masters-swimmers">https://www.usms.org/fitness-and-training/articles-and-videos/articles/best-workouts-for-masters-swimmers</a></li><li><strong>Sprint for Distance Swimmers</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/six-reasons-distance-swimmers-should-sprint">https://www.usms.org/fitness-and-training/articles-and-videos/articles/six-reasons-distance-swimmers-should-sprint</a></li><li><strong>Breath Control Safety</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-work-safely-on-breath-control">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-work-safely-on-breath-control</a></li><li><strong>Recovery Swims</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/why-you-need-to-do-more-recovery-swims">https://www.usms.org/fitness-and-training/articles-and-videos/articles/why-you-need-to-do-more-recovery-swims</a></li><li><strong>Periodization</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/periodization">https://www.usms.org/fitness-and-training/articles-and-videos/articles/periodization</a></li><li><strong>Taper</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/what-to-consider-when-planning-your-taper">https://www.usms.org/fitness-and-training/articles-and-videos/articles/what-to-consider-when-planning-your-taper</a></li><li><strong>Strength Training: A Balanced Approach</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/strength-training-a-balanced-approach">https://www.usms.org/fitness-and-training/articles-and-videos/articles/strength-training-a-balanced-approach</a></li><li><strong>Three Dryland Tests</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/three-dryland-tests-for-improved-swimming">https://www.usms.org/fitness-and-training/articles-and-videos/articles/three-dryland-tests-for-improved-swimming</a></li><li><strong>Fitness Series</strong> — <a href="https://www.usms.org/events/fitness-events/fitness-series">https://www.usms.org/events/fitness-events/fitness-series</a></li><li><strong>Video Stroke Analysis</strong> — <a href="https://www.usms.org/fitness-and-training/usms-video-stroke-analysis">https://www.usms.org/fitness-and-training/usms-video-stroke-analysis</a></li><li><strong>Coach Certification 当前状态</strong> — <a href="https://www.usms.org/coach-central/coach-certification">https://www.usms.org/coach-central/coach-certification</a></li><li><strong>Triathlon 2026</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-triathletes-should-use-masters-swimming-to-improve-swim-times">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-triathletes-should-use-masters-swimming-to-improve-swim-times</a></li><li><strong>Return after injury/hiatus</strong> — <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-start-swimming-again-after-an-injury-or-hiatus">https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-start-swimming-again-after-an-injury-or-hiatus</a></li></ol>
     </section>
 
-    <section id="drills-sec">
-      <h2>专项练习库</h2>
-      <p class="small">分类以 USMS 自由泳四域（身体位置与转动、打腿、划水、呼吸）为基础，并拆出移臂与入水、单臂与协调、效率与技术耐力、开放水域。</p>
-      <div id="drills"></div>
-    </section>
-
-    <section id="chains-sec">
-      <h2>常用专项练习链</h2>
-      <p class="small muted">每一步只增加一个新的复杂因素。链尾必须回到完整泳。</p>
-      <div id="chains"></div>
-    </section>
-
-    <section id="session">
-      <h2>单次训练闭环</h2>
-      <table class="kv">
-        <thead><tr><th>步骤</th><th>做法</th></tr></thead>
-        <tbody>
-          <tr><td>E1 基线</td><td>2×25 米轻松完整泳。记录最明显现象、换气侧、频率、划次、问题何时出现。</td></tr>
-          <tr><td>E2 一个诊断测试</td><td><a href="../gear/snorkels/">呼吸管</a> / <a href="../gear/fins/">脚蹼</a> / 侧身打腿 / 单臂 / 夹浮漂，确认环节。</td></tr>
-          <tr><td>E3 一个主问题</td><td>例：主问题换气抬头；辅助现象换气时腿分开。不要立刻当成两个独立问题。</td></tr>
-          <tr><td>E4 1～2 个专项</td><td>各 2～4 组，10～25 米，动作控制优先。</td></tr>
-          <tr><td>E5 回完整泳</td><td>4～6×15～25 米。只留一个提示，例如「头只向侧面转」。</td></tr>
-          <tr><td>E6 再专项→完整</td><td>优先 <a href="#drill-D-I09">D-I09</a>：25 米分解 + 25 米完整。</td></tr>
-          <tr><td>E7 最终复测</td><td>4×25 米完整泳。前两组允许提示，后两组尽量不提示。</td></tr>
-          <tr><td>E8 判断</td><td>改善则巩固再加距离；专项好完整泳不好 → 迁移（<a href="#drill-D-I04">D-I04</a> / <a href="#drill-D-I09">D-I09</a> / <a href="#drill-D-E01">D-E01</a>）；完全不改善 → 重诊上游；更严重代偿 → 降难度或退阶。</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="advance">
-      <h2>进阶规则与退阶信号</h2>
-      <div class="cols-2">
-        <table class="kv">
-          <thead><tr><th>F</th><th>进阶规则</th></tr></thead>
-          <tbody>
-            <tr><td>F1</td><td>同一里程碑至少两次训练稳定出现。避免把偶然成功当成掌握。</td></tr>
-            <tr><td>F2</td><td>先增加稳定次数，再增加距离。先多个稳定 25 米，再考虑 50 米。</td></tr>
-            <tr><td>F3</td><td>距离增加以后动作崩掉，缩短单组。不是继续硬撑。</td></tr>
-            <tr><td>F4</td><td>分解会做但完整泳不会，不通过。必须完成迁移。</td></tr>
-            <tr><td>F5</td><td>换气先建立一个稳定侧，再补弱侧。最终左右都能换，不是强制始终三划一换。</td></tr>
-            <tr><td>F6</td><td>先动作质量，后速度。速度增加以后，错误动作通常会被放大。</td></tr>
-          </tbody>
-        </table>
-        <table>
-          <thead><tr><th>出现任一情况需重检</th></tr></thead>
-          <tbody>
-            <tr><td>必须憋气或冲刺才能完成</td></tr>
-            <tr><td>戴脚蹼会、摘掉完全不会</td></tr>
-            <tr><td>夹浮漂很好、撤掉全部消失</td></tr>
-            <tr><td>单臂很好、完整泳无法保持</td></tr>
-            <tr><td>一换气动作立即崩</td></tr>
-            <tr><td>疲劳后技术迅速散掉</td></tr>
-            <tr><td>为改一个问题出现更严重代偿</td></tr>
-            <tr><td>每次训练表现差异非常大</td></tr>
-            <tr><td>持续肩、颈、腰痛</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="goals">
-      <h2>不同训练目标的重点</h2>
-      <table>
-        <thead><tr><th>目标</th><th>优先顺序 / 重点</th></tr></thead>
-        <tbody>
-          <tr><td>轻松连续游</td><td>呼吸 &gt; 身体平衡 &gt; 换气 &gt; 放松划水 &gt; 连续节奏</td></tr>
-          <tr><td>长距离</td><td>线型、稳定抱水、合理划频、控制打腿消耗、双侧换气、技术耐力、配速</td></tr>
-          <tr><td>短距离</td><td>更积极打腿、较高划频、快速抱水、连续推进、快速移臂、减少换气造成的速度损失</td></tr>
-          <tr><td>开放水域</td><td>左右换气、<a href="#drill-D-OW01">D-OW01</a> 抬眼观察、直线游、绕标、变速、不同换气时机、水中安全</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="safety">
-      <h2>呼吸控制安全说明</h2>
-      <div class="warn">
-        <p>3-5-7、限制换气、Blowout 类练习的目标是<strong>呼吸控制和技术保持</strong>，不是比谁憋气久。</p>
-        <p>禁止：训练前过度换气；长时间水下屏气；单独进行憋气训练；把水下打腿做成距离挑战。</p>
-        <p>出现头晕、视野异常、意识模糊、明显胸闷、异常气短：<strong>立即停止</strong>。</p>
-      </div>
-      <p class="lead close">专项练习不是终点，回到完整自由泳后仍然改善，才算真正学会。</p>
+    <section id="close">
+      <h2>结论：USMS 的真正“完整构成”</h2>
+      <p>如果只看 drill，USMS 像一个动作库；把全部系统连起来后，它实际上是：</p>
+<p><strong>Adult Learn-to-Swim → Training Literacy → Stroke/Transition Technique → Progressive Drills → Sets → Workouts → Goal-based Plans → Intensity/Pace Methods → Dryland → Open Water/Triathlon/Special Populations → Assessment/Tracking → Coaching Feedback → Periodization/Recovery → Long-term Participation。</strong></p>
+<p>其中 Current Guides 的 220 条水中 drill 是“动作原子层”，并不是整个系统的终点。真正训练价值来自：<strong>选对问题 → 选对 drill → 在 set 中迁移 → 在目标强度下保持 → 用重复测试和数据反馈判断是否真的改变。</strong></p>
     </section>
   </main>
 </div>
-<script src="data.js"></script>
-<script src="js/app.js"></script>
+<script src="js/nav.js?4"></script>
 </body>
 </html>

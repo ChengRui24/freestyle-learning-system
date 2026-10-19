@@ -1,10 +1,10 @@
 :root {
   --site-bar-h: 2.75rem;
   --site-bg: #f6f6f3;
-  --site-fg: #161616;
-  --site-muted: #4a4a4a;
-  --site-line: #c8c8c2;
-  --site-link: #0b3a58;
+  --site-fg: #111214;
+  --site-muted: #5a5e64;
+  --site-line: #e2e3dd;
+  --site-link: #163a56;
   color-scheme: light;
 }
 
@@ -24,16 +24,17 @@ html {
   min-height: var(--site-bar-h);
   height: auto;
   margin: 0;
-  padding: 0 18px;
+  padding: 0 28px;
   background: var(--site-bg);
   border-bottom: 1px solid rgba(17, 18, 20, 0.1);
   font: 13px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
   color: var(--site-fg);
+  -webkit-font-smoothing: antialiased;
 }
 
 header.site-bar {
-  padding: 0 18px;
+  padding: 0 28px;
   margin: 0;
   min-height: var(--site-bar-h);
   height: auto;
@@ -157,10 +158,10 @@ body.page-fins .topbar nav a:hover {
 }
 
 .site-cross {
-  font-size: 13px;
+  font-size: 0.9rem;
   color: var(--site-muted);
   margin: 10px 0 0;
-  max-width: 52rem;
+  max-width: 40.5rem;
 }
 
 .site-cross a {
@@ -168,7 +169,8 @@ body.page-fins .topbar nav a:hover {
   text-underline-offset: 2px;
 }
 
-body.page-learn .side {
+body.page-learn .side,
+body.page-safety .side {
   top: var(--site-bar-h);
   height: calc(100vh - var(--site-bar-h));
 }
@@ -177,7 +179,10 @@ body.page-learn .drill,
 body.page-learn .stage,
 body.page-learn section,
 body.page-learn tr,
-body.page-learn .cat-h {
+body.page-learn .cat-h,
+body.page-learn h3,
+body.page-safety section,
+body.page-safety tr {
   scroll-margin-top: calc(var(--site-bar-h) + 0.7rem);
 }
 
@@ -192,8 +197,9 @@ body.page-home {
   margin: 0;
   color: var(--site-fg);
   background: var(--site-bg);
-  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+  font: 17px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.page-home a {
@@ -206,42 +212,47 @@ body.page-home a:hover {
 }
 
 body.page-home .home-card,
-body.page-home .home-card:hover {
+body.page-home .home-card:hover,
+body.page-home .stroke-grid a,
+body.page-home .stroke-grid a:hover {
   color: inherit;
   text-decoration: none;
 }
 
 .home {
-  max-width: 46rem;
+  max-width: 40.5rem;
   margin: 0 auto;
-  padding: 2rem 1.35rem 4.5rem;
+  padding: 2.6rem 1.4rem 5rem;
 }
 
 .home h1 {
-  font-size: 1.5rem;
+  font-size: 2.05rem;
   font-weight: 750;
-  line-height: 1.25;
-  margin: 0 0 0.4rem;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  margin: 0 0 0.55rem;
 }
 
 .home .lede {
-  margin: 0 0 1.8rem;
+  margin: 0 0 2.4rem;
   color: var(--site-muted);
-  max-width: 38rem;
+  max-width: 36rem;
+  font-size: 1.02rem;
 }
 
 .home h2 {
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 650;
   letter-spacing: 0.04em;
   color: var(--site-muted);
-  margin: 1.7rem 0 0.65rem;
+  margin: 2.1rem 0 0.55rem;
 }
 
 .home-card {
   display: block;
-  border: 1px solid var(--site-line);
-  padding: 1.05rem 1.1rem 1.15rem;
+  border: 0;
+  border-bottom: 1px solid var(--site-line);
+  padding: 0 0 1.25rem;
   color: inherit;
   text-decoration: none;
 }
@@ -252,54 +263,138 @@ body.page-home .home-card:hover {
 }
 
 .home-card h3 {
-  font-size: 1.12rem;
+  font-size: 1.28rem;
   font-weight: 700;
-  margin: 0 0 0.35rem;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.3rem;
   color: var(--site-fg);
 }
 
 .home-card p {
   margin: 0;
+  font-size: 0.95rem;
+  color: var(--site-muted);
+  line-height: 1.55;
+}
+
+.home-k {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  color: var(--site-muted);
+  margin: 1.35rem 0 0.35rem;
+}
+
+.stroke-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--site-line);
+  margin: 0 0 0.85rem;
+}
+
+.stroke-grid a {
+  display: block;
+  padding: 0.65rem 0.9rem 0.65rem 0;
+  border-bottom: 1px solid var(--site-line);
+  color: var(--site-fg);
+  font-size: 1.02rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.stroke-grid a:hover {
+  color: var(--site-muted);
+  text-decoration: none;
+}
+
+.home-note {
+  margin: 0 0 0.4rem;
   font-size: 0.9rem;
   color: var(--site-muted);
 }
 
 .gear-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.gear-grid .home-card {
+  padding: 0.85rem 0 0.95rem;
+}
+
+.gear-grid .home-card:first-child {
+  border-top: 1px solid var(--site-line);
 }
 
 .home table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   margin: 0;
 }
 
 .home th,
 .home td {
-  border: 1px solid var(--site-line);
-  padding: 0.45rem 0.55rem;
+  border: 0;
+  border-bottom: 1px solid var(--site-line);
+  padding: 0.55rem 0.8rem 0.55rem 0;
   text-align: left;
   vertical-align: top;
 }
 
 .home th {
   font-weight: 650;
+  font-size: 0.72rem;
+  color: var(--site-muted);
+  letter-spacing: 0.04em;
 }
 
 @media (max-width: 720px) {
-  .gear-grid {
+  .gear-grid,
+  .stroke-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 980px) {
-  body.page-learn .side {
+  body.page-learn .side,
+  body.page-safety .side {
     top: auto;
     height: auto;
   }
+}
+
+body.page-fins,
+body.page-snorkels,
+body.page-paddles {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+body.page-fins h1,
+body.page-snorkels h1 {
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 680;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+body.page-fins .wrap a,
+body.page-snorkels .wrap a,
+body.page-paddles .wrap a {
+  color: var(--site-link);
+}
+
+body.page-fins .pill,
+body.page-fins .filterbar button,
+body.page-paddles .chip,
+body.page-paddles button.filter,
+body.page-snorkels .tag,
+body.page-snorkels .meta span,
+body.page-snorkels .compat span {
+  border-radius: 0;
 }
 
 @media print {

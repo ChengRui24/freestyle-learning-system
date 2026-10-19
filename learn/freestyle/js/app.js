@@ -107,9 +107,9 @@
 
   function withGearLinks(html) {
     return html
-      .replace(/正面呼吸管/g, '<a href="../gear/snorkels/">正面呼吸管</a>')
-      .replace(/短脚蹼/g, '<a href="../gear/fins/">短脚蹼</a>')
-      .replace(/小划手/g, '<a href="../gear/paddles/">小划手</a>');
+      .replace(/正面呼吸管/g, '<a href="../../gear/snorkels/">正面呼吸管</a>')
+      .replace(/短脚蹼/g, '<a href="../../gear/fins/">短脚蹼</a>')
+      .replace(/小划手/g, '<a href="../../gear/paddles/">小划手</a>');
   }
 
   function drillHref(code) {
