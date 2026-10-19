@@ -35,6 +35,11 @@ BOOKS = {
         "stroke": "fly",
         "stroke_label": "蝶泳",
     },
+    "course": {
+        "brand": "课程安排",
+        "ver": "四式通用",
+        "sub": "学习流程、通过条件，以及一节课的热身、专项、主项和放松。",
+    },
 }
 
 SIBLINGS = [
@@ -97,24 +102,40 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
         else:
             siblings.append(f'<a href="../{href}">{label}</a>')
     sib = " · ".join(siblings)
+    if key == "course":
+        cross = (
+            '<p class="site-cross">各式的阶段和专项见 '
+            '<a href="../freestyle/">自由泳</a>、'
+            '<a href="../back/">仰泳</a>、'
+            '<a href="../fly/">蝶泳</a>、'
+            '<a href="../breast/">蛙泳</a>。'
+            '上课口令见 <a href="../../strokes/">四泳姿</a>。'
+            '入水共同课见 <a href="../#alts">USMS 汇总</a>。</p>'
+        )
+    else:
+        cross = (
+            '<p class="site-cross">四式阶段诊断：'
+            f"{sib}。"
+            f'上课口诀见 <a href="../../strokes/#stroke-{meta["stroke"]}">四泳姿 · {meta["stroke_label"]}</a>。'
+            '入水共同课见 <a href="../#alts">USMS 汇总</a>。'
+            '一节课怎么排见 <a href="../course/">课程安排</a>。'
+            '个人自救见 <a href="../../safety/">水中自救</a>。</p>'
+        )
     body = []
     body.append(
         '<header class="page-head">\n'
         f"      <h1>{inline(title)}</h1>\n"
         f'      <p class="sub">{html.escape(meta["sub"])}</p>\n'
-        '      <p class="site-cross">四式阶段诊断：'
-        f"{sib}。"
-        f'上课口诀见 <a href="../../strokes/#stroke-{meta["stroke"]}">四泳姿 · {meta["stroke_label"]}</a>。'
-        '入水共同课见 <a href="../#alts">USMS 汇总</a>。'
-        '个人自救见 <a href="../../safety/">水中自救</a>。</p>\n'
+        f"      {cross}\n"
         f"      {render_blocks(preamble, 'lede')}\n"
         "    </header>"
     )
+    as_list = key in {"back", "breast", "fly"}
     for sid, stitle, text in sections:
         body.append(
             f'<section id="{html.escape(sid)}">\n'
             f"      <h2>{inline(stitle)}</h2>\n"
-            f"      {render_blocks(text, sid)}\n"
+            f"      {render_blocks(text, sid, drill_lists=as_list)}\n"
             "    </section>"
         )
     main = "\n\n    ".join(body)
@@ -138,6 +159,7 @@ def page(key: str, title: str, preamble: str, sections: list[tuple[str, str, str
   </nav>
 </header>
 <nav class="section-nav" aria-label="学习">
+  <a href="../course/"{cur("course")}>课程安排</a>
   <a href="../../strokes/">四泳姿</a>
   <a href="../">汇总</a>
   <a href="../freestyle/"{cur("freestyle")}>自由泳</a>

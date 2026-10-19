@@ -2,6 +2,7 @@
 
 在线阅读：<https://chengrui24.github.io/freestyle-learning-system/>
 
+- [课程安排](https://chengrui24.github.io/freestyle-learning-system/learn/course/)
 - [USMS 成人游泳训练体系](https://chengrui24.github.io/freestyle-learning-system/learn/)
 - [四泳姿教学](https://chengrui24.github.io/freestyle-learning-system/strokes/)
 - [自由泳学习体系](https://chengrui24.github.io/freestyle-learning-system/learn/freestyle/)

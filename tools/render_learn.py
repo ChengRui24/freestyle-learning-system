@@ -169,7 +169,41 @@ def is_table_sep(line: str) -> bool:
     return all(re.fullmatch(r":?-{3,}:?", c.replace(" ", "")) for c in cells)
 
 
-def render_table(rows: list[str]) -> str:
+def is_drill_table(head: list[str]) -> bool:
+    if not head:
+        return False
+    first = head[0]
+    if any(word in first for word in ("现象", "阶段", "看见", "测试", "问题", "不够准确", "直接可见")):
+        return False
+    text = " ".join(head)
+    if any(word in text for word in ("具体做法", "练习名称", "主要解决")):
+        return True
+    if "做法" in text and "练习" in text:
+        return True
+    return "中文名称" in text and "主要目的" in text
+
+
+def render_drill_list(head: list[str], body: list[list[str]]) -> str:
+    name_i = 1 if head and head[0] == "编号" and len(head) > 1 else 0
+    parts = ['<ul class="drill-list">']
+    for row in body:
+        name = row[name_i].strip() if name_i < len(row) else ""
+        if not name:
+            continue
+        bits = [f'<p class="drill-name">{inline(name)}</p>']
+        for i, label in enumerate(head):
+            if i == name_i or (name_i == 1 and i == 0):
+                continue
+            value = row[i].strip() if i < len(row) else ""
+            if not value:
+                continue
+            bits.append(f'<p><span class="drill-k">{inline(label)}</span>{inline(value)}</p>')
+        parts.append("<li>" + "".join(bits) + "</li>")
+    parts.append("</ul>")
+    return "\n".join(parts)
+
+
+def render_table(rows: list[str], drill_lists: bool = False) -> str:
     parsed: list[list[str]] = []
     for row in rows:
         if is_table_sep(row):
@@ -182,6 +216,8 @@ def render_table(rows: list[str]) -> str:
         while len(r) < width:
             r.append("")
     head, body = parsed[0], parsed[1:]
+    if drill_lists and is_drill_table(head):
+        return render_drill_list(head, body)
     parts = [
         '<div class="table-wrap">',
         "<table>",
@@ -194,7 +230,7 @@ def render_table(rows: list[str]) -> str:
     return "\n".join(parts)
 
 
-def render_blocks(text: str, parent_id: str = "sec") -> str:
+def render_blocks(text: str, parent_id: str = "sec", drill_lists: bool = False) -> str:
     lines = text.split("\n")
     out: list[str] = []
     i = 0
@@ -227,7 +263,7 @@ def render_blocks(text: str, parent_id: str = "sec") -> str:
                 if is_table_row(lines[i]):
                     rows.append(lines[i].rstrip())
                 i += 1
-            out.append(render_table(rows))
+            out.append(render_table(rows, drill_lists=drill_lists))
             continue
         if raw.startswith("> "):
             quote = [raw[2:]]
@@ -381,6 +417,7 @@ def page_html(title: str, preamble: str, sections: list[tuple[str, str, str]]) -
   </nav>
 </header>
 <nav class="section-nav" aria-label="学习">
+  <a href="course/">课程安排</a>
   <a href="../strokes/">四泳姿</a>
   <a href="./" aria-current="page">汇总</a>
   <a href="freestyle/">自由泳</a>

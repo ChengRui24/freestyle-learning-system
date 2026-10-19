@@ -334,7 +334,7 @@ th {
   letter-spacing: 0.04em;
 }
 
-td strong { white-space: nowrap; }
+td strong { white-space: normal; }
 
 .kv td:first-child {
   white-space: nowrap;
@@ -397,24 +397,55 @@ td strong { white-space: nowrap; }
 }
 
 .table-wrap {
-  overflow-x: auto;
+  overflow-x: visible;
   margin: 0.5rem 0 1.4rem;
-  max-width: var(--wide);
+  max-width: 100%;
 }
 
 .table-wrap table {
+  width: 100%;
+  table-layout: fixed;
   margin: 0;
   font-size: 0.82rem;
   line-height: 1.45;
 }
 
-.table-wrap th:first-child,
-.table-wrap td:first-child {
-  white-space: nowrap;
+.table-wrap th,
+.table-wrap td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-.table-wrap tr:has(> :nth-child(4)) > :nth-child(-n+3) {
-  white-space: nowrap;
+.drill-list {
+  list-style: none;
+  margin: 0.4rem 0 1.4rem;
+  padding: 0;
+  max-width: var(--max);
+}
+
+.drill-list li {
+  margin: 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.drill-list .drill-name {
+  margin: 0 0 0.2rem;
+  font-weight: 650;
+}
+
+.drill-list p {
+  margin: 0.15rem 0;
+  max-width: none;
+}
+
+.drill-list .drill-k {
+  display: inline-block;
+  min-width: 4.5rem;
+  margin-right: 0.45rem;
+  color: var(--muted);
+  font-size: 0.75rem;
 }
 
 blockquote {
